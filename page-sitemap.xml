@@ -74,16 +74,14 @@
 		</image:image>
 	</url>
 	<url>
-		<loc>./ubicaciones/index.html</loc>
-		<lastmod>2023-12-01T20:35:40+00:00</lastmod>
-	</url>
-	<url>
-		<loc>./contacto/index.html</loc>
-		<lastmod>2023-12-06T20:38:32+00:00</lastmod>
-	</url>
-	<url>
 		<loc>./servicios/index.html</loc>
-		<lastmod>2023-12-11T14:17:27+00:00</lastmod>
+		<lastmod>2023-12-11T15:46:08+00:00</lastmod>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/11/menumobilenaraja.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/11/Grupo-9360.png</image:loc>
+		</image:image>
 		<image:image>
 			<image:loc>./wp-content/uploads/2023/11/Enmascarar-grupo-38.svg</image:loc>
 		</image:image>
@@ -131,6 +129,35 @@
 		</image:image>
 		<image:image>
 			<image:loc>./wp-content/uploads/2023/11/Grupo-14266.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/11/Grupo-9360.png</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>./contacto/index.html</loc>
+		<lastmod>2023-12-11T15:48:53+00:00</lastmod>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/11/menumobilenaraja.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/11/Grupo-9360.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/11/Grupo-9360.png</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>./ubicaciones/index.html</loc>
+		<lastmod>2023-12-11T15:53:02+00:00</lastmod>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/11/menumobilenaraja.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/11/Grupo-9360.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/11/Grupo-9360.png</image:loc>
 		</image:image>
 	</url>
 </urlset>

@@ -78,58 +78,6 @@
 		<lastmod>2023-12-11T16:16:49+00:00</lastmod>
 	</url>
 	<url>
-		<loc>./servicios/index.html</loc>
-		<lastmod>2023-12-11T16:16:58+00:00</lastmod>
-		<image:image>
-			<image:loc>./wp-content/uploads/2023/11/Enmascarar-grupo-38.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>./wp-content/uploads/2023/11/Enmascarar-grupo-37.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>./wp-content/uploads/2023/11/Enmascarar-grupo-36.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>./wp-content/uploads/2023/11/Enmascarar-grupo-39.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>./wp-content/uploads/2023/11/Enmascarar-grupo-40.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>./wp-content/uploads/2023/11/Enmascarar-grupo-38.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>./wp-content/uploads/2023/11/Enmascarar-grupo-37.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>./wp-content/uploads/2023/11/Enmascarar-grupo-36.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>./wp-content/uploads/2023/11/Enmascarar-grupo-39.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>./wp-content/uploads/2023/11/Enmascarar-grupo-40.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>./wp-content/uploads/2023/11/Grupo-14226.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>./wp-content/uploads/2023/11/Enmascarar-grupo-43.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>./wp-content/uploads/2023/11/Enmascarar-grupo-42.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>./wp-content/uploads/2023/11/Enmascarar-grupo-41.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>./wp-content/uploads/2023/11/Map-col.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>./wp-content/uploads/2023/11/Grupo-14266.png</image:loc>
-		</image:image>
-	</url>
-	<url>
 		<loc>./contacto/index.html</loc>
 		<lastmod>2023-12-11T16:17:44+00:00</lastmod>
 	</url>
@@ -204,6 +152,58 @@
 		</image:image>
 		<image:image>
 			<image:loc>./wp-content/uploads/2023/11/Elipse-317.png</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>./servicios/index.html</loc>
+		<lastmod>2023-12-13T20:41:03+00:00</lastmod>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/11/Enmascarar-grupo-38.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/11/Enmascarar-grupo-37.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/11/Enmascarar-grupo-36.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/11/Enmascarar-grupo-39.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/11/Enmascarar-grupo-40.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/11/Enmascarar-grupo-38.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/11/Enmascarar-grupo-37.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/11/Enmascarar-grupo-36.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/11/Enmascarar-grupo-39.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/11/Enmascarar-grupo-40.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/11/Grupo-14226.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/11/Enmascarar-grupo-43.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/11/Enmascarar-grupo-42.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/11/Enmascarar-grupo-41.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/11/Map-col.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>./wp-content/uploads/2023/11/Grupo-14266.png</image:loc>
 		</image:image>
 	</url>
 </urlset>

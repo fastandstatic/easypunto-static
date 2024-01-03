@@ -2,15 +2,9 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>/</loc>
-		<lastmod>2024-01-03T21:49:32+00:00</lastmod>
+		<lastmod>2024-01-03T21:58:48+00:00</lastmod>
 		<image:image>
 			<image:loc>/wp-content/uploads/2024/01/Grupo-9360-e1704300530313.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>/wp-content/uploads/2023/11/Enmascarar-grupo-37.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>/wp-content/uploads/2023/11/Enmascarar-grupo-38.png</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>/wp-content/uploads/2023/11/Grupo-14261-1.png</image:loc>
@@ -61,6 +55,12 @@
 			<image:loc>/wp-content/uploads/2024/01/Urosario.png</image:loc>
 		</image:image>
 		<image:image>
+			<image:loc>/wp-content/uploads/2024/01/Olimpica-e1704318977352.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>/wp-content/uploads/2024/01/torremedica-e1704319037694.png</image:loc>
+		</image:image>
+		<image:image>
 			<image:loc>/wp-content/uploads/2024/01/lamercerd-e1704311722423.png</image:loc>
 		</image:image>
 		<image:image>
@@ -74,6 +74,12 @@
 		</image:image>
 		<image:image>
 			<image:loc>/wp-content/uploads/2024/01/Urosario.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>/wp-content/uploads/2024/01/Olimpica-e1704318977352.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>/wp-content/uploads/2024/01/torremedica-e1704319037694.png</image:loc>
 		</image:image>
 	</url>
 	<url>

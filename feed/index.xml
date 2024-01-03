@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Easy Punto</title>
-	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
-	<link>./../index.html</link>
+	<atom:link href="/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>Con nosotros, tu vehículo está seguro.</description>
 	<lastBuildDate>Wed, 03 Jan 2024 15:36:16 +0000</lastBuildDate>
 	<language>es</language>
@@ -21,9 +21,9 @@
 	<generator>https://wordpress.org/?v=6.4.2</generator>
 
 <image>
-	<url>./../wp-content/uploads/2023/11/Enmascarar-grupo-39-150x150.png</url>
+	<url>/wp-content/uploads/2023/11/Enmascarar-grupo-39-150x150.png</url>
 	<title>Easy Punto</title>
-	<link>./../index.html</link>
+	<link>/</link>
 	<width>32</width>
 	<height>32</height>
 </image> 

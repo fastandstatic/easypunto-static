@@ -1,167 +1,167 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="./main-sitemap.xsl"?>
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="/main-sitemap.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>./ubicacion/calle-60-38-91/index.html</loc>
+		<loc>/ubicacion/calle-60-38-91/</loc>
 		<lastmod>2023-12-06T20:20:44+00:00</lastmod>
 	</url>
 	<url>
-		<loc>./ubicacion/carrera-21-127-03/index.html</loc>
+		<loc>/ubicacion/carrera-21-127-03/</loc>
 		<lastmod>2023-12-07T15:15:30+00:00</lastmod>
 	</url>
 	<url>
-		<loc>./ubicacion/carrera-49c-80-145/index.html</loc>
+		<loc>/ubicacion/carrera-49c-80-145/</loc>
 		<lastmod>2023-12-07T15:17:36+00:00</lastmod>
 	</url>
 	<url>
-		<loc>./ubicacion/carrera-47-84-72/index.html</loc>
+		<loc>/ubicacion/carrera-47-84-72/</loc>
 		<lastmod>2023-12-07T17:19:23+00:00</lastmod>
 	</url>
 	<url>
-		<loc>./ubicacion/carrera-46-79-215/index.html</loc>
+		<loc>/ubicacion/carrera-46-79-215/</loc>
 		<lastmod>2023-12-07T17:30:37+00:00</lastmod>
 	</url>
 	<url>
-		<loc>./ubicacion/calle-36-39-30/index.html</loc>
+		<loc>/ubicacion/calle-36-39-30/</loc>
 		<lastmod>2023-12-07T17:33:10+00:00</lastmod>
 	</url>
 	<url>
-		<loc>./ubicacion/calle-93-no-45-b-90/index.html</loc>
+		<loc>/ubicacion/calle-93-no-45-b-90/</loc>
 		<lastmod>2023-12-07T17:34:53+00:00</lastmod>
 	</url>
 	<url>
-		<loc>./ubicacion/cra-46-no-82-54/index.html</loc>
+		<loc>/ubicacion/cra-46-no-82-54/</loc>
 		<lastmod>2023-12-07T17:35:27+00:00</lastmod>
 	</url>
 	<url>
-		<loc>./ubicacion/calle-24-7-43/index.html</loc>
+		<loc>/ubicacion/calle-24-7-43/</loc>
 		<lastmod>2023-12-07T17:40:06+00:00</lastmod>
 	</url>
 	<url>
-		<loc>./ubicacion/carrera-21-127-03-2/index.html</loc>
+		<loc>/ubicacion/carrera-21-127-03-2/</loc>
 		<lastmod>2023-12-07T17:41:49+00:00</lastmod>
 	</url>
 	<url>
-		<loc>./ubicacion/calle-127a-53a-45/index.html</loc>
+		<loc>/ubicacion/calle-127a-53a-45/</loc>
 		<lastmod>2023-12-07T17:44:18+00:00</lastmod>
 	</url>
 	<url>
-		<loc>./ubicacion/calle-119-13-95/index.html</loc>
+		<loc>/ubicacion/calle-119-13-95/</loc>
 		<lastmod>2023-12-07T17:45:56+00:00</lastmod>
 	</url>
 	<url>
-		<loc>./ubicacion/carrera-40-22c-10/index.html</loc>
+		<loc>/ubicacion/carrera-40-22c-10/</loc>
 		<lastmod>2023-12-07T17:50:10+00:00</lastmod>
 	</url>
 	<url>
-		<loc>./ubicacion/calle-22c-68d-20/index.html</loc>
+		<loc>/ubicacion/calle-22c-68d-20/</loc>
 		<lastmod>2023-12-07T17:50:50+00:00</lastmod>
 	</url>
 	<url>
-		<loc>./ubicacion/av-carrera-14-48-74/index.html</loc>
+		<loc>/ubicacion/av-carrera-14-48-74/</loc>
 		<lastmod>2023-12-07T17:51:15+00:00</lastmod>
 	</url>
 	<url>
-		<loc>./ubicacion/calle-127-14-54/index.html</loc>
+		<loc>/ubicacion/calle-127-14-54/</loc>
 		<lastmod>2023-12-07T17:53:00+00:00</lastmod>
 	</url>
 	<url>
-		<loc>./ubicacion/autopista-norte-104-76/index.html</loc>
+		<loc>/ubicacion/autopista-norte-104-76/</loc>
 		<lastmod>2023-12-07T17:53:03+00:00</lastmod>
 	</url>
 	<url>
-		<loc>./ubicacion/cra-20-124-64/index.html</loc>
+		<loc>/ubicacion/cra-20-124-64/</loc>
 		<lastmod>2023-12-07T17:53:34+00:00</lastmod>
 	</url>
 	<url>
-		<loc>./ubicacion/calle-125-19-67/index.html</loc>
+		<loc>/ubicacion/calle-125-19-67/</loc>
 		<lastmod>2023-12-07T17:54:27+00:00</lastmod>
 	</url>
 	<url>
-		<loc>./ubicacion/carrera-13-81-17/index.html</loc>
+		<loc>/ubicacion/carrera-13-81-17/</loc>
 		<lastmod>2023-12-07T17:56:01+00:00</lastmod>
 	</url>
 	<url>
-		<loc>./ubicacion/calle-119-11-b-59/index.html</loc>
+		<loc>/ubicacion/calle-119-11-b-59/</loc>
 		<lastmod>2023-12-07T17:56:38+00:00</lastmod>
 	</url>
 	<url>
-		<loc>./ubicacion/autopista-norte-200/index.html</loc>
+		<loc>/ubicacion/autopista-norte-200/</loc>
 		<lastmod>2023-12-07T17:56:59+00:00</lastmod>
 	</url>
 	<url>
-		<loc>./ubicacion/carrera-7-62-57/index.html</loc>
+		<loc>/ubicacion/carrera-7-62-57/</loc>
 		<lastmod>2023-12-07T17:58:36+00:00</lastmod>
 	</url>
 	<url>
-		<loc>./ubicacion/carrera-38-bis-5b-2-04/index.html</loc>
+		<loc>/ubicacion/carrera-38-bis-5b-2-04/</loc>
 		<lastmod>2023-12-07T18:01:54+00:00</lastmod>
 	</url>
 	<url>
-		<loc>./ubicacion/calle-5e-43-05/index.html</loc>
+		<loc>/ubicacion/calle-5e-43-05/</loc>
 		<lastmod>2023-12-07T18:02:33+00:00</lastmod>
 	</url>
 	<url>
-		<loc>./ubicacion/av-roosevelt-43-08/index.html</loc>
+		<loc>/ubicacion/av-roosevelt-43-08/</loc>
 		<lastmod>2023-12-07T18:03:09+00:00</lastmod>
 	</url>
 	<url>
-		<loc>./ubicacion/calle-18-106-11/index.html</loc>
+		<loc>/ubicacion/calle-18-106-11/</loc>
 		<lastmod>2023-12-07T18:03:56+00:00</lastmod>
 	</url>
 	<url>
-		<loc>./ubicacion/av-5a-21n-102/index.html</loc>
+		<loc>/ubicacion/av-5a-21n-102/</loc>
 		<lastmod>2023-12-07T18:04:42+00:00</lastmod>
 	</url>
 	<url>
-		<loc>./ubicacion/av-9-norte-10-107/index.html</loc>
+		<loc>/ubicacion/av-9-norte-10-107/</loc>
 		<lastmod>2023-12-07T18:05:45+00:00</lastmod>
 	</url>
 	<url>
-		<loc>./ubicacion/avenida-2-norte-no-24-157/index.html</loc>
+		<loc>/ubicacion/avenida-2-norte-no-24-157/</loc>
 		<lastmod>2023-12-07T18:07:07+00:00</lastmod>
 	</url>
 	<url>
-		<loc>./ubicacion/calle-5-e-43-19/index.html</loc>
+		<loc>/ubicacion/calle-5-e-43-19/</loc>
 		<lastmod>2023-12-07T18:07:40+00:00</lastmod>
 	</url>
 	<url>
-		<loc>./ubicacion/carrera-7-59-20/index.html</loc>
+		<loc>/ubicacion/carrera-7-59-20/</loc>
 		<lastmod>2023-12-07T18:08:52+00:00</lastmod>
 	</url>
 	<url>
-		<loc>./ubicacion/calle-7d-43a-40/index.html</loc>
+		<loc>/ubicacion/calle-7d-43a-40/</loc>
 		<lastmod>2023-12-07T18:09:22+00:00</lastmod>
 	</url>
 	<url>
-		<loc>./ubicacion/calle-11-5-63/index.html</loc>
+		<loc>/ubicacion/calle-11-5-63/</loc>
 		<lastmod>2023-12-07T18:09:44+00:00</lastmod>
 	</url>
 	<url>
-		<loc>./ubicacion/carrera-44b-33b-08/index.html</loc>
+		<loc>/ubicacion/carrera-44b-33b-08/</loc>
 		<lastmod>2023-12-07T18:10:21+00:00</lastmod>
 	</url>
 	<url>
-		<loc>./ubicacion/calle-65-bis-4-12/index.html</loc>
+		<loc>/ubicacion/calle-65-bis-4-12/</loc>
 		<lastmod>2023-12-13T21:01:34+00:00</lastmod>
 	</url>
 	<url>
-		<loc>./ubicacion/calle-74-15-60/index.html</loc>
+		<loc>/ubicacion/calle-74-15-60/</loc>
 		<lastmod>2023-12-13T21:03:18+00:00</lastmod>
 	</url>
 	<url>
-		<loc>./ubicacion/carrera-20-18-35-sur/index.html</loc>
+		<loc>/ubicacion/carrera-20-18-35-sur/</loc>
 		<lastmod>2023-12-13T21:13:17+00:00</lastmod>
 	</url>
 	<url>
-		<loc>./ubicacion/calle-5e-43a-104/index.html</loc>
+		<loc>/ubicacion/calle-5e-43a-104/</loc>
 		<lastmod>2023-12-13T21:17:52+00:00</lastmod>
 	</url>
 	<url>
-		<loc>./ubicacion/carrera-24-63c-69/index.html</loc>
+		<loc>/ubicacion/carrera-24-63c-69/</loc>
 		<lastmod>2023-12-13T21:18:09+00:00</lastmod>
 	</url>
 	<url>
-		<loc>./ubicacion/avenida-calle-80-69p-28/index.html</loc>
+		<loc>/ubicacion/avenida-calle-80-69p-28/</loc>
 		<lastmod>2023-12-13T21:20:07+00:00</lastmod>
 	</url>
 </urlset>

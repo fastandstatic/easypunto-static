@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+	<!-- This site is optimized with the Yoast SEO plugin v21.8 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Ubicaciones - Easy Punto</title>
+	<link rel="canonical" href="/ubicaciones/">
+	<meta property="og:locale" content="es_ES">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Ubicaciones - Easy Punto">
+	<meta property="og:description" content="Ubicaciones Barranquilla Bogotá Cali Ibagué Medellín Neiva Villavicencio Easy punto © copyright 2023. Todos los derechos reservados">
+	<meta property="og:url" content="/ubicaciones/">
+	<meta property="og:site_name" content="Easy Punto">
+	<meta property="article:publisher" content="https://www.facebook.com/people/Easy-Punto/100092509685189/">
+	<meta property="article:modified_time" content="2024-05-21T14:37:29+00:00">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:label1" content="Tiempo de lectura">
+	<meta name="twitter:data1" content="21 minutos">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"/ubicaciones/","url":"/ubicaciones/","name":"Ubicaciones - Easy Punto","isPartOf":{"@id":"/#website"},"datePublished":"2023-11-24T22:06:14+00:00","dateModified":"2024-05-21T14:37:29+00:00","inLanguage":"es","potentialAction":[{"@type":"ReadAction","target":["/ubicaciones/"]}]},{"@type":"WebSite","@id":"/#website","url":"/","name":"Easy Punto","description":"Con nosotros, tu vehículo está seguro.","publisher":{"@id":"/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"es"},{"@type":"Organization","@id":"/#organization","name":"Easy Punto","url":"/","logo":{"@type":"ImageObject","inLanguage":"es","@id":"/#/schema/logo/image/","url":"/wp-content/uploads/2023/11/Grupo-9360.png","contentUrl":"/wp-content/uploads/2023/11/Grupo-9360.png","width":282,"height":74,"caption":"Easy Punto"},"image":{"@id":"/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/people/Easy-Punto/100092509685189/","https://www.instagram.com/easypunto/?hl=es"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<script type="application/javascript">console.log('PixelYourSite PRO version 9.11.0.1');</script>
+<link rel="alternate" type="application/rss+xml" title="Easy Punto &raquo; Feed" href="/feed/">
+<link rel="alternate" type="application/rss+xml" title="Easy Punto &raquo; Feed de los comentarios" href="/comments/feed/">
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.5.3"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"🏳️‍⚧️","🏳️​⚧️")?!1:!n(e,"🇺🇳","🇺​🇳")&&!n(e,"🏴󠁧󠁢󠁥󠁮󠁧󠁿","🏴​󠁧​󠁢​󠁥​󠁮​󠁧​󠁿");case"emoji":return!n(e,"🐦‍⬛","🐦​⬛")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+</script>
+<style id="wp-emoji-styles-inline-css">img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}</style>
+<style id="joinchat-button-style-inline-css">.wp-block-joinchat-button{border:none!important;text-align:center}.wp-block-joinchat-button figure{display:table;margin:0 auto;padding:0}.wp-block-joinchat-button figcaption{font:normal normal 400 .6em/2em var(--wp--preset--font-family--system-font,sans-serif);margin:0;padding:0}.wp-block-joinchat-button .joinchat-button__qr{background-color:#fff;border:6px solid #25d366;border-radius:30px;box-sizing:content-box;display:block;height:200px;margin:auto;overflow:hidden;padding:10px;width:200px}.wp-block-joinchat-button .joinchat-button__qr canvas,.wp-block-joinchat-button .joinchat-button__qr img{display:block;margin:auto}.wp-block-joinchat-button .joinchat-button__link{align-items:center;background-color:#25d366;border:6px solid #25d366;border-radius:30px;display:inline-flex;flex-flow:row nowrap;justify-content:center;line-height:1.25em;margin:0 auto;text-decoration:none}.wp-block-joinchat-button .joinchat-button__link:before{background:transparent var(--joinchat-ico) no-repeat center;background-size:100%;content:"";display:block;height:1.5em;margin:-.75em .75em -.75em 0;width:1.5em}.wp-block-joinchat-button figure+.joinchat-button__link{margin-top:10px}@media (orientation:landscape)and (min-height:481px),(orientation:portrait)and (min-width:481px){.wp-block-joinchat-button.joinchat-button--qr-only figure+.joinchat-button__link{display:none}}@media (max-width:480px),(orientation:landscape)and (max-height:480px){.wp-block-joinchat-button figure{display:none}}</style>
+<style id="classic-theme-styles-inline-css">/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}</style>
+<style id="global-styles-inline-css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}</style>
+<link rel="stylesheet" id="hello-elementor-css" href="/wp-content/themes/hello-elementor/style.min.css?ver=3.0.0" media="all">
+<link rel="stylesheet" id="hello-elementor-theme-style-css" href="/wp-content/themes/hello-elementor/theme.min.css?ver=3.0.0" media="all">
+<link rel="stylesheet" id="hello-elementor-header-footer-css" href="/wp-content/themes/hello-elementor/header-footer.min.css?ver=3.0.0" media="all">
+<link rel="stylesheet" id="elementor-frontend-css" href="/wp-content/uploads/elementor/css/custom-frontend-lite.min.css?ver=1704318176" media="all">
+<link rel="stylesheet" id="elementor-post-5-css" href="/wp-content/uploads/elementor/css/post-5.css?ver=1704318176" media="all">
+<link rel="stylesheet" id="jet-popup-frontend-css" href="/wp-content/plugins/jet-popup/assets/css/jet-popup-frontend.css?ver=2.0.2.1" media="all">
+<link rel="stylesheet" id="elementor-lazyload-css" href="/wp-content/plugins/elementor/assets/css/modules/lazyload/frontend.min.css?ver=3.18.3" media="all">
+<link rel="stylesheet" id="swiper-css" href="/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css?ver=8.4.5" media="all">
+<link rel="stylesheet" id="dashicons-css" href="/wp-includes/css/dashicons.min.css?ver=6.5.3" media="all">
+<link rel="stylesheet" id="elementor-pro-css" href="/wp-content/uploads/elementor/css/custom-pro-frontend-lite.min.css?ver=1704318176" media="all">
+<link rel="stylesheet" id="elementor-global-css" href="/wp-content/uploads/elementor/css/global.css?ver=1704318178" media="all">
+<link rel="stylesheet" id="elementor-post-695-css" href="/wp-content/uploads/elementor/css/post-695.css?ver=1716302734" media="all">
+<link rel="stylesheet" id="leaflet-css" href="/wp-content/plugins/osm-map-elementor/assets/leaflet/leaflet.css?ver=6.5.3" media="all">
+<link rel="stylesheet" id="mapbox-gl-css" href="/wp-content/plugins/osm-map-elementor/assets/css/mapbox-gl.css?ver=6.5.3" media="all">
+<link rel="stylesheet" id="leaflet-fa-markers-css" href="/wp-content/plugins/osm-map-elementor/assets/leaflet-fa-markers/L.Icon.FontAwesome.css?ver=6.5.3" media="all">
+<link rel="stylesheet" id="osm-map-elementor-css" href="/wp-content/plugins/osm-map-elementor/assets/css/osm-map-elementor.css?ver=6.5.3" media="all">
+<link rel="stylesheet" id="elementor-post-645-css" href="/wp-content/uploads/elementor/css/post-645.css?ver=1704318500" media="all">
+<link rel="stylesheet" id="elementor-post-603-css" href="/wp-content/uploads/elementor/css/post-603.css?ver=1704318179" media="all">
+<link rel="stylesheet" id="elementor-post-1345-css" href="/wp-content/uploads/elementor/css/post-1345.css?ver=1704318179" media="all">
+<link rel="stylesheet" id="elementor-post-1340-css" href="/wp-content/uploads/elementor/css/post-1340.css?ver=1704318489" media="all">
+<link rel="stylesheet" id="elementor-post-1337-css" href="/wp-content/uploads/elementor/css/post-1337.css?ver=1704318179" media="all">
+<link rel="stylesheet" id="elementor-post-1327-css" href="/wp-content/uploads/elementor/css/post-1327.css?ver=1704318179" media="all">
+<link rel="stylesheet" id="elementor-post-1315-css" href="/wp-content/uploads/elementor/css/post-1315.css?ver=1704319240" media="all">
+<link rel="stylesheet" id="elementor-post-1305-css" href="/wp-content/uploads/elementor/css/post-1305.css?ver=1704318179" media="all">
+<link rel="stylesheet" id="elementor-post-1298-css" href="/wp-content/uploads/elementor/css/post-1298.css?ver=1704318179" media="all">
+<link rel="stylesheet" id="elementor-post-1287-css" href="/wp-content/uploads/elementor/css/post-1287.css?ver=1704318179" media="all">
+<link rel="stylesheet" id="elementor-post-612-css" href="/wp-content/uploads/elementor/css/post-612.css?ver=1704318179" media="all">
+<link rel="stylesheet" id="joinchat-css" href="/wp-content/plugins/creame-whatsapp-me/public/css/joinchat.min.css?ver=5.0.16" media="all">
+<link rel="stylesheet" id="google-fonts-1-css" href="https://fonts.googleapis.com/css?family=Rubik%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto&#038;ver=6.5.3" media="all">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+<script src="/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script src="/wp-content/plugins/osm-map-elementor/assets/leaflet/leaflet.js?ver=1.2" id="leaflet-js"></script>
+<script src="/wp-content/plugins/osm-map-elementor/assets/js/mapbox-gl.js?ver=1.2" id="mapbox-gl-js"></script>
+<script src="/wp-content/plugins/osm-map-elementor/assets/leaflet/leaflet-mapbox-gl.js?ver=1.2" id="leaflet-mapbox-gl-js"></script>
+<script src="/wp-content/plugins/osm-map-elementor/assets/leaflet-fa-markers/L.Icon.FontAwesome.js?ver=1.2" id="leaflet-fa-markers-js"></script>
+<script src="/wp-content/plugins/pixelyoursite-pro/dist/scripts/js.cookie-2.1.3.min.js?ver=2.1.3" id="js-cookie-pys-js"></script>
+<script src="/wp-content/plugins/pixelyoursite-pro/dist/scripts/jquery.bind-first-0.2.3.min.js?ver=6.5.3" id="jquery-bind-first-js"></script>
+<script id="pys-js-extra">var pysOptions = {"staticEvents":{"facebook":{"init_event":[{"delay":0,"type":"static","name":"PageView","eventID":"10710cbb-934c-4a0c-94c1-b6a3958a21ef","pixelIds":["3249631925342025"],"params":{"page_title":"Ubicaciones","post_type":"page","post_id":695,"plugin":"PixelYourSite","event_url":"easypunto.fastandstatic.com\/ubicaciones\/","user_role":"guest"},"e_id":"init_event","ids":[],"hasTimeWindow":false,"timeWindow":0,"woo_order":"","edd_order":""}]}},"dynamicEvents":[],"triggerEvents":[],"triggerEventTypes":[],"facebook":{"pixelIds":["3249631925342025"],"advancedMatchingEnabled":true,"advancedMatching":[],"removeMetadata":false,"wooVariableAsSimple":false,"serverApiEnabled":true,"wooCRSendFromServer":false,"send_external_id":true},"ga":{"trackingIds":["G-NM5DQJKRSN"],"unifyGA4":false,"retargetingLogic":"ecomm","crossDomainEnabled":false,"crossDomainAcceptIncoming":false,"crossDomainDomains":[],"wooVariableAsSimple":true,"isDebugEnabled":[false],"disableAdvertisingFeatures":false,"disableAdvertisingPersonalization":false},"debug":"","siteUrl":"","ajaxUrl":"\/wp-admin\/admin-ajax.php","ajax_event":"d2586edca6","trackUTMs":"1","trackTrafficSource":"1","user_id":"0","enable_lading_page_param":"1","cookie_duration":"7","enable_event_day_param":"1","enable_event_month_param":"1","enable_event_time_param":"1","enable_remove_target_url_param":"1","enable_remove_download_url_param":"1","visit_data_model":"first_visit","last_visit_duration":"60","enable_auto_save_advance_matching":"1","advance_matching_fn_names":["","first_name","first-name","first name","name"],"advance_matching_ln_names":["","last_name","last-name","last name"],"advance_matching_tel_names":["","phone","tel"],"enable_success_send_form":"","enable_automatic_events":"","enable_event_video":"1","ajaxForServerEvent":"1","send_external_id":"1","external_id_expire":"180","gdpr":{"ajax_enabled":false,"all_disabled_by_api":false,"facebook_disabled_by_api":false,"tiktok_disabled_by_api":false,"analytics_disabled_by_api":false,"google_ads_disabled_by_api":false,"pinterest_disabled_by_api":false,"bing_disabled_by_api":false,"externalID_disabled_by_api":false,"facebook_prior_consent_enabled":true,"tiktok_prior_consent_enabled":true,"analytics_prior_consent_enabled":true,"google_ads_prior_consent_enabled":true,"pinterest_prior_consent_enabled":true,"bing_prior_consent_enabled":true,"cookiebot_integration_enabled":false,"cookiebot_facebook_consent_category":"marketing","cookiebot_tiktok_consent_category":"marketing","cookiebot_analytics_consent_category":"statistics","cookiebot_google_ads_consent_category":"marketing","cookiebot_pinterest_consent_category":"marketing","cookiebot_bing_consent_category":"marketing","cookie_notice_integration_enabled":false,"cookie_law_info_integration_enabled":false,"real_cookie_banner_integration_enabled":false,"consent_magic_integration_enabled":false},"cookie":{"disabled_all_cookie":false,"disabled_start_session_cookie":false,"disabled_advanced_form_data_cookie":false,"disabled_landing_page_cookie":false,"disabled_first_visit_cookie":false,"disabled_trafficsource_cookie":false,"disabled_utmTerms_cookie":false,"disabled_utmId_cookie":false},"tracking_analytics":{"TrafficSource":"direct","TrafficLanding":"\/ubicaciones\/","TrafficUtms":[],"TrafficUtmsId":[]},"automatic":{"enable_youtube":true,"enable_vimeo":true,"enable_video":true},"woo":{"enabled":false},"edd":{"enabled":false}};</script>
+<script src="/wp-content/plugins/pixelyoursite-pro/dist/scripts/public.js?ver=9.11.0.1" id="pys-js"></script>
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="alternate" type="application/json" href="/wp-json/wp/v2/pages/695">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.5.3">
+<link rel="shortlink" href="/?p=695">
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2Fubicaciones%2F">
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2Fubicaciones%2F#038;format=xml">
+
+<meta name="google-site-verification" content="b_VE6jNyxxU_CrGKox_4sS76aMRJVq7VJy9dyZpkoVE">	
+
+
+	<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5DNB3FH8');</script>
+<!-- End Google Tag Manager -->
+	
+	<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5DNB3FH8" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+		
+<meta name="generator" content="Elementor 3.18.3; features: e_dom_optimization, e_optimized_assets_loading, e_optimized_css_loading, e_font_icon_svg, additional_custom_breakpoints, block_editor_assets_optimize, e_image_loading_optimization; settings: css_print_method-external, google_font-enabled, font_display-auto">
+<link rel="icon" href="/wp-content/uploads/2023/11/Enmascarar-grupo-39-150x150.png" sizes="32x32">
+<link rel="icon" href="/wp-content/uploads/2023/11/Enmascarar-grupo-39.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/wp-content/uploads/2023/11/Enmascarar-grupo-39.png">
+<meta name="msapplication-TileImage" content="/wp-content/uploads/2023/11/Enmascarar-grupo-39.png">
+</head>
+<body class="page-template page-template-elementor_header_footer page page-id-695 e-lazyload elementor-default elementor-template-full-width elementor-kit-5 elementor-page elementor-page-695">
+
+
+<a class="skip-link screen-reader-text" href="#content">Ir al contenido</a>
+
+		<div data-elementor-type="header" data-elementor-id="645" class="elementor elementor-645 elementor-location-header" data-elementor-post-type="elementor_library">
+						<div data-dce-background-color="#FFFFFF" class="elementor-element elementor-element-78b7247 e-flex e-con-boxed e-con e-parent" data-id="78b7247" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;sticky&quot;:&quot;top&quot;,&quot;container_type&quot;:&quot;flex&quot;,&quot;content_width&quot;:&quot;boxed&quot;,&quot;sticky_on&quot;:[&quot;widescreen&quot;,&quot;desktop&quot;,&quot;laptop&quot;,&quot;tablet&quot;,&quot;mobile&quot;],&quot;sticky_offset&quot;:0,&quot;sticky_effects_offset&quot;:0}" data-core-v316-plus="true">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-a5935c9 e-con-full e-flex e-con e-child" data-id="a5935c9" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;container_type&quot;:&quot;flex&quot;}">
+				<div class="elementor-element elementor-element-327f567 elementor-hidden-widescreen elementor-hidden-desktop elementor-hidden-laptop elementor-widget elementor-widget-image" data-id="327f567" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.18.0 - 20-12-2023 */
+.elementor-widget-image{text-align:center}.elementor-widget-image a{display:inline-block}.elementor-widget-image a img[src$=".svg"]{width:48px}.elementor-widget-image img{vertical-align:middle;display:inline-block}</style>													<a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjYxMiIsInRvZ2dsZSI6ZmFsc2V9">
+							<img width="23" height="21" src="/wp-content/uploads/2023/11/menumobilenaraja.svg" class="attachment-full size-full wp-image-788" alt="">								</a>
+															</div>
+				</div>
+				<div class="elementor-element elementor-element-f558474 elementor-widget-mobile__width-initial elementor-widget elementor-widget-image" data-id="f558474" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+																<a href="/">
+							<img width="282" height="74" src="/wp-content/uploads/2024/01/Grupo-9360222.png" class="attachment-full size-full wp-image-1506" alt="">								</a>
+															</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-b152c36 e-con-full elementor-hidden-tablet elementor-hidden-mobile e-flex e-con e-child" data-id="b152c36" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;container_type&quot;:&quot;flex&quot;}">
+				<div class="elementor-element elementor-element-af6b49d elementor-nav-menu__align-right elementor-nav-menu--dropdown-none elementor-widget elementor-widget-nav-menu" data-id="af6b49d" data-element_type="widget" data-settings="{&quot;layout&quot;:&quot;horizontal&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;svg class=\&quot;e-font-icon-svg e-fas-caret-down\&quot; viewBox=\&quot;0 0 320 512\&quot; xmlns=\&quot;http:\/\/www.w3.org\/2000\/svg\&quot;&gt;&lt;path d=\&quot;M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z\&quot;&gt;&lt;\/path&gt;&lt;\/svg&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;}}" data-widget_type="nav-menu.default">
+				<div class="elementor-widget-container">
+			<link rel="stylesheet" href="/wp-content/uploads/elementor/css/custom-pro-widget-nav-menu.min.css?ver=1704318179">			<nav class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-text e--animation-none">
+				<ul id="menu-1-af6b49d" class="elementor-nav-menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-758"><a href="/" class="elementor-item">Inicio</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-759"><a href="/servicios/" class="elementor-item">Servicios</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-695 current_page_item menu-item-760"><a href="/ubicaciones/" aria-current="page" class="elementor-item elementor-item-active">Ubicaciones</a></li>
+</ul>			</nav>
+						<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
+				<ul id="menu-2-af6b49d" class="elementor-nav-menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-758"><a href="/" class="elementor-item" tabindex="-1">Inicio</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-759"><a href="/servicios/" class="elementor-item" tabindex="-1">Servicios</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-695 current_page_item menu-item-760"><a href="/ubicaciones/" aria-current="page" class="elementor-item elementor-item-active" tabindex="-1">Ubicaciones</a></li>
+</ul>			</nav>
+				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-e41675f e-con-full e-flex e-con e-child" data-id="e41675f" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;container_type&quot;:&quot;flex&quot;}">
+				<div class="elementor-element elementor-element-b339a1f elementor-align-right elementor-widget elementor-widget-button" data-id="b339a1f" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a class="elementor-button elementor-button-link elementor-size-sm" href="/contacto/">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-text">Contacto</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-17fab97 elementor-grid-2 elementor-hidden-tablet elementor-hidden-mobile elementor-shape-rounded e-grid-align-center elementor-widget elementor-widget-social-icons" data-id="17fab97" data-element_type="widget" data-widget_type="social-icons.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.18.0 - 20-12-2023 */
+.elementor-widget-social-icons.elementor-grid-0 .elementor-widget-container,.elementor-widget-social-icons.elementor-grid-mobile-0 .elementor-widget-container,.elementor-widget-social-icons.elementor-grid-tablet-0 .elementor-widget-container{line-height:1;font-size:0}.elementor-widget-social-icons:not(.elementor-grid-0):not(.elementor-grid-tablet-0):not(.elementor-grid-mobile-0) .elementor-grid{display:inline-grid}.elementor-widget-social-icons .elementor-grid{grid-column-gap:var(--grid-column-gap,5px);grid-row-gap:var(--grid-row-gap,5px);grid-template-columns:var(--grid-template-columns);justify-content:var(--justify-content,center);justify-items:var(--justify-content,center)}.elementor-icon.elementor-social-icon{font-size:var(--icon-size,25px);line-height:var(--icon-size,25px);width:calc(var(--icon-size, 25px) + 2 * var(--icon-padding, .5em));height:calc(var(--icon-size, 25px) + 2 * var(--icon-padding, .5em))}.elementor-social-icon{--e-social-icon-icon-color:#fff;display:inline-flex;background-color:#69727d;align-items:center;justify-content:center;text-align:center;cursor:pointer}.elementor-social-icon i{color:var(--e-social-icon-icon-color)}.elementor-social-icon svg{fill:var(--e-social-icon-icon-color)}.elementor-social-icon:last-child{margin:0}.elementor-social-icon:hover{opacity:.9;color:#fff}.elementor-social-icon-android{background-color:#a4c639}.elementor-social-icon-apple{background-color:#999}.elementor-social-icon-behance{background-color:#1769ff}.elementor-social-icon-bitbucket{background-color:#205081}.elementor-social-icon-codepen{background-color:#000}.elementor-social-icon-delicious{background-color:#39f}.elementor-social-icon-deviantart{background-color:#05cc47}.elementor-social-icon-digg{background-color:#005be2}.elementor-social-icon-dribbble{background-color:#ea4c89}.elementor-social-icon-elementor{background-color:#d30c5c}.elementor-social-icon-envelope{background-color:#ea4335}.elementor-social-icon-facebook,.elementor-social-icon-facebook-f{background-color:#3b5998}.elementor-social-icon-flickr{background-color:#0063dc}.elementor-social-icon-foursquare{background-color:#2d5be3}.elementor-social-icon-free-code-camp,.elementor-social-icon-freecodecamp{background-color:#006400}.elementor-social-icon-github{background-color:#333}.elementor-social-icon-gitlab{background-color:#e24329}.elementor-social-icon-globe{background-color:#69727d}.elementor-social-icon-google-plus,.elementor-social-icon-google-plus-g{background-color:#dd4b39}.elementor-social-icon-houzz{background-color:#7ac142}.elementor-social-icon-instagram{background-color:#262626}.elementor-social-icon-jsfiddle{background-color:#487aa2}.elementor-social-icon-link{background-color:#818a91}.elementor-social-icon-linkedin,.elementor-social-icon-linkedin-in{background-color:#0077b5}.elementor-social-icon-medium{background-color:#00ab6b}.elementor-social-icon-meetup{background-color:#ec1c40}.elementor-social-icon-mixcloud{background-color:#273a4b}.elementor-social-icon-odnoklassniki{background-color:#f4731c}.elementor-social-icon-pinterest{background-color:#bd081c}.elementor-social-icon-product-hunt{background-color:#da552f}.elementor-social-icon-reddit{background-color:#ff4500}.elementor-social-icon-rss{background-color:#f26522}.elementor-social-icon-shopping-cart{background-color:#4caf50}.elementor-social-icon-skype{background-color:#00aff0}.elementor-social-icon-slideshare{background-color:#0077b5}.elementor-social-icon-snapchat{background-color:#fffc00}.elementor-social-icon-soundcloud{background-color:#f80}.elementor-social-icon-spotify{background-color:#2ebd59}.elementor-social-icon-stack-overflow{background-color:#fe7a15}.elementor-social-icon-steam{background-color:#00adee}.elementor-social-icon-stumbleupon{background-color:#eb4924}.elementor-social-icon-telegram{background-color:#2ca5e0}.elementor-social-icon-thumb-tack{background-color:#1aa1d8}.elementor-social-icon-tripadvisor{background-color:#589442}.elementor-social-icon-tumblr{background-color:#35465c}.elementor-social-icon-twitch{background-color:#6441a5}.elementor-social-icon-twitter{background-color:#1da1f2}.elementor-social-icon-viber{background-color:#665cac}.elementor-social-icon-vimeo{background-color:#1ab7ea}.elementor-social-icon-vk{background-color:#45668e}.elementor-social-icon-weibo{background-color:#dd2430}.elementor-social-icon-weixin{background-color:#31a918}.elementor-social-icon-whatsapp{background-color:#25d366}.elementor-social-icon-wordpress{background-color:#21759b}.elementor-social-icon-xing{background-color:#026466}.elementor-social-icon-yelp{background-color:#af0606}.elementor-social-icon-youtube{background-color:#cd201f}.elementor-social-icon-500px{background-color:#0099e5}.elementor-shape-rounded .elementor-icon.elementor-social-icon{border-radius:10%}.elementor-shape-circle .elementor-icon.elementor-social-icon{border-radius:50%}</style>		<div class="elementor-social-icons-wrapper elementor-grid">
+							<span class="elementor-grid-item">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-facebook elementor-animation-grow elementor-repeater-item-a28e0a3" href="https://www.facebook.com/people/Easy-Punto/100092509685189/" target="_blank">
+						<span class="elementor-screen-only">Facebook</span>
+						<svg class="e-font-icon-svg e-fab-facebook" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg>					</a>
+				</span>
+							<span class="elementor-grid-item">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-animation-grow elementor-repeater-item-41be7ac" href="https://www.instagram.com/easypunto/?hl=es" target="_blank">
+						<span class="elementor-screen-only">Instagram</span>
+						<svg class="e-font-icon-svg e-fab-instagram" viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>					</a>
+				</span>
+					</div>
+				</div>
+				</div>
+				</div>
+					</div>
+				</div>
+						</div>
+				<div data-elementor-type="wp-page" data-elementor-id="695" class="elementor elementor-695" data-elementor-post-type="page">
+							<div data-dce-background-image-url="https://easypunto.fastandstatic.com/wp-content/uploads/2023/11/Enmascarar-grupo-36.png" class="elementor-element elementor-element-1a52341 e-flex e-con-boxed e-con e-parent" data-id="1a52341" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;container_type&quot;:&quot;flex&quot;,&quot;content_width&quot;:&quot;boxed&quot;}" data-e-bg-lazyload="" data-core-v316-plus="true">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-a4bd02e elementor-widget elementor-widget-heading" data-id="a4bd02e" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.18.0 - 20-12-2023 */
+.elementor-heading-title{padding:0;margin:0;line-height:1}.elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a{color:inherit;font-size:inherit;line-height:inherit}.elementor-widget-heading .elementor-heading-title.elementor-size-small{font-size:15px}.elementor-widget-heading .elementor-heading-title.elementor-size-medium{font-size:19px}.elementor-widget-heading .elementor-heading-title.elementor-size-large{font-size:29px}.elementor-widget-heading .elementor-heading-title.elementor-size-xl{font-size:39px}.elementor-widget-heading .elementor-heading-title.elementor-size-xxl{font-size:59px}</style>
+<h2 class="elementor-heading-title elementor-size-default">Ubicaciones</h2>		</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-0f4efb8 e-flex e-con-boxed e-con e-parent" data-id="0f4efb8" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;container_type&quot;:&quot;flex&quot;,&quot;content_width&quot;:&quot;boxed&quot;}" data-core-v316-plus="true">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-ce75106 e-con-full e-flex e-con e-child" data-id="ce75106" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;container_type&quot;:&quot;flex&quot;}">
+				<div class="elementor-element elementor-element-dea1456 elementor-widget elementor-widget-heading" data-id="dea1456" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Barranquilla</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-dcd2395 elementor-grid-4 elementor-grid-tablet-2 elementor-grid-mobile-1 elementor-widget elementor-widget-loop-grid" data-id="dcd2395" data-element_type="widget" data-settings="{&quot;template_id&quot;:&quot;691&quot;,&quot;columns&quot;:4,&quot;_skin&quot;:&quot;post&quot;,&quot;columns_tablet&quot;:&quot;2&quot;,&quot;columns_mobile&quot;:&quot;1&quot;,&quot;edit_handle_selector&quot;:&quot;[data-elementor-type=\&quot;loop-item\&quot;]&quot;,&quot;row_gap&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;row_gap_widescreen&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;row_gap_laptop&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;row_gap_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;row_gap_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}" data-widget_type="loop-grid.post">
+				<div class="elementor-widget-container">
+			<link rel="stylesheet" href="/wp-content/plugins/elementor-pro/assets/css/widget-loop-builder.min.css">		<div class="elementor-loop-container elementor-grid">
+		<style id="loop-691">.elementor-691 .elementor-element.elementor-element-b8a5116{--display:flex;--flex-direction:row;--container-widget-width:initial;--container-widget-height:100%;--container-widget-flex-grow:1;--container-widget-align-self:stretch;--gap:0px 0px;--background-transition:0.3s;border-style:solid;--border-style:solid;border-width:1px 1px 1px 1px;--border-block-start-width:1px;--border-inline-end-width:1px;--border-block-end-width:1px;--border-inline-start-width:1px;border-color:#EDEDED;--border-color:#EDEDED;--border-radius:25px 25px 25px 25px;--margin-block-start:0px;--margin-block-end:0px;--margin-inline-start:0px;--margin-inline-end:0px;--padding-block-start:0px;--padding-block-end:0px;--padding-inline-start:0px;--padding-inline-end:0px;}.elementor-691 .elementor-element.elementor-element-b8a5116:not(.elementor-motion-effects-element-type-background), .elementor-691 .elementor-element.elementor-element-b8a5116 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-color:#F8F8F8;}.elementor-691 .elementor-element.elementor-element-b8a5116, .elementor-691 .elementor-element.elementor-element-b8a5116::before{--border-transition:0.3s;}.elementor-691 .elementor-element.elementor-element-47953b2{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--justify-content:center;--background-transition:0.3s;}.elementor-691 .elementor-element.elementor-element-91c3d6d{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--gap:10px 10px;--background-transition:0.3s;}.elementor-691 .elementor-element.elementor-element-46156cf .elementor-heading-title{color:#636363;font-family:"Rubik", Sans-serif;font-size:16px;font-weight:600;}.elementor-691 .elementor-element.elementor-element-254d070 .elementor-heading-title{color:#636363;font-family:"Rubik", Sans-serif;font-size:16px;font-weight:400;}.elementor-691 .elementor-element.elementor-element-bd6f63f .elementor-heading-title{color:#636363;font-family:"Rubik", Sans-serif;font-size:16px;font-weight:400;}@media(min-width:768px){.elementor-691 .elementor-element.elementor-element-47953b2{--width:25%;}.elementor-691 .elementor-element.elementor-element-91c3d6d{--width:75%;}}@media(max-width:767px){.elementor-691 .elementor-element.elementor-element-b8a5116{--flex-wrap:nowrap;}.elementor-691 .elementor-element.elementor-element-47953b2{--width:20%;}}</style>		<div data-elementor-type="loop-item" data-elementor-id="691" class="elementor elementor-691 e-loop-item e-loop-item-1790 post-1790 ubicacion type-ubicacion status-publish hentry" data-elementor-post-type="elementor_library" data-custom-edit-handle="1">
+						<a data-dce-background-color="#F8F8F8" class="elementor-element elementor-element-b8a5116 e-con-full e-flex e-con e-parent" data-id="b8a5116" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;content_width&quot;:&quot;full&quot;,&quot;container_type&quot;:&quot;flex&quot;}" data-core-v316-plus="true" href="https://maps.app.goo.gl/2SYsREfJj6YV7JwG7" target="_blank">
+		<div class="elementor-element elementor-element-47953b2 e-con-full e-flex e-con e-child" data-id="47953b2" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;container_type&quot;:&quot;flex&quot;}">
+				<div class="elementor-element elementor-element-9e62e04 elementor-widget elementor-widget-image" data-id="9e62e04" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img decoding="async" width="22" height="39" src="/wp-content/uploads/2023/11/Grupo-14268.svg" class="attachment-large size-large wp-image-692" alt="">															</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-91c3d6d e-con-full e-flex e-con e-child" data-id="91c3d6d" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;container_type&quot;:&quot;flex&quot;}">
+				<div class="elementor-element elementor-element-46156cf elementor-widget elementor-widget-heading" data-id="46156cf" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Carrera 53 # 106- 280</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-254d070 elementor-widget elementor-widget-heading" data-id="254d070" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Barrio: Sabanilla Montecarmelo</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-bd6f63f elementor-widget elementor-widget-heading" data-id="bd6f63f" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Teléfono:  3138874607</h2>		</div>
+				</div>
+				</div>
+				</a>
+						</div>
+				<div data-elementor-type="loop-item" data-elementor-id="691" class="elementor elementor-691 e-loop-item e-loop-item-1789 post-1789 ubicacion type-ubicacion status-publish hentry" data-elementor-post-type="elementor_library" data-custom-edit-handle="1">
+						<a data-dce-background-color="#F8F8F8" class="elementor-element elementor-element-b8a5116 e-con-full e-flex e-con e-parent" data-id="b8a5116" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;content_width&quot;:&quot;full&quot;,&quot;container_type&quot;:&quot;flex&quot;}" data-core-v316-plus="true" href="https://maps.app.goo.gl/VnnqGZZscitqNUeQ9" target="_blank">
+		<div class="elementor-element elementor-element-47953b2 e-con-full e-flex e-con e-child" data-id="47953b2" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;container_type&quot;:&quot;flex&quot;}">
+				<div class="elementor-element elementor-element-9e62e04 elementor-widget elementor-widget-image" data-id="9e62e04" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img decoding="async" width="22" height="39" src="/wp-content/uploads/2023/11/Grupo-14268.svg" class="attachment-large size-large wp-image-692" alt="">															</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-91c3d6d e-con-full e-flex e-con e-child" data-id="91c3d6d" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;container_type&quot;:&quot;flex&quot;}">
+				<div class="elementor-element elementor-element-46156cf elementor-widget elementor-widget-heading" data-id="46156cf" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Via 40 #69-111</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-254d070 elementor-widget elementor-widget-heading" data-id="254d070" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Barrio: San Francisco</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-bd6f63f elementor-widget elementor-widget-heading" data-id="bd6f63f" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Teléfono:  3138874607</h2>		</div>
+				</div>
+				</div>
+				</a>
+						</div>
+				<div data-elementor-type="loop-item" data-elementor-id="691" class="elementor elementor-691 e-loop-item e-loop-item-1788 post-1788 ubicacion type-ubicacion status-publish hentry" data-elementor-post-type="elementor_library" data-custom-edit-handle="1">
+						<a data-dce-background-color="#F8F8F8" class="elementor-element elementor-element-b8a5116 e-con-full e-flex e-con e-parent" data-id="b8a5116" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;content_width&quot;:&quot;full&quot;,&quot;container_type&quot;:&quot;flex&quot;}" data-core-v316-plus="true" href="https://maps.app.goo.gl/GpwVBMuTsnMafMoA6" target="_blank">
+		<div class="elementor-element elementor-element-47953b2 e-con-full e-flex e-con e-child" data-id="47953b2" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;container_type&quot;:&quot;flex&quot;}">
+				<div class="elementor-element elementor-element-9e62e04 elementor-widget elementor-widget-image" data-id="9e62e04" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img decoding="async" width="22" height="39" src="/wp-content/uploads/2023/11/Grupo-14268.svg" class="attachment-large size-large wp-image-692" alt="">															</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-91c3d6d e-con-full e-flex e-con e-child" data-id="91c3d6d" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;container_type&quot;:&quot;flex&quot;}">
+				<div class="elementor-element elementor-element-46156cf elementor-widget elementor-widget-heading" data-id="46156cf" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Carrera 57 No 99a-65</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-254d070 elementor-widget elementor-widget-heading" data-id="254d070" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Barrio: Riomar</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-bd6f63f elementor-widget elementor-widget-heading" data-id="bd6f63f" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Teléfono:  3138874607</h2>		</div>
+				</div>
+				</div>
+				</a>
+						</div>
+				<div data-elementor-type="loop-item" data-elementor-id="691" class="elementor elementor-691 e-loop-item e-loop-item-725 post-725 ubicacion type-ubicacion status-publish hentry" data-elementor-post-type="elementor_library" data-custom-edit-handle="1">
+						<a data-dce-background-color="#F8F8F8" class="elementor-element elementor-element-b8a5116 e-con-full e-flex e-con e-parent" data-id="b8a5116" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;content_width&quot;:&quot;full&quot;,&quot;container_type&quot;:&quot;flex&quot;}" data-core-v316-plus="true" href="https://maps.app.goo.gl/CKVJ1PrKzkjnagWv6" target="_blank">
+		<div class="elementor-element elementor-element-47953b2 e-con-full e-flex e-con e-child" data-id="47953b2" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;container_type&quot;:&quot;flex&quot;}">
+				<div class="elementor-element elementor-element-9e62e04 elementor-widget elementor-widget-image" data-id="9e62e04" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img decoding="async" width="22" height="39" src="/wp-content/uploads/2023/11/Grupo-14268.svg" class="attachment-large size-large wp-image-692" alt="">															</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-91c3d6d e-con-full e-flex e-con e-child" data-id="91c3d6d" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;container_type&quot;:&quot;flex&quot;}">
+				<div class="elementor-element elementor-element-46156cf elementor-widget elementor-widget-heading" data-id="46156cf" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">CRA 46 No 82-54</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-254d070 elementor-widget elementor-widget-heading" data-id="254d070" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Barrio: El Porvenir</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-bd6f63f elementor-widget elementor-widget-heading" data-id="bd6f63f" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Teléfono:  313 887 4607</h2>		</div>
+				</div>
+				</div>
+				</a>
+						</div>
+				<div data-elementor-type="loop-item" data-elementor-id="691" class="elementor elementor-691 e-loop-item e-loop-item-724 post-724 ubicacion type-ubicacion status-publish hentry" data-elementor-post-type="elementor_library" data-custom-edit-handle="1">
+						<a data-dce-background-color="#F8F8F8" class="elementor-element elementor-element-b8a5116 e-con-full e-flex e-con e-parent" data-id="b8a5116" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;content_width&quot;:&quot;full&quot;,&quot;container_type&quot;:&quot;flex&quot;}" data-core-v316-plus="true" href="https://maps.app.goo.gl/o9oRARuyYhYBBtPu9" target="_blank">
+		<div class="elementor-element elementor-element-47953b2 e-con-full e-flex e-con e-child" data-id="47953b2" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;container_type&quot;:&quot;flex&quot;}">
+				<div class="elementor-element elementor-element-9e62e04 elementor-widget elementor-widget-image" data-id="9e62e04" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img decoding="async" width="22" height="39" src="/wp-content/uploads/2023/11/Grupo-14268.svg" class="attachment-large size-large wp-image-692" alt="">															</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-91c3d6d e-con-full e-flex e-con e-child" data-id="91c3d6d" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;container_type&quot;:&quot;flex&quot;}">
+				<div class="elementor-element elementor-element-46156cf elementor-widget elementor-widget-heading" data-id="46156cf" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Calle 93 No 45 B -90</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-254d070 elementor-widget elementor-widget-heading" data-id="254d070" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Barrio: El Poblado</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-bd6f63f elementor-widget elementor-widget-heading" data-id="bd6f63f" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Teléfono:  313 887 4607</h2>		</div>
+				</div>
+				</div>
+				</a>
+						</div>
+				<div data-elementor-type="loop-item" data-elementor-id="691" class="elementor elementor-691 e-loop-item e-loop-item-723 post-723 ubicacion type-ubicacion status-publish hentry" data-elementor-post-type="elementor_library" data-custom-edit-handle="1">
+						<a data-dce-background-color="#F8F8F8" class="elementor-element elementor-element-b8a5116 e-con-full e-flex e-con e-parent" data-id="b8a5116" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;content_width&quot;:&quot;full&quot;,&quot;container_type&quot;:&quot;flex&quot;}" data-core-v316-plus="true" href="https://maps.app.goo.gl/5ej9j3VX1uzzKjtW9" target="_blank">
+		<div class="elementor-element elementor-element-47953b2 e-con-full e-flex e-con e-child" data-id="47953b2" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;container_type&quot;:&quot;flex&quot;}">
+				<div class="elementor-element elementor-element-9e62e04 elementor-widget elementor-widget-image" data-id="9e62e04" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img decoding="async" width="22" height="39" src="/wp-content/uploads/2023/11/Grupo-14268.svg" class="attachment-large size-large wp-image-692" alt="">															</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-91c3d6d e-con-full e-flex e-con e-child" data-id="91c3d6d" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;container_type&quot;:&quot;flex&quot;}">
+				<div class="elementor-element elementor-element-46156cf elementor-widget elementor-widget-heading" data-id="46156cf" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Calle 36 # 39 &#8211; 30</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-254d070 elementor-widget elementor-widget-heading" data-id="254d070" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Barrio: Bolivar</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-bd6f63f elementor-widget elementor-widget-heading" data-id="bd6f63f" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Teléfono:  313 887 4607</h2>		</div>
+				</div>
+				</div>
+				</a>
+						</div>
+				<div data-elementor-type="loop-item" data-elementor-id="691" class="elementor elementor-691 e-loop-item e-loop-item-721 post-721 ubicacion type-ubicacion status-publish hentry" data-elementor-post-type="elementor_library" data-custom-edit-handle="1">
+						<a data-dce-background-color="#F8F8F8" class="elementor-element elementor-element-b8a5116 e-con-full e-flex e-con e-parent" data-id="b8a5116" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;content_width&quot;:&quot;full&quot;,&quot;container_type&quot;:&quot;flex&quot;}" data-core-v316-plus="true" href="https://maps.app.goo.gl/Te7FwXujR1y8eZ7k9" target="_blank">
+		<div class="elementor-element elementor-element-47953b2 e-con-full e-flex e-con e-child" data-id="47953b2" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;container_type&quot;:&quot;flex&quot;}">
+				<div class="elementor-element elementor-element-9e62e04 elementor-widget elementor-widget-image" data-id="9e62e04" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img decoding="async" width="22" height="39" src="/wp-content/uploads/2023/11/Grupo-14268.svg" class="attachment-large size-large wp-image-692" alt="">															</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-91c3d6d e-con-full e-flex e-con e-child" data-id="91c3d6d" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;container_type&quot;:&quot;flex&quot;}">
+				<div class="elementor-element elementor-element-46156cf elementor-widget elementor-widget-heading" data-id="46156cf" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Carrera 47 # 84 &#8211; 72</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-254d070 elementor-widget elementor-widget-heading" data-id="254d070" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Barrio: San Vicente</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-bd6f63f elementor-widget elementor-widget-heading" data-id="bd6f63f" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Teléfono:  313 887 4607</h2>		</div>
+				</div>
+				</div>
+				</a>
+						</div>
+				<div data-elementor-type="loop-item" data-elementor-id="691" class="elementor elementor-691 e-loop-item e-loop-item-720 post-720 ubicacion type-ubicacion status-publish hentry" data-elementor-post-type="elementor_library" data-custom-edit-handle="1">
+						<a data-dce-background-color="#F8F8F8" class="elementor-element elementor-element-b8a5116 e-con-full e-flex e-con e-parent" data-id="b8a5116" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;content_width&quot;:&quot;full&quot;,&quot;container_type&quot;:&quot;flex&quot;}" data-core-v316-plus="true" href="https://maps.app.goo.gl/4hQLBfFJMNciPowQ6" target="_blank">
+		<div class="elementor-element elementor-element-47953b2 e-con-full e-flex e-con e-child" data-id="47953b2" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;container_type&quot;:&quot;flex&quot;}">
+				<div class="elementor-element elementor-element-9e62e04 elementor-widget elementor-widget-image" data-id="9e62e04" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img decoding="async" width="22" height="39" src="/wp-content/uploads/2023/11/Grupo-14268.svg" class="attachment-large size-large wp-image-692" alt="">															</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-91c3d6d e-con-full e-flex e-con e-child" data-id="91c3d6d" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;container_type&quot;:&quot;flex&quot;}">
+				<div class="elementor-element elementor-element-46156cf elementor-widget elementor-widget-heading" data-id="46156cf" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Carrera 46 # 79 &#8211; 215</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-254d070 elementor-widget elementor-widget-heading" data-id="254d070" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Barrio: El Porvenir</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-bd6f63f elementor-widget elementor-widget-heading" data-id="bd6f63f" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Teléfono:  313 887 4607</h2>		</div>
+				</div>
+				</div>
+				</a>
+						</div>
+				<div data-elementor-type="loop-item" data-elementor-id="691" class="elementor elementor-691 e-loop-item e-loop-item-719 post-719 ubicacion type-ubicacion status-publish hentry" data-elementor-post-type="elementor_library" data-custom-edit-handle="1">
+						<a data-dce-background-color="#F8F8F8" class="elementor-element elementor-element-b8a5116 e-con-full e-flex e-con e-parent" data-id="b8a5116" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;content_width&quot;:&quot;full&quot;,&quot;container_type&quot;:&quot;flex&quot;}" data-core-v316-plus="true" href="https://maps.app.goo.gl/8xKPAmtgEWHBLJUS7" target="_blank">
+		<div class="elementor-element elementor-element-47953b2 e-con-full e-flex e-con e-child" data-id="47953b2" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;container_type&quot;:&quot;flex&quot;}">
+				<div class="elementor-element elementor-element-9e62e04 elementor-widget elementor-widget-image" data-id="9e62e04" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img decoding="async" width="22" height="39" src="/wp-content/uploads/2023/11/Grupo-14268.svg" class="attachment-large size-large wp-image-692" alt="">															</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-91c3d6d e-con-full e-flex e-con e-child" data-id="91c3d6d" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;container_type&quot;:&quot;flex&quot;}">
+				<div class="elementor-element elementor-element-46156cf elementor-widget elementor-widget-heading" data-id="46156cf" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Carrera 49C # 80 &#8211; 145</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-254d070 elementor-widget elementor-widget-heading" data-id="254d070" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Barrio: Nuevo Horizonte</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-bd6f63f elementor-widget elementor-widget-heading" data-id="bd6f63f" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Teléfono:  313 887 4607</h2>		</div>
+				</div>
+				</div>
+				</a>
+						</div>
+				<div data-elementor-type="loop-item" data-elementor-id="691" class="elementor elementor-691 e-loop-item e-loop-item-711 post-711 ubicacion type-ubicacion status-publish hentry" data-elementor-post-type="elementor_library" data-custom-edit-handle="1">
+						<a data-dce-background-color="#F8F8F8" class="elementor-element elementor-element-b8a5116 e-con-full e-flex e-con e-parent" data-id="b8a5116" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;content_width&quot;:&quot;full&quot;,&quot;container_type&quot;:&quot;flex&quot;}" data-core-v316-plus="true" href="https://maps.app.goo.gl/25rvURAzKhyza6mz8" target="_blank">
+		<div class="elementor-element elementor-element-47953b2 e-con-full e-flex e-con e-child" data-id="47953b2" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;container_type&quot;:&quot;flex&quot;}">
+				<div class="elementor-element elementor-element-9e62e04 elementor-widget elementor-widget-image" data-id="9e62e04" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img decoding="async" width="22" height="39" src="/wp-content/uploads/2023/11/Grupo-14268.svg" class="attachment-large size-large wp-image-692" alt="">															</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-91c3d6d e-con-full e-flex e-con e-child" data-id="91c3d6d" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;container_type&quot;:&quot;flex&quot;}">
+				<div class="elementor-element elementor-element-46156cf elementor-

@@ -1,4 +1,4 @@
-/*! elementor - v3.18.0 - 20-12-2023 */
+/*! elementor - v3.26.0 - 19-12-2024 */
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
@@ -340,6 +340,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   Component: () => (/* reexport safe */ _react__WEBPACK_IMPORTED_MODULE_1__.Component),
 /* harmony export */   Fragment: () => (/* reexport safe */ _react__WEBPACK_IMPORTED_MODULE_1__.Fragment),
 /* harmony export */   Platform: () => (/* reexport safe */ _platform__WEBPACK_IMPORTED_MODULE_4__["default"]),
+/* harmony export */   PureComponent: () => (/* reexport safe */ _react__WEBPACK_IMPORTED_MODULE_1__.PureComponent),
 /* harmony export */   RawHTML: () => (/* reexport safe */ _raw_html__WEBPACK_IMPORTED_MODULE_6__["default"]),
 /* harmony export */   StrictMode: () => (/* reexport safe */ _react__WEBPACK_IMPORTED_MODULE_1__.StrictMode),
 /* harmony export */   Suspense: () => (/* reexport safe */ _react__WEBPACK_IMPORTED_MODULE_1__.Suspense),
@@ -429,7 +430,7 @@ const Platform = {
  *
  * This is the same concept as the React Native implementation.
  *
- * @see https://facebook.github.io/react-native/docs/platform-specific-code#platform-module
+ * @see https://reactnative.dev/docs/platform-specific-code#platform-module
  *
  * Here is an example of how to use the select method:
  * @example
@@ -612,6 +613,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   Children: () => (/* reexport safe */ react__WEBPACK_IMPORTED_MODULE_0__.Children),
 /* harmony export */   Component: () => (/* reexport safe */ react__WEBPACK_IMPORTED_MODULE_0__.Component),
 /* harmony export */   Fragment: () => (/* reexport safe */ react__WEBPACK_IMPORTED_MODULE_0__.Fragment),
+/* harmony export */   PureComponent: () => (/* reexport safe */ react__WEBPACK_IMPORTED_MODULE_0__.PureComponent),
 /* harmony export */   StrictMode: () => (/* reexport safe */ react__WEBPACK_IMPORTED_MODULE_0__.StrictMode),
 /* harmony export */   Suspense: () => (/* reexport safe */ react__WEBPACK_IMPORTED_MODULE_0__.Suspense),
 /* harmony export */   cloneElement: () => (/* reexport safe */ react__WEBPACK_IMPORTED_MODULE_0__.cloneElement),
@@ -850,6 +852,11 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * @see https://reactjs.org/docs/react-api.html#reactsuspense
+ */
+
+
+/**
+ * @see https://reactjs.org/docs/react-api.html#reactpurecomponent
  */
 
 
@@ -1303,8 +1310,8 @@ function renderNativeComponent(type, props, context, legacyContext = {}) {
  * @return {string} Serialized element
  */
 function renderComponent(Component, props, context, legacyContext = {}) {
-  const instance = new /** @type {import('react').ComponentClass} */
-  Component(props, legacyContext);
+  const instance = new ( /** @type {import('react').ComponentClass} */
+  Component)(props, legacyContext);
   if (typeof
   // Ignore reason: Current prettier reformats parens and mangles type assertion
   // prettier-ignore
@@ -1640,50 +1647,51 @@ Object.defineProperty(exports, "__esModule", ({
 exports.saveDisabledWidgets = exports.markNoticeViewed = exports.getUsageWidgets = exports.getAdminAppData = void 0;
 var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ "../node_modules/@babel/runtime/regenerator/index.js"));
 var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "../node_modules/@babel/runtime/helpers/asyncToGenerator.js"));
-var saveDisabledWidgets = /*#__PURE__*/function () {
-  var _ref = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee(widgetsDisabled) {
-    var response, data;
+var saveDisabledWidgets = exports.saveDisabledWidgets = /*#__PURE__*/function () {
+  var _ref = (0, _asyncToGenerator2.default)(/*#__PURE__*/_regenerator.default.mark(function _callee(widgetsDisabled) {
+    var elementsRestriction,
+      bodyData,
+      _args = arguments;
     return _regenerator.default.wrap(function _callee$(_context) {
       while (1) switch (_context.prev = _context.next) {
         case 0:
-          _context.prev = 0;
-          _context.next = 3;
+          elementsRestriction = _args.length > 1 && _args[1] !== undefined ? _args[1] : {};
+          _context.prev = 1;
+          bodyData = {
+            action: 'elementor_element_manager_save_disabled_elements',
+            nonce: eElementManagerConfig.nonce,
+            widgets: JSON.stringify(widgetsDisabled)
+          };
+          if (null !== elementsRestriction) {
+            bodyData.elements_restriction = JSON.stringify(elementsRestriction);
+          }
+          _context.next = 6;
           return fetch(eElementManagerConfig.ajaxurl, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/x-www-form-urlencoded'
             },
-            body: new URLSearchParams({
-              action: 'elementor_element_manager_save_disabled_elements',
-              nonce: eElementManagerConfig.nonce,
-              widgets: JSON.stringify(widgetsDisabled)
-            })
+            body: new URLSearchParams(bodyData)
           });
-        case 3:
-          response = _context.sent;
-          _context.next = 6;
-          return response.json();
         case 6:
-          data = _context.sent;
-          _context.next = 12;
+          _context.next = 11;
           break;
-        case 9:
-          _context.prev = 9;
-          _context.t0 = _context["catch"](0);
-          console.error(_context.t0);
-        case 12:
+        case 8:
+          _context.prev = 8;
+          _context.t0 = _context["catch"](1);
+          console.error(_context.t0); // eslint-disable-line no-console
+        case 11:
         case "end":
           return _context.stop();
       }
-    }, _callee, null, [[0, 9]]);
+    }, _callee, null, [[1, 8]]);
   }));
   return function saveDisabledWidgets(_x) {
     return _ref.apply(this, arguments);
   };
 }();
-exports.saveDisabledWidgets = saveDisabledWidgets;
-var getAdminAppData = /*#__PURE__*/function () {
-  var _ref2 = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee2() {
+var getAdminAppData = exports.getAdminAppData = /*#__PURE__*/function () {
+  var _ref2 = (0, _asyncToGenerator2.default)(/*#__PURE__*/_regenerator.default.mark(function _callee2() {
     var response, data;
     return _regenerator.default.wrap(function _callee2$(_context2) {
       while (1) switch (_context2.prev = _context2.next) {
@@ -1717,7 +1725,7 @@ var getAdminAppData = /*#__PURE__*/function () {
         case 11:
           _context2.prev = 11;
           _context2.t0 = _context2["catch"](0);
-          console.error(_context2.t0);
+          console.error(_context2.t0); // eslint-disable-line no-console
         case 14:
         case "end":
           return _context2.stop();
@@ -1728,9 +1736,8 @@ var getAdminAppData = /*#__PURE__*/function () {
     return _ref2.apply(this, arguments);
   };
 }();
-exports.getAdminAppData = getAdminAppData;
-var getUsageWidgets = /*#__PURE__*/function () {
-  var _ref3 = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee3() {
+var getUsageWidgets = exports.getUsageWidgets = /*#__PURE__*/function () {
+  var _ref3 = (0, _asyncToGenerator2.default)(/*#__PURE__*/_regenerator.default.mark(function _callee3() {
     var response, data;
     return _regenerator.default.wrap(function _callee3$(_context3) {
       while (1) switch (_context3.prev = _context3.next) {
@@ -1764,7 +1771,7 @@ var getUsageWidgets = /*#__PURE__*/function () {
         case 11:
           _context3.prev = 11;
           _context3.t0 = _context3["catch"](0);
-          console.error(_context3.t0);
+          console.error(_context3.t0); // eslint-disable-line no-console
         case 14:
         case "end":
           return _context3.stop();
@@ -1775,9 +1782,8 @@ var getUsageWidgets = /*#__PURE__*/function () {
     return _ref3.apply(this, arguments);
   };
 }();
-exports.getUsageWidgets = getUsageWidgets;
-var markNoticeViewed = /*#__PURE__*/function () {
-  var _ref4 = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee4(noticeId) {
+var markNoticeViewed = exports.markNoticeViewed = /*#__PURE__*/function () {
+  var _ref4 = (0, _asyncToGenerator2.default)(/*#__PURE__*/_regenerator.default.mark(function _callee4(noticeId) {
     var response, data;
     return _regenerator.default.wrap(function _callee4$(_context4) {
       while (1) switch (_context4.prev = _context4.next) {
@@ -1811,7 +1817,7 @@ var markNoticeViewed = /*#__PURE__*/function () {
         case 11:
           _context4.prev = 11;
           _context4.t0 = _context4["catch"](0);
-          console.error(_context4.t0);
+          console.error(_context4.t0); // eslint-disable-line no-console
         case 14:
         case "end":
           return _context4.stop();
@@ -1822,7 +1828,6 @@ var markNoticeViewed = /*#__PURE__*/function () {
     return _ref4.apply(this, arguments);
   };
 }();
-exports.markNoticeViewed = markNoticeViewed;
 
 /***/ }),
 
@@ -1849,10 +1854,12 @@ var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runt
 var _element = __webpack_require__(/*! @wordpress/element */ "../node_modules/@wordpress/element/build-module/index.js");
 var _components = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
 var _i18n = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+var _upgradeButton = __webpack_require__(/*! ./upgrade-button */ "../modules/element-manager/assets/js/upgrade-button.js");
 var _api = __webpack_require__(/*! ./api */ "../modules/element-manager/assets/js/api.js");
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; } /* eslint-disable react/prop-types */
-var App = function App() {
+var _rolePermissions = __webpack_require__(/*! ./role-permissions */ "../modules/element-manager/assets/js/role-permissions.js");
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { (0, _defineProperty2.default)(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; } /* eslint-disable react/prop-types */
+var App = exports.App = function App() {
   var _useState = (0, _element.useState)(true),
     _useState2 = (0, _slicedToArray2.default)(_useState, 2),
     isLoading = _useState2[0],
@@ -1873,48 +1880,66 @@ var App = function App() {
     _useState10 = (0, _slicedToArray2.default)(_useState9, 2),
     plugins = _useState10[0],
     setPlugins = _useState10[1];
-  var _useState11 = (0, _element.useState)({
+  var _useState11 = (0, _element.useState)([]),
+    _useState12 = (0, _slicedToArray2.default)(_useState11, 2),
+    roles = _useState12[0],
+    setRoles = _useState12[1];
+  var _useState13 = (0, _element.useState)({
       isLoading: false,
       data: null
     }),
-    _useState12 = (0, _slicedToArray2.default)(_useState11, 2),
-    usageWidgets = _useState12[0],
-    setUsageWidgets = _useState12[1];
-  var _useState13 = (0, _element.useState)([]),
     _useState14 = (0, _slicedToArray2.default)(_useState13, 2),
-    widgetsDisabled = _useState14[0],
-    setWidgetsDisabled = _useState14[1];
-  var _useState15 = (0, _element.useState)('widget'),
+    usageWidgets = _useState14[0],
+    setUsageWidgets = _useState14[1];
+  var _useState15 = (0, _element.useState)([]),
     _useState16 = (0, _slicedToArray2.default)(_useState15, 2),
-    sortingColumn = _useState16[0],
-    setSortingColumn = _useState16[1];
-  var _useState17 = (0, _element.useState)('asc'),
+    widgetsDisabled = _useState16[0],
+    setWidgetsDisabled = _useState16[1];
+  var _useState17 = (0, _element.useState)('widget'),
     _useState18 = (0, _slicedToArray2.default)(_useState17, 2),
-    sortingDirection = _useState18[0],
-    setSortingDirection = _useState18[1];
-  var _useState19 = (0, _element.useState)(''),
+    sortingColumn = _useState18[0],
+    setSortingColumn = _useState18[1];
+  var _useState19 = (0, _element.useState)('asc'),
     _useState20 = (0, _slicedToArray2.default)(_useState19, 2),
-    filterByPlugin = _useState20[0],
-    setFilterByPlugin = _useState20[1];
-  var _useState21 = (0, _element.useState)({
+    sortingDirection = _useState20[0],
+    setSortingDirection = _useState20[1];
+  var _useState21 = (0, _element.useState)(''),
+    _useState22 = (0, _slicedToArray2.default)(_useState21, 2),
+    filterByPlugin = _useState22[0],
+    setFilterByPlugin = _useState22[1];
+  var _useState23 = (0, _element.useState)('all'),
+    _useState24 = (0, _slicedToArray2.default)(_useState23, 2),
+    filterByStatus = _useState24[0],
+    setFilterByStatus = _useState24[1];
+  var _useState25 = (0, _element.useState)({
       isSaving: false,
       isUnsavedChanges: false
     }),
-    _useState22 = (0, _slicedToArray2.default)(_useState21, 2),
-    changeProgress = _useState22[0],
-    setChangeProgress = _useState22[1];
-  var _useState23 = (0, _element.useState)(false),
-    _useState24 = (0, _slicedToArray2.default)(_useState23, 2),
-    isConfirmDialogOpen = _useState24[0],
-    setIsConfirmDialogOpen = _useState24[1];
-  var _useState25 = (0, _element.useState)(false),
     _useState26 = (0, _slicedToArray2.default)(_useState25, 2),
-    isSnackbarOpen = _useState26[0],
-    setIsSnackbarOpen = _useState26[1];
-  var _useState27 = (0, _element.useState)(null),
+    changeProgress = _useState26[0],
+    setChangeProgress = _useState26[1];
+  var _useState27 = (0, _element.useState)(false),
     _useState28 = (0, _slicedToArray2.default)(_useState27, 2),
-    noticeData = _useState28[0],
-    setNoticeData = _useState28[1];
+    isConfirmDialogOpen = _useState28[0],
+    setIsConfirmDialogOpen = _useState28[1];
+  var _useState29 = (0, _element.useState)(false),
+    _useState30 = (0, _slicedToArray2.default)(_useState29, 2),
+    isSnackbarOpen = _useState30[0],
+    setIsSnackbarOpen = _useState30[1];
+  var _useState31 = (0, _element.useState)(null),
+    _useState32 = (0, _slicedToArray2.default)(_useState31, 2),
+    noticeData = _useState32[0],
+    setNoticeData = _useState32[1];
+  var _useState33 = (0, _element.useState)(null),
+    _useState34 = (0, _slicedToArray2.default)(_useState33, 2),
+    widgetsRoleRestrictions = _useState34[0],
+    setWidgetsRoleRestrictions = _useState34[1];
+  var _useState35 = (0, _element.useState)([]),
+    _useState36 = (0, _slicedToArray2.default)(_useState35, 2),
+    promotionData = _useState36[0],
+    setPromotionData = _useState36[1];
+  var managerPermissions = promotionData.manager_permissions,
+    elementManager = promotionData.element_manager;
   var getWidgetUsage = function getWidgetUsage(widgetName) {
     if (!usageWidgets.data || !usageWidgets.data.hasOwnProperty(widgetName)) {
       return 0;
@@ -1928,6 +1953,14 @@ var App = function App() {
     if ('' !== filterByPlugin) {
       filteredWidgets = filteredWidgets.filter(function (widget) {
         return widget.plugin.toLowerCase() === filterByPlugin.toLowerCase();
+      });
+    }
+    if ('all' !== filterByStatus) {
+      filteredWidgets = filteredWidgets.filter(function (widget) {
+        if ('active' === filterByStatus) {
+          return !widgetsDisabled.includes(widget.name);
+        }
+        return widgetsDisabled.includes(widget.name);
       });
     }
     filteredWidgets.sort(function (a, b) {
@@ -1950,7 +1983,7 @@ var App = function App() {
       return aValue > bValue ? -1 : 1;
     });
     return filteredWidgets;
-  }, [widgets, searchKeyword, sortingColumn, sortingDirection, filterByPlugin, usageWidgets]);
+  }, [widgets, searchKeyword, sortingColumn, sortingDirection, filterByPlugin, usageWidgets, filterByStatus, widgetsDisabled]);
   var getSortingIndicatorClasses = function getSortingIndicatorClasses(column) {
     if (sortingColumn !== column) {
       return '';
@@ -1973,7 +2006,7 @@ var App = function App() {
     }
   };
   var onSaveClicked = /*#__PURE__*/function () {
-    var _ref = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
+    var _ref = (0, _asyncToGenerator2.default)(/*#__PURE__*/_regenerator.default.mark(function _callee() {
       return _regenerator.default.wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
           case 0:
@@ -1982,7 +2015,7 @@ var App = function App() {
               isSaving: true
             }));
             _context.next = 4;
-            return (0, _api.saveDisabledWidgets)(widgetsDisabled);
+            return (0, _api.saveDisabledWidgets)(widgetsDisabled, widgetsRoleRestrictions);
           case 4:
             setChangeProgress(_objectSpread(_objectSpread({}, changeProgress), {}, {
               isSaving: false,
@@ -2011,7 +2044,7 @@ var App = function App() {
     setWidgetsDisabled([]);
   };
   var onScanUsageElementsClicked = /*#__PURE__*/function () {
-    var _ref2 = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee2() {
+    var _ref2 = (0, _asyncToGenerator2.default)(/*#__PURE__*/_regenerator.default.mark(function _callee2() {
       var data;
       return _regenerator.default.wrap(function _callee2$(_context2) {
         while (1) switch (_context2.prev = _context2.next) {
@@ -2055,7 +2088,8 @@ var App = function App() {
   };
   (0, _element.useEffect)(function () {
     var onLoading = /*#__PURE__*/function () {
-      var _ref4 = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee3() {
+      var _ref4 = (0, _asyncToGenerator2.default)(/*#__PURE__*/_regenerator.default.mark(function _callee3() {
+        var _appData$additional_d, _appData$additional_d2;
         var appData, pluginsData;
         return _regenerator.default.wrap(function _callee3$(_context3) {
           while (1) switch (_context3.prev = _context3.next) {
@@ -2068,6 +2102,13 @@ var App = function App() {
               setWidgetsDisabled(appData.disabled_elements);
               setWidgets(appData.widgets);
               setPromotionWidgets(appData.promotion_widgets);
+              setPromotionData(appData.promotion_data);
+              if ((_appData$additional_d = appData.additional_data) !== null && _appData$additional_d !== void 0 && _appData$additional_d.roles) {
+                setRoles(appData.additional_data.roles);
+              }
+              if ((_appData$additional_d2 = appData.additional_data) !== null && _appData$additional_d2 !== void 0 && _appData$additional_d2.role_restrictions) {
+                setWidgetsRoleRestrictions(appData.additional_data.role_restrictions);
+              }
               pluginsData = appData.plugins.map(function (plugin) {
                 return {
                   label: plugin,
@@ -2080,7 +2121,7 @@ var App = function App() {
               });
               setPlugins(pluginsData);
               setIsLoading(false);
-            case 11:
+            case 14:
             case "end":
               return _context3.stop();
           }
@@ -2099,7 +2140,21 @@ var App = function App() {
     setChangeProgress(_objectSpread(_objectSpread({}, changeProgress), {}, {
       isUnsavedChanges: true
     }));
-  }, [widgetsDisabled]);
+  }, [widgetsDisabled, widgetsRoleRestrictions]);
+  (0, _element.useEffect)(function () {
+    var handleBeforeUnload = function handleBeforeUnload(event) {
+      event.preventDefault();
+      event.returnValue = '';
+    };
+    if (changeProgress.isUnsavedChanges) {
+      window.addEventListener('beforeunload', handleBeforeUnload);
+    } else {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    }
+    return function () {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, [changeProgress.isUnsavedChanges]);
   if (isLoading) {
     return /*#__PURE__*/_react.default.createElement(_components.Flex, {
       justify: 'center',
@@ -2122,11 +2177,7 @@ var App = function App() {
     href: "https://go.elementor.com/wp-dash-element-manager/",
     rel: 'noreferrer',
     target: '_blank'
-  }, (0, _i18n.__)('Learn More', 'elementor'))), !noticeData.is_viewed && /*#__PURE__*/_react.default.createElement("p", {
-    style: {
-      margin: '20px -15px'
-    }
-  }, /*#__PURE__*/_react.default.createElement(_components.Notice, {
+  }, (0, _i18n.__)('Learn More', 'elementor'))), !noticeData.is_viewed && /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_components.Notice, {
     onRemove: function onRemove() {
       (0, _api.markNoticeViewed)(noticeData.notice_id);
       setNoticeData(_objectSpread(_objectSpread({}, noticeData), {}, {
@@ -2157,12 +2208,34 @@ var App = function App() {
     },
     __nextHasNoMarginBottom: true,
     onChange: setSearchKeyword
-  }), /*#__PURE__*/_react.default.createElement(_components.SelectControl, {
+  }), /*#__PURE__*/_react.default.createElement(_components.FlexItem, {
+    style: {
+      maxWidth: '130px'
+    }
+  }, /*#__PURE__*/_react.default.createElement(_components.SelectControl, {
     onChange: setFilterByPlugin,
     size: '__unstable-large',
     __nextHasNoMarginBottom: true,
     options: plugins
-  }), /*#__PURE__*/_react.default.createElement("hr", {
+  })), /*#__PURE__*/_react.default.createElement(_components.FlexItem, {
+    style: {
+      maxWidth: '130px'
+    }
+  }, /*#__PURE__*/_react.default.createElement(_components.SelectControl, {
+    onChange: setFilterByStatus,
+    size: '__unstable-large',
+    __nextHasNoMarginBottom: true,
+    options: [{
+      label: (0, _i18n.__)('All Statuses', 'elementor'),
+      value: 'all'
+    }, {
+      label: (0, _i18n.__)('Active', 'elementor'),
+      value: 'active'
+    }, {
+      label: (0, _i18n.__)('Inactive', 'elementor'),
+      value: 'inactive'
+    }]
+  })), /*#__PURE__*/_react.default.createElement("hr", {
     style: {
       height: '30px',
       margin: '0 5px',
@@ -2233,12 +2306,33 @@ var App = function App() {
   }), /*#__PURE__*/_react.default.createElement("span", {
     className: "sorting-indicator desc",
     "aria-hidden": "true"
-  })))), /*#__PURE__*/_react.default.createElement("th", null, (0, _i18n.__)('Plugin', 'elementor')))), /*#__PURE__*/_react.default.createElement("tbody", null, sortedAndFilteredWidgets.map(function (widget) {
+  })))), /*#__PURE__*/_react.default.createElement("th", null, (0, _i18n.__)('Plugin', 'elementor')), /*#__PURE__*/_react.default.createElement("th", null, /*#__PURE__*/_react.default.createElement(_components.Flex, {
+    justify: 'flex-start',
+    gap: 0
+  }, /*#__PURE__*/_react.default.createElement(_components.FlexItem, null, (0, _i18n.__)('Permission', 'elementor')), /*#__PURE__*/_react.default.createElement(_components.FlexItem, null, /*#__PURE__*/_react.default.createElement(_components.Tooltip, {
+    placement: 'top',
+    delay: 100,
+    text: (0, _i18n.__)('Choose which users will have access to each widget.', 'elementor')
+  }, /*#__PURE__*/_react.default.createElement(_components.Button, {
+    icon: 'info-outline',
+    iconSize: 16
+  }))), null === widgetsRoleRestrictions && /*#__PURE__*/_react.default.createElement(_components.FlexItem, {
+    style: {
+      marginInlineStart: '10px'
+    }
+  }, /*#__PURE__*/_react.default.createElement(_upgradeButton.UpgradeButton, {
+    href: promotionWidgets.length ? managerPermissions.pro.url : managerPermissions.advanced.url,
+    size: 'small',
+    text: promotionWidgets.length ? managerPermissions.pro.text : managerPermissions.advanced.text
+  })))))), /*#__PURE__*/_react.default.createElement("tbody", null, sortedAndFilteredWidgets.map(function (widget) {
     return /*#__PURE__*/_react.default.createElement("tr", {
-      key: widget.name
+      key: widget.name,
+      "data-key-id": widget.name
     }, /*#__PURE__*/_react.default.createElement("td", null, /*#__PURE__*/_react.default.createElement("i", {
       style: {
-        marginInlineEnd: '5px'
+        marginInlineEnd: '5px',
+        marginInlineStart: '0',
+        display: 'inline-block'
       },
       className: "".concat(widget.icon)
     }), " ", widget.title), /*#__PURE__*/_react.default.createElement("td", null, /*#__PURE__*/_react.default.createElement(_components.ToggleControl, {
@@ -2255,25 +2349,33 @@ var App = function App() {
       }
     })), /*#__PURE__*/_react.default.createElement("td", null, /*#__PURE__*/_react.default.createElement(UsageTimesColumn, {
       widgetName: widget.name
-    })), /*#__PURE__*/_react.default.createElement("td", null, widget.plugin));
+    })), /*#__PURE__*/_react.default.createElement("td", null, widget.plugin), /*#__PURE__*/_react.default.createElement("td", null, null !== widgetsRoleRestrictions && !widgetsDisabled.includes(widget.name) ? /*#__PURE__*/_react.default.createElement(_rolePermissions.RolePermissions, {
+      widgetName: widget.name,
+      roles: roles,
+      widgetsRoleRestrictions: widgetsRoleRestrictions,
+      setWidgetsRoleRestrictions: setWidgetsRoleRestrictions
+    }) : /*#__PURE__*/_react.default.createElement(_rolePermissions.EditButtonDisabled, null)));
   })))), promotionWidgets.length > 0 && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_components.PanelRow, null, /*#__PURE__*/_react.default.createElement(_components.Flex, {
     style: {
       marginTop: '40px',
       marginBottom: '20px'
     }
-  }, /*#__PURE__*/_react.default.createElement(_components.FlexItem, null, /*#__PURE__*/_react.default.createElement("h3", null, (0, _i18n.__)('Elementor Pro Elements', 'elementor')), /*#__PURE__*/_react.default.createElement("p", null, (0, _i18n.__)('Unleash the full power of Elementor\'s features and web creation tools.', 'elementor'))), /*#__PURE__*/_react.default.createElement(_components.FlexItem, null, /*#__PURE__*/_react.default.createElement(_components.Button, {
-    variant: "primary",
-    href: "https://go.elementor.com/go-pro-element-manager/",
-    target: "_blank",
-    rel: 'noreferrer',
-    style: {
-      background: 'var(--e-a-btn-bg-accent, #93003f)'
-    }
-  }, (0, _i18n.__)('Upgrade Now', 'elementor'))))), /*#__PURE__*/_react.default.createElement(_components.PanelRow, null, /*#__PURE__*/_react.default.createElement("table", {
+  }, /*#__PURE__*/_react.default.createElement(_components.FlexItem, null, /*#__PURE__*/_react.default.createElement("h3", null, (0, _i18n.__)('Elementor Pro Elements', 'elementor')), /*#__PURE__*/_react.default.createElement("p", null, (0, _i18n.__)('Unleash the full power of Elementor\'s features and web creation tools.', 'elementor'))), /*#__PURE__*/_react.default.createElement(_components.FlexItem, null, /*#__PURE__*/_react.default.createElement(_upgradeButton.UpgradeButton, {
+    href: elementManager.url,
+    text: elementManager.text
+  })))), /*#__PURE__*/_react.default.createElement(_components.PanelRow, null, /*#__PURE__*/_react.default.createElement("table", {
     className: 'wp-list-table widefat fixed striped table-view-list'
   }, /*#__PURE__*/_react.default.createElement("thead", null, /*#__PURE__*/_react.default.createElement("tr", null, /*#__PURE__*/_react.default.createElement("th", {
     className: "manage-column"
-  }, /*#__PURE__*/_react.default.createElement("span", null, (0, _i18n.__)('Element', 'elementor'))), /*#__PURE__*/_react.default.createElement("th", null, (0, _i18n.__)('Status', 'elementor')), /*#__PURE__*/_react.default.createElement("th", null, (0, _i18n.__)('Usage', 'elementor')), /*#__PURE__*/_react.default.createElement("th", null, (0, _i18n.__)('Plugin', 'elementor')))), /*#__PURE__*/_react.default.createElement("tbody", null, promotionWidgets.map(function (widget) {
+  }, /*#__PURE__*/_react.default.createElement("span", null, (0, _i18n.__)('Element', 'elementor'))), /*#__PURE__*/_react.default.createElement("th", null, (0, _i18n.__)('Status', 'elementor')), /*#__PURE__*/_react.default.createElement("th", null, (0, _i18n.__)('Usage', 'elementor')), /*#__PURE__*/_react.default.createElement("th", null, (0, _i18n.__)('Plugin', 'elementor')), /*#__PURE__*/_react.default.createElement("th", null, /*#__PURE__*/_react.default.createElement(_components.Flex, {
+    justify: 'flex-start'
+  }, /*#__PURE__*/_react.default.createElement(_components.FlexItem, null, (0, _i18n.__)('Permission', 'elementor')), /*#__PURE__*/_react.default.createElement(_components.FlexItem, null, /*#__PURE__*/_react.default.createElement(_components.Tooltip, {
+    placement: 'top',
+    delay: 100,
+    text: (0, _i18n.__)('Choose which role will have access to a specific widget.', 'elementor')
+  }, /*#__PURE__*/_react.default.createElement(_components.Button, {
+    icon: 'info-outline'
+  }))))))), /*#__PURE__*/_react.default.createElement("tbody", null, promotionWidgets.map(function (widget) {
     return /*#__PURE__*/_react.default.createElement("tr", {
       key: widget.name
     }, /*#__PURE__*/_react.default.createElement("td", null, /*#__PURE__*/_react.default.createElement("i", {
@@ -2285,7 +2387,7 @@ var App = function App() {
       __nextHasNoMarginBottom: true,
       checked: false,
       disabled: true
-    })), /*#__PURE__*/_react.default.createElement("td", null), /*#__PURE__*/_react.default.createElement("td", null, (0, _i18n.__)('Elementor Pro', 'elementor')));
+    })), /*#__PURE__*/_react.default.createElement("td", null), /*#__PURE__*/_react.default.createElement("td", null, (0, _i18n.__)('Elementor Pro', 'elementor')), /*#__PURE__*/_react.default.createElement("td", null, /*#__PURE__*/_react.default.createElement(_rolePermissions.EditButtonDisabled, null)));
   }))))))), isConfirmDialogOpen && /*#__PURE__*/_react.default.createElement(_components.Modal, {
     title: (0, _i18n.__)('Sure you want to save these changes?', 'elementor'),
     size: 'small',
@@ -2334,7 +2436,166 @@ var App = function App() {
     }
   }, (0, _i18n.__)('We saved your changes.', 'elementor'))));
 };
-exports.App = App;
+
+/***/ }),
+
+/***/ "../modules/element-manager/assets/js/role-permissions.js":
+/*!****************************************************************!*\
+  !*** ../modules/element-manager/assets/js/role-permissions.js ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.RolePermissions = exports.EditButtonDisabled = void 0;
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "../node_modules/@babel/runtime/helpers/defineProperty.js"));
+var _components = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+var _i18n = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { (0, _defineProperty2.default)(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; } /* eslint-disable react/prop-types */
+var toggleRoleRestrictions = function toggleRoleRestrictions(widgetName, roleId, widgetsRoleRestrictions, setWidgetsRoleRestrictions) {
+  var widgetRoleRestrictions = widgetsRoleRestrictions[widgetName] || [];
+  if (widgetRoleRestrictions.includes(roleId)) {
+    widgetRoleRestrictions.splice(widgetRoleRestrictions.indexOf(roleId), 1);
+  } else {
+    widgetRoleRestrictions.push(roleId);
+  }
+
+  // TODO: Remove the object from the state if it's empty
+  setWidgetsRoleRestrictions(_objectSpread(_objectSpread({}, widgetsRoleRestrictions), {}, (0, _defineProperty2.default)({}, widgetName, widgetRoleRestrictions)));
+};
+var RolesList = function RolesList(props) {
+  var roles = props.roles,
+    widgetRoleRestrictions = props.widgetRoleRestrictions;
+  var rolesEnables = roles.filter(function (role) {
+    return !widgetRoleRestrictions.includes(role.id);
+  });
+  if (!rolesEnables.length) {
+    return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "(", (0, _i18n.__)('Admin', 'elementor'), ")");
+  }
+  if (rolesEnables.length === roles.length) {
+    return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "(", (0, _i18n.__)('All Roles', 'elementor'), ")");
+  }
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "(", rolesEnables.map(function (role) {
+    return role.name;
+  }).join(', '), ")");
+};
+var RolePermissions = exports.RolePermissions = function RolePermissions(props) {
+  var roles = props.roles,
+    widgetName = props.widgetName,
+    widgetsRoleRestrictions = props.widgetsRoleRestrictions,
+    setWidgetsRoleRestrictions = props.setWidgetsRoleRestrictions;
+  var widgetRoleRestrictions = widgetsRoleRestrictions[widgetName] || [];
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_components.Dropdown, {
+    className: 'my-container-class-name',
+    contentClassName: 'my-dropdown-content-classname',
+    popoverProps: {
+      placement: 'bottom-start'
+    },
+    renderToggle: function renderToggle(_ref) {
+      var isOpen = _ref.isOpen,
+        onToggle = _ref.onToggle;
+      return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_components.Button, {
+        variant: 'link',
+        onClick: onToggle,
+        "aria-expanded": isOpen,
+        style: {
+          textDecoration: 'none'
+        }
+      }, (0, _i18n.__)('Edit', 'elementor')), ' ', /*#__PURE__*/_react.default.createElement("span", {
+        style: {
+          color: 'var(--e-a-color-txt-muted)'
+        }
+      }, /*#__PURE__*/_react.default.createElement(RolesList, {
+        roles: roles,
+        widgetRoleRestrictions: widgetRoleRestrictions
+      })));
+    },
+    renderContent: function renderContent() {
+      var isAllChecked = roles.every(function (role) {
+        return !widgetRoleRestrictions.includes(role.id);
+      });
+      var isIndeterminate = !isAllChecked && roles.some(function (role) {
+        return !widgetRoleRestrictions.includes(role.id);
+      });
+      return /*#__PURE__*/_react.default.createElement("div", {
+        style: {
+          minWidth: '150px',
+          paddingInline: '10px',
+          paddingBlockStart: '10px'
+        }
+      }, /*#__PURE__*/_react.default.createElement(_components.CheckboxControl, {
+        checked: isAllChecked,
+        indeterminate: isIndeterminate,
+        label: 'All',
+        onChange: function onChange(value) {
+          if (value) {
+            setWidgetsRoleRestrictions(_objectSpread(_objectSpread({}, widgetsRoleRestrictions), {}, (0, _defineProperty2.default)({}, widgetName, [])));
+          } else {
+            setWidgetsRoleRestrictions(_objectSpread(_objectSpread({}, widgetsRoleRestrictions), {}, (0, _defineProperty2.default)({}, widgetName, roles.map(function (role) {
+              return role.id;
+            }))));
+          }
+        }
+      }), roles.map(function (role) {
+        return /*#__PURE__*/_react.default.createElement("div", {
+          key: role.id
+        }, /*#__PURE__*/_react.default.createElement(_components.CheckboxControl, {
+          checked: !widgetRoleRestrictions.includes(role.id),
+          label: role.name,
+          onChange: function onChange() {
+            toggleRoleRestrictions(widgetName, role.id, widgetsRoleRestrictions, setWidgetsRoleRestrictions);
+          }
+        }));
+      }));
+    }
+  }));
+};
+var EditButtonDisabled = exports.EditButtonDisabled = function EditButtonDisabled() {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_components.Button, {
+    variant: "link",
+    disabled: true,
+    style: {
+      textDecoration: 'none'
+    }
+  }, (0, _i18n.__)('Edit', 'elementor')));
+};
+
+/***/ }),
+
+/***/ "../modules/element-manager/assets/js/upgrade-button.js":
+/*!**************************************************************!*\
+  !*** ../modules/element-manager/assets/js/upgrade-button.js ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.UpgradeButton = void 0;
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
+var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "../node_modules/@babel/runtime/helpers/extends.js"));
+var _components = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+var UpgradeButton = exports.UpgradeButton = function UpgradeButton(props) {
+  return /*#__PURE__*/_react.default.createElement(_components.Button, (0, _extends2.default)({}, props, {
+    variant: "primary",
+    target: "_blank",
+    rel: 'noreferrer',
+    style: {
+      background: 'var(--e-a-btn-bg-accent, #93003f)'
+    }
+  }));
+};
 
 /***/ }),
 
@@ -2587,10 +2848,10 @@ module.exports = wp.i18n;
   \******************************************************************/
 /***/ ((module) => {
 
-function _arrayLikeToArray(arr, len) {
-  if (len == null || len > arr.length) len = arr.length;
-  for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i];
-  return arr2;
+function _arrayLikeToArray(r, a) {
+  (null == a || a > r.length) && (a = r.length);
+  for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e];
+  return n;
 }
 module.exports = _arrayLikeToArray, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
@@ -2602,8 +2863,8 @@ module.exports = _arrayLikeToArray, module.exports.__esModule = true, module.exp
   \****************************************************************/
 /***/ ((module) => {
 
-function _arrayWithHoles(arr) {
-  if (Array.isArray(arr)) return arr;
+function _arrayWithHoles(r) {
+  if (Array.isArray(r)) return r;
 }
 module.exports = _arrayWithHoles, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
@@ -2616,8 +2877,8 @@ module.exports = _arrayWithHoles, module.exports.__esModule = true, module.expor
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var arrayLikeToArray = __webpack_require__(/*! ./arrayLikeToArray.js */ "../node_modules/@babel/runtime/helpers/arrayLikeToArray.js");
-function _arrayWithoutHoles(arr) {
-  if (Array.isArray(arr)) return arrayLikeToArray(arr);
+function _arrayWithoutHoles(r) {
+  if (Array.isArray(r)) return arrayLikeToArray(r);
 }
 module.exports = _arrayWithoutHoles, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
@@ -2629,33 +2890,28 @@ module.exports = _arrayWithoutHoles, module.exports.__esModule = true, module.ex
   \******************************************************************/
 /***/ ((module) => {
 
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
+function asyncGeneratorStep(n, t, e, r, o, a, c) {
   try {
-    var info = gen[key](arg);
-    var value = info.value;
-  } catch (error) {
-    reject(error);
-    return;
+    var i = n[a](c),
+      u = i.value;
+  } catch (n) {
+    return void e(n);
   }
-  if (info.done) {
-    resolve(value);
-  } else {
-    Promise.resolve(value).then(_next, _throw);
-  }
+  i.done ? t(u) : Promise.resolve(u).then(r, o);
 }
-function _asyncToGenerator(fn) {
+function _asyncToGenerator(n) {
   return function () {
-    var self = this,
-      args = arguments;
-    return new Promise(function (resolve, reject) {
-      var gen = fn.apply(self, args);
-      function _next(value) {
-        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);
+    var t = this,
+      e = arguments;
+    return new Promise(function (r, o) {
+      var a = n.apply(t, e);
+      function _next(n) {
+        asyncGeneratorStep(a, r, o, _next, _throw, "next", n);
       }
-      function _throw(err) {
-        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);
+      function _throw(n) {
+        asyncGeneratorStep(a, r, o, _next, _throw, "throw", n);
       }
-      _next(undefined);
+      _next(void 0);
     });
   };
 }
@@ -2670,21 +2926,34 @@ module.exports = _asyncToGenerator, module.exports.__esModule = true, module.exp
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var toPropertyKey = __webpack_require__(/*! ./toPropertyKey.js */ "../node_modules/@babel/runtime/helpers/toPropertyKey.js");
-function _defineProperty(obj, key, value) {
-  key = toPropertyKey(key);
-  if (key in obj) {
-    Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-  return obj;
+function _defineProperty(e, r, t) {
+  return (r = toPropertyKey(r)) in e ? Object.defineProperty(e, r, {
+    value: t,
+    enumerable: !0,
+    configurable: !0,
+    writable: !0
+  }) : e[r] = t, e;
 }
 module.exports = _defineProperty, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ "../node_modules/@babel/runtime/helpers/extends.js":
+/*!*********************************************************!*\
+  !*** ../node_modules/@babel/runtime/helpers/extends.js ***!
+  \*********************************************************/
+/***/ ((module) => {
+
+function _extends() {
+  return module.exports = _extends = Object.assign ? Object.assign.bind() : function (n) {
+    for (var e = 1; e < arguments.length; e++) {
+      var t = arguments[e];
+      for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]);
+    }
+    return n;
+  }, module.exports.__esModule = true, module.exports["default"] = module.exports, _extends.apply(null, arguments);
+}
+module.exports = _extends, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
 
@@ -2694,9 +2963,9 @@ module.exports = _defineProperty, module.exports.__esModule = true, module.expor
   \***********************************************************************/
 /***/ ((module) => {
 
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : {
-    "default": obj
+function _interopRequireDefault(e) {
+  return e && e.__esModule ? e : {
+    "default": e
   };
 }
 module.exports = _interopRequireDefault, module.exports.__esModule = true, module.exports["default"] = module.exports;
@@ -2709,8 +2978,8 @@ module.exports = _interopRequireDefault, module.exports.__esModule = true, modul
   \*****************************************************************/
 /***/ ((module) => {
 
-function _iterableToArray(iter) {
-  if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter);
+function _iterableToArray(r) {
+  if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r);
 }
 module.exports = _iterableToArray, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
@@ -2895,7 +3164,7 @@ function _regeneratorRuntime() {
   function makeInvokeMethod(e, r, n) {
     var o = h;
     return function (i, a) {
-      if (o === f) throw new Error("Generator is already running");
+      if (o === f) throw Error("Generator is already running");
       if (o === s) {
         if ("throw" === i) throw a;
         return {
@@ -3037,7 +3306,7 @@ function _regeneratorRuntime() {
           } else if (c) {
             if (this.prev < i.catchLoc) return handle(i.catchLoc, !0);
           } else {
-            if (!u) throw new Error("try statement without catch or finally");
+            if (!u) throw Error("try statement without catch or finally");
             if (this.prev < i.finallyLoc) return handle(i.finallyLoc);
           }
         }
@@ -3077,7 +3346,7 @@ function _regeneratorRuntime() {
           return o;
         }
       }
-      throw new Error("illegal catch attempt");
+      throw Error("illegal catch attempt");
     },
     delegateYield: function delegateYield(e, r, n) {
       return this.delegate = {
@@ -3102,8 +3371,8 @@ var arrayWithHoles = __webpack_require__(/*! ./arrayWithHoles.js */ "../node_mod
 var iterableToArrayLimit = __webpack_require__(/*! ./iterableToArrayLimit.js */ "../node_modules/@babel/runtime/helpers/iterableToArrayLimit.js");
 var unsupportedIterableToArray = __webpack_require__(/*! ./unsupportedIterableToArray.js */ "../node_modules/@babel/runtime/helpers/unsupportedIterableToArray.js");
 var nonIterableRest = __webpack_require__(/*! ./nonIterableRest.js */ "../node_modules/@babel/runtime/helpers/nonIterableRest.js");
-function _slicedToArray(arr, i) {
-  return arrayWithHoles(arr) || iterableToArrayLimit(arr, i) || unsupportedIterableToArray(arr, i) || nonIterableRest();
+function _slicedToArray(r, e) {
+  return arrayWithHoles(r) || iterableToArrayLimit(r, e) || unsupportedIterableToArray(r, e) || nonIterableRest();
 }
 module.exports = _slicedToArray, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
@@ -3119,8 +3388,8 @@ var arrayWithoutHoles = __webpack_require__(/*! ./arrayWithoutHoles.js */ "../no
 var iterableToArray = __webpack_require__(/*! ./iterableToArray.js */ "../node_modules/@babel/runtime/helpers/iterableToArray.js");
 var unsupportedIterableToArray = __webpack_require__(/*! ./unsupportedIterableToArray.js */ "../node_modules/@babel/runtime/helpers/unsupportedIterableToArray.js");
 var nonIterableSpread = __webpack_require__(/*! ./nonIterableSpread.js */ "../node_modules/@babel/runtime/helpers/nonIterableSpread.js");
-function _toConsumableArray(arr) {
-  return arrayWithoutHoles(arr) || iterableToArray(arr) || unsupportedIterableToArray(arr) || nonIterableSpread();
+function _toConsumableArray(r) {
+  return arrayWithoutHoles(r) || iterableToArray(r) || unsupportedIterableToArray(r) || nonIterableSpread();
 }
 module.exports = _toConsumableArray, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
@@ -3133,17 +3402,17 @@ module.exports = _toConsumableArray, module.exports.__esModule = true, module.ex
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var _typeof = (__webpack_require__(/*! ./typeof.js */ "../node_modules/@babel/runtime/helpers/typeof.js")["default"]);
-function _toPrimitive(input, hint) {
-  if (_typeof(input) !== "object" || input === null) return input;
-  var prim = input[Symbol.toPrimitive];
-  if (prim !== undefined) {
-    var res = prim.call(input, hint || "default");
-    if (_typeof(res) !== "object") return res;
+function toPrimitive(t, r) {
+  if ("object" != _typeof(t) || !t) return t;
+  var e = t[Symbol.toPrimitive];
+  if (void 0 !== e) {
+    var i = e.call(t, r || "default");
+    if ("object" != _typeof(i)) return i;
     throw new TypeError("@@toPrimitive must return a primitive value.");
   }
-  return (hint === "string" ? String : Number)(input);
+  return ("string" === r ? String : Number)(t);
 }
-module.exports = _toPrimitive, module.exports.__esModule = true, module.exports["default"] = module.exports;
+module.exports = toPrimitive, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
 
@@ -3155,11 +3424,11 @@ module.exports = _toPrimitive, module.exports.__esModule = true, module.exports[
 
 var _typeof = (__webpack_require__(/*! ./typeof.js */ "../node_modules/@babel/runtime/helpers/typeof.js")["default"]);
 var toPrimitive = __webpack_require__(/*! ./toPrimitive.js */ "../node_modules/@babel/runtime/helpers/toPrimitive.js");
-function _toPropertyKey(arg) {
-  var key = toPrimitive(arg, "string");
-  return _typeof(key) === "symbol" ? key : String(key);
+function toPropertyKey(t) {
+  var i = toPrimitive(t, "string");
+  return "symbol" == _typeof(i) ? i : i + "";
 }
-module.exports = _toPropertyKey, module.exports.__esModule = true, module.exports["default"] = module.exports;
+module.exports = toPropertyKey, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
 
@@ -3172,11 +3441,11 @@ module.exports = _toPropertyKey, module.exports.__esModule = true, module.export
 function _typeof(o) {
   "@babel/helpers - typeof";
 
-  return (module.exports = _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) {
+  return module.exports = _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) {
     return typeof o;
   } : function (o) {
     return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o;
-  }, module.exports.__esModule = true, module.exports["default"] = module.exports), _typeof(o);
+  }, module.exports.__esModule = true, module.exports["default"] = module.exports, _typeof(o);
 }
 module.exports = _typeof, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
@@ -3189,13 +3458,12 @@ module.exports = _typeof, module.exports.__esModule = true, module.exports["defa
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var arrayLikeToArray = __webpack_require__(/*! ./arrayLikeToArray.js */ "../node_modules/@babel/runtime/helpers/arrayLikeToArray.js");
-function _unsupportedIterableToArray(o, minLen) {
-  if (!o) return;
-  if (typeof o === "string") return arrayLikeToArray(o, minLen);
-  var n = Object.prototype.toString.call(o).slice(8, -1);
-  if (n === "Object" && o.constructor) n = o.constructor.name;
-  if (n === "Map" || n === "Set") return Array.from(o);
-  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return arrayLikeToArray(o, minLen);
+function _unsupportedIterableToArray(r, a) {
+  if (r) {
+    if ("string" == typeof r) return arrayLikeToArray(r, a);
+    var t = {}.toString.call(r).slice(8, -1);
+    return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? arrayLikeToArray(r, a) : void 0;
+  }
 }
 module.exports = _unsupportedIterableToArray, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
@@ -4192,7 +4460,7 @@ var _app = __webpack_require__(/*! ./app */ "../modules/element-manager/assets/j
 (0, _domReady.default)(function () {
   var htmlOutput = document.getElementById('elementor-element-manager-wrap');
   if (htmlOutput) {
-    (0, _element.render)( /*#__PURE__*/_react.default.createElement(_app.App, null), htmlOutput);
+    (0, _element.render)(/*#__PURE__*/_react.default.createElement(_app.App, null), htmlOutput);
   }
 });
 })();

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head></head>
+<body>
+
+    {{ partial "head" . }}
+  
+  
+    {{ partialCached "skippy" . }}
+    {{ partialCached "navbar" . }}
+    {{ partialCached "home/hero" . }}
+
+    <main class="container-xxl bd-gutter" id="content">
+      {{ partialCached "icons" . "home" }}
+      {{ .Content }}
+    </main>
+
+    {{- partialCached "footer" . }}
+    {{- partialCached "scripts" . "home" }}
+  
+</body>
+</html>

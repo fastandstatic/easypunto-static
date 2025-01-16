@@ -1,0 +1,205 @@
+.mapsvg-directory {
+  box-sizing: border-box;
+  overflow: visible !important;
+}
+.mapsvg-directory * {
+  box-sizing: border-box;
+}
+.mapsvg-directory.flex {
+  display: flex;
+  flex-flow: column;
+  max-height: 100%;
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  /*background-color: #f5f5f5;*/
+}
+.mapsvg-directory-search-wrap-margin {
+  position: relative;
+  height: 34px;
+}
+.mapsvg-directory-list-wrap:after {
+  content: " ";
+  height: 100%;
+  position: absolute;
+  right: -15px;
+  width: 15px;
+  top: 0;
+}
+.mapsvg-directory-search:active,
+.mapsvg-directory-search:focus {
+  border: 1px solid #eee !important;
+}
+.mapsvg-directory-search:focus,
+.mapsvg-directory-search:active {
+  outline: 0 !important;
+  -webkit-appearance: none !important;
+  border: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.mapsvg-directory-list-wrap {
+  border-right: 1px solid #e5e5e5;
+  max-height: 100%;
+  flex: 1 0;
+  z-index: 1;
+  background: #fafafa;
+  position: relative;
+  height: 48px;
+}
+.mapsvg-directory-list {
+  overflow-y: scroll;
+  position: absolute !important;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.mapsvg-directory-item {
+  display: block;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 14px;
+  font-family: "Helvetica", sans-serif;
+  color: #444;
+}
+.mapsvg-category-item {
+  padding: 10px;
+  color: #444;
+  font-size: 14px;
+  font-family: "Helvetica", sans-serif;
+  border-bottom: 1px solid #eee;
+  user-select: none;
+}
+.mapsvg-category-label {
+  font-weight: bold;
+}
+.mapsvg-category-counter {
+}
+
+.mapsvg-category-block {
+  border-bottom: 1px solid #eee;
+  transition: max-height 0.2s ease-out;
+  max-height: 0;
+  overflow: hidden;
+}
+.mapsvg-category-block:last-child {
+  border-bottom: none;
+}
+
+.mapsvg-category-block .mapsvg-directory-item {
+  padding-left: 20px;
+}
+.mapsvg-category-block.active {
+  display: block;
+  max-height: 100%;
+}
+.mapsvg-category-block.collapsed {
+  /*display: none;*/
+}
+.mapsvg-category-item:hover {
+  cursor: pointer;
+}
+.mapsvg-directory-item:hover,
+.mapsvg-category-item:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+.mapsvg-directory-item.hover,
+.mapsvg-category-item.hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+.mapsvg-directory-item.selected,
+.mapsvg-category-item.selected {
+  background: rgba(0, 0, 0, 0.1);
+}
+.mapsvg-directory-item:after,
+.mapsvg-category-item:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.mapsvg-directory {
+  min-width: 0; /* firefox flex fix */
+  position: relative;
+  z-index: 2;
+  -webkit-font-smoothing: antialiased;
+}
+.mapsvg-directory.closed {
+  /*left: -100%;*/
+  display: none;
+}
+.mapsvg-directory.closed .mapsvg-directory-list-wrap {
+}
+.mapsvg-directory.mapsvg-directory-overlapping .mapsvg-details-container {
+  box-shadow: none;
+}
+.mapsvg-directory ul {
+  margin: 0;
+}
+.mapsvg-directory li {
+  list-style: none;
+}
+.mapsvg-directory-filter-wrap:empty {
+  display: none;
+}
+
+.mapsvg-directory-search-wrap {
+  box-sizing: border-box;
+  position: relative;
+}
+
+.mapsvg-directory-filter-wrap.filter-wrap .mapsvg-directory-filter-wrap {
+  padding: 0;
+}
+
+.mapsvg-chevron::before {
+  transition: transform 0.2s;
+  border-style: solid;
+  border-width: 0.1em 0.1em 0 0;
+  content: "";
+  display: inline-block;
+  height: 0.55em;
+  left: 0.15em;
+  position: relative;
+  top: 0.5em;
+  vertical-align: top;
+  width: 0.55em;
+}
+.mapsvg-category-item .mapsvg-chevron {
+  position: absolute;
+  right: 10px;
+}
+.mapsvg-category-item .mapsvg-chevron:before {
+  top: 0.5em;
+  transform: rotate(135deg);
+}
+
+.mapsvg-chevron.right:before {
+  left: 0;
+  transform: rotate(45deg);
+}
+
+.active .mapsvg-chevron:before,
+.mapsvg-chevron.bottom:before {
+  transform: rotate(-45deg);
+}
+
+.mapsvg-chevron.left:before {
+  left: 0.25em;
+  transform: rotate(-135deg);
+}
+
+@media (max-width: 812px) {
+  /* 812px = iPhone X, all others phones are smaller */
+  .mapsvg-wrap .mapsvg-directory {
+    width: 100% !important;
+  }
+}

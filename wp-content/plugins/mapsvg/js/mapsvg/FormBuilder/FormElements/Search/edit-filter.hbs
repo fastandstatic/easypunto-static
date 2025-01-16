@@ -1,0 +1,25 @@
+<script type="text/x-handlebars-template" id="mapsvg-filters-tmpl-search-control">
+  <div class="form-group mb-3 "> <label class="form-label">Label</label> <input type="text"
+  class="form-control" name="label" value="{{label}}" autocomplete="off" /> <p class="form-text">
+  Label can be empty </p> </div> <div class="form-group mb-3"> <label
+  class="form-label">Placeholder</label> <input type="text" name="placeholder" class="form-control"
+  value="{{placeholder}}"/> </div> <div class="form-group mb-3"> <label
+  class="col-form-label">Search method fallback</label> <div class="form-switch form-switch-md">
+  <input type="checkbox" class="form-check-input" name="searchFallback"
+  {{#if searchFallback}}checked{{/if}}
+  /> </div> <p class="form-text"> MapSVG uses MySQL "FULLTEXT" search by default. Usually it is
+  limited to minimum word length of 4 characters. If you need to be able to search for shorter
+  words, change the <em>ft_min_word_len</em> option in MySQL <em>my.cnf</em> settings file.<br />
+  Also you may need to edit the list of stop-words: edit the <em>ft_stopword_file</em> option in
+  my.cnf file. See the <a target="_blank"
+  href="https://dev.mysql.com/doc/refman/5.5/en/fulltext-stopwords.html">default stop-word list</a>
+  (your list may be different). <br /><br /> If for some reason you can't change MySQL settings and
+  "FULLTEXT" search doesn't work for you as expected - then turn on the <em>Search Fallback</em>
+  MapSVG option above. It uses (LIKE '...%'</em>) syntax that works slower but usually it is not
+  noticeable if you have small database and your traffic is not too large. </p> </div> <div
+  class="form-group mb-3"> <label class="form-label">Width</label> <input type="text" name="width"
+  class="form-control" value="{{width}}"/> </div> <!--<div class="form-group mb-3 row">-->
+  <!--<label class="form-label">Help</label>--> <!--<textarea class="form-control" name="help">{{help}}</textarea>-->
+  <!--</div>--> <div class="form-group mb-3 "> <button class="btn btn-outline-secondary
+  mapsvg-remove"><i class="bi bi-trash"></i> Remove</button> </div>
+</script>

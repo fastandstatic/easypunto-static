@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Redirigiendo...</title>
+		<meta http-equiv="refresh" content="0;url=/wp-content/plugins/mapsvg/js/vendor/bootstrap-icons/docs/layouts/partials/%7B%7B%20searchJs.Permalink%20%7C%20relURL">
+	</head>
+	<body>
+		<script type="text/javascript">
+			window.location = "/wp-content/plugins/mapsvg/js/vendor/bootstrap-icons/docs/layouts/partials/%7B%7B%20searchJs.Permalink%20%7C%20relURL";
+		</script>
+
+		<p>Estás siendo redirigido a <a href="/wp-content/plugins/mapsvg/js/vendor/bootstrap-icons/docs/layouts/partials/%7B%7B%20searchJs.Permalink%20%7C%20relURL">/wp-content/plugins/mapsvg/js/vendor/bootstrap-icons/docs/layouts/partials/%7B%7B%20searchJs.Permalink%20%7C%20relURL</a></p>
+	</body>
+</html>

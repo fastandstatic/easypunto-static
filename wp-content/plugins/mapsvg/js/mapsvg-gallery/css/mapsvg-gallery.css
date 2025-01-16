@@ -1,0 +1,100 @@
+.mapsvg-gallery {
+    overflow: hidden;
+}
+.mapsvg-gallery.slick-dotted {
+    overflow: visible;
+}
+.mapsvg-gallery-wrap {
+    position: relative;
+    background: #999;
+    /*max-height: 250px;*/
+}
+.mapsvg-gallery-button {
+    position: absolute;
+    bottom: 10px;
+    /*right: 0;*/
+    left: 50%;
+    font-size: 12px;
+    transform: translateX(-50%);
+    padding: 7px 10px;
+    border: 1px solid #999;
+    border-radius: 3px;
+    font-weight: normal;
+    text-transform: none;
+    color: #fff;
+    background-color: rgba(0,0,0,0.6);
+    transition: background-color .2s;
+}
+.mapsvg-gallery-button:hover {
+    background-color: rgba(0,0,0,0.7);
+}
+.mapsvg-gallery-button:active {
+    background-color: rgba(0,0,0,0.7);
+}
+
+.mapsvg-gallery.mapsvg-gallery-multi,
+.mapsvg-gallery.mapsvg-gallery-combo
+{
+    /*margin: -3px;*/
+}
+/*.mapsvg-gallery.mapsvg-gallery-single {*/
+    /*margin: 0 -15px;*/
+/*}*/
+.mapsvg-gallery.mapsvg-gallery-single figure {
+    display: none;
+}
+.mapsvg-gallery.mapsvg-gallery-single figure:first-child,
+.mapsvg-gallery.mapsvg-gallery-combo figure:first-child
+{
+    display: block;
+    width: 100%;
+    max-width: 100% !important;
+}
+.mapsvg-gallery figure {
+    margin: 0;
+}
+.mapsvg-gallery figure > a {
+    display: block;
+    line-height: 0;
+}
+
+.mapsvg-gallery.mapsvg-gallery-slider figure {
+    display: block;
+    max-width: 100% !important;
+    /*max-height: 250px;*/
+}
+.mapsvg-gallery.mapsvg-gallery-slider figure a {
+    display: block;
+    text-align: center;
+}
+.mapsvg-gallery.mapsvg-gallery-slider figure img {
+    margin: 0 auto;
+    max-height: 250px;
+}
+.mapsvg-gallery.mapsvg-gallery-multi img,
+.mapsvg-gallery.mapsvg-gallery-combo img {
+    /*width: 50px;*/
+    /*margin: 3px;*/
+    float: left;
+}
+.mapsvg-gallery.mapsvg-gallery-single figure:first-child img,
+.mapsvg-gallery.mapsvg-gallery-combo figure:first-child img
+{
+    width: 100%;
+    margin: 0;
+    float: none;
+}
+.mapsvg-gallery.mapsvg-gallery-slider figure img
+{
+    float: none;
+}
+.mapsvg-gallery.mapsvg-gallery-combo figure:first-child img {
+    /*margin: 3px;*/
+}
+
+.mapsvg-gallery figcaption {
+    display: none;
+}
+.pswp {
+    z-index: 9999999;
+}

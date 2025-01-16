@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head></head>
+<body>
+
+    {{ partial "head" . }}
+  
+  
+    {{ partialCached "skippy" . }}
+    {{ partialCached "navbar" . }}
+
+    <main class="my-auto p-5" id="content">
+      {{ .Content }}
+    </main>
+
+    {{- partialCached "scripts" . "default" }}
+  
+</body>
+</html>

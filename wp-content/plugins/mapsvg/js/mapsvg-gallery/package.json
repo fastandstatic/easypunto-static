@@ -1,0 +1,38 @@
+{
+  "name": "mapsvg.gallery",
+  "version": "1.2.0",
+  "description": "MapSVG WordPress mapping plugin",
+  "main": "",
+  "author": "Roman Stepanov",
+  "license": "ISC",
+  "devDependencies": {
+    "cross-env": "^5.0.1",
+    "eslint": "^7.25.0",
+    "eslint-config-prettier": "^8.3.0",
+    "gulp": "^4.0.2",
+    "gulp-bump": "^3.2.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-exec": "^4.0.0",
+    "gulp-file-post": "^1.2.3",
+    "gulp-if": "^3.0.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-print": "^5.0.2",
+    "gulp-prompt": "^1.2.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-rsync": "0.0.8",
+    "gulp-ssh": "^0.7.0",
+    "gulp-strip-comments": "^2.5.2",
+    "gulp-uglify": "^3.0.2",
+    "gulp-util": "^3.0.8",
+    "gulp-zip": "^4.2.0",
+    "prettier": "2.2.1"
+  },
+  "dependencies": {},
+  "scripts": {
+    "format": "prettier-eslint --write \"{,!(node_modules)/**/}*.{ts,js,jsx}\" --trailing-comma es5",
+    "build": "gulp gallery",
+    "dev": ""
+  }
+}

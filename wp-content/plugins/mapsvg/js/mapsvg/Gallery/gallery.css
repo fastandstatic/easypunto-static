@@ -1,0 +1,182 @@
+.mapsvg-gallery {
+    overflow: hidden;
+    text-align: left;
+    display: flex;
+}
+.mapsvg-gallery.slick-dotted {
+    overflow: visible;
+}
+.mapsvg-gallery-wrap {
+    position: relative;
+    background: #999;
+    text-align: center;
+    /*max-height: 250px;*/
+}
+.mapsvg-gallery-button {
+    font-size: 13px;
+    padding: 8px 15px;
+    border: 1px solid #999;
+    border-radius: 10px;
+    font-weight: normal;
+    text-transform: none;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 1);
+    transition: background-color .2s;
+}
+.mapsvg-gallery-button:hover {
+    background-color: rgba(30,30,30,1);
+}
+.mapsvg-gallery-button:active {
+    background-color: rgba(50,50,50,1);
+}
+
+.mapsvg-gallery.mapsvg-gallery-multi,
+.mapsvg-gallery.mapsvg-gallery-combo
+{
+    /*margin: -3px;*/
+}
+/*.mapsvg-gallery.mapsvg-gallery-single {*/
+    /*margin: 0 -15px;*/
+/*}*/
+.mapsvg-gallery.mapsvg-gallery-single a {
+    display: none;
+}
+.mapsvg-gallery.mapsvg-gallery-single a:first-child,
+.mapsvg-gallery.mapsvg-gallery-combo a:first-child
+{
+    display: block;
+    width: 100%;
+    max-width: 100% !important;
+}
+.mapsvg-gallery a {
+    margin: 0;
+}
+/* .mapsvg-gallery a {
+    display: block;
+    line-height: 0;
+} */
+
+.mapsvg-gallery.mapsvg-gallery-slider a {
+    display: block;
+    max-width: 100% !important;
+    text-align: center;
+    /*max-height: 250px;*/
+}
+/* .mapsvg-gallery.mapsvg-gallery-slider figure a {
+    display: block;
+    text-align: center;
+} */
+.mapsvg-gallery.mapsvg-gallery-slider img {
+    margin: 0 auto;
+    max-height: 250px;
+}
+.mapsvg-gallery.mapsvg-gallery-multi img {
+    object-fit: cover;
+}
+
+.mapsvg-gallery.mapsvg-gallery-single a:first-child img,
+.mapsvg-gallery.mapsvg-gallery-combo a:first-child img
+{
+    width: 100%;
+    margin: 0;
+    float: none;
+}
+.mapsvg-gallery.mapsvg-gallery-slider a img
+{
+    float: none;
+}
+.mapsvg-gallery.mapsvg-gallery-combo a:first-child img {
+    /*margin: 3px;*/
+}
+
+.mapsvg-gallery figcaption {
+    display: none;
+}
+.pswp {
+    z-index: 9999999;
+}
+
+/* .mapsvg-gallery {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+}
+.mapsvg-gallery>* {
+    display: block;
+    margin-bottom: 4px;
+    margin-right: 4px;
+    position: relative;
+    width: 70px;
+} */
+
+.mapsvg-gallery-justified {    
+    flex-wrap: wrap;
+  }
+  .mapsvg-gallery-justified a {
+    margin: 2px;
+    cursor: pointer;
+  }
+  .mapsvg-gallery-justified a:hover {
+    opacity: 0.9;
+  }
+  .mapsvg-gallery-justified a img {
+    user-select: none;
+    width: 100%;
+    vertical-align: middle;
+  }
+  .mapsvg-gallery-justified::after {
+    content: "";
+    flex-grow: 99999;
+    min-width: calc(100vw / 4);
+  }
+  @media (max-width: 460px) {
+    .mapsvg-gallery-justified {
+      flex-direction: column;
+    }
+    .mapsvg-gallery-justified a {
+      width: 100% !important;
+    }
+  }
+  .glide__slides {
+    transition: transform 400ms cubic-bezier(0.165, 0.84, 0.44, 1) 0s !important;
+  }
+  .glide__arrows,
+  .glide__bullets {
+    display: none;
+  }
+  .mapsvg-gallery-slider .glide__arrows,
+  .mapsvg-gallery-slider .glide__bullets
+  {
+    display: block;
+  }
+  /* .glide__arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+    margin-top: -9px;
+    border-radius: 50%;
+    background-color: #818999;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    -webkit-box-shadow: 0 .5rem 4rem 0 rgba(0, 0, 0, .5);
+    box-shadow: 0 .5rem 4rem 0 rgba(0, 0, 0, .5);
+  }
+  .glide__bullet {
+    background-color: hsla(0, 0%, 100%, .5);
+    width: 9px;
+    height: 9px;
+    padding: 0;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    line-height: 0;
+    -webkit-box-shadow: 0 .25em .5em 0 rgba(0, 0, 0, .1);
+    box-shadow: 0 .25em .5em 0 rgba(0, 0, 0, .1);
+    margin: 0 .25em;
+} */

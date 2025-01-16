@@ -1,0 +1,4 @@
+{
+  "entryPoints": ["js/mapsvg/Core/MapSVGClass.ts", "js/mapsvg/Map/Map.ts"],
+  "plugin": ["typedoc-plugin-markdown"]
+}

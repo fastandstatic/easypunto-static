@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="https://easypunto.fastandstatic.com/main-sitemap.xsl"?>
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="/main-sitemap.xsl"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<sitemap>
-		<loc>https://easypunto.fastandstatic.com/page-sitemap.xml</loc>
-		<lastmod>2025-01-20T14:19:43+00:00</lastmod>
+		<loc>/page-sitemap.xml</loc>
+		<lastmod>2025-01-20T15:14:38+00:00</lastmod>
 	</sitemap>
 	<sitemap>
-		<loc>https://easypunto.fastandstatic.com/ciudad-sitemap.xml</loc>
+		<loc>/ciudad-sitemap.xml</loc>
 		<lastmod>2025-01-14T20:18:34+00:00</lastmod>
 	</sitemap>
 	<sitemap>
-		<loc>https://easypunto.fastandstatic.com/ubicacion-sitemap.xml</loc>
+		<loc>/ubicacion-sitemap.xml</loc>
 		<lastmod>2024-12-04T14:11:29+00:00</lastmod>
 	</sitemap>
 </sitemapindex>

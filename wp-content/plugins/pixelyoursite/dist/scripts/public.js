@@ -453,40 +453,7 @@ if (!String.prototype.trim) {
                     Cookies.set('pys_session_limit', true,{ expires: now, path: '/',domain: domain })
                     Cookies.set('pys_start_session', true,{path: '/',domain: domain});
                 }
-                if (options.gdpr.ajax_enabled && !options.gdpr.consent_magic_integration_enabled) {
 
-                    // retrieves actual PYS GDPR filters values which allow to avoid cache issues
-                    $.get({
-                        url: options.ajaxUrl,
-                        dataType: 'json',
-                        data: {
-                            action: 'pys_get_gdpr_filters_values'
-                        },
-                        success: function (res) {
-
-                            if (res.success) {
-
-                                options.gdpr.all_disabled_by_api = res.data.all_disabled_by_api;
-                                options.gdpr.facebook_disabled_by_api = res.data.facebook_disabled_by_api;
-                                options.gdpr.tiktok_disabled_by_api = res.data.tiktok_disabled_by_api;
-                                options.gdpr.analytics_disabled_by_api = res.data.analytics_disabled_by_api;
-                                options.gdpr.google_ads_disabled_by_api = res.data.google_ads_disabled_by_api;
-                                options.gdpr.pinterest_disabled_by_api = res.data.pinterest_disabled_by_api;
-                                options.gdpr.bing_disabled_by_api = res.data.bing_disabled_by_api;
-
-                                options.cookie.externalID_disabled_by_api = res.data.externalID_disabled_by_api;
-                                options.cookie.disabled_all_cookie = res.data.disabled_all_cookie;
-                                options.cookie.disabled_advanced_form_data_cookie = res.data.disabled_advanced_form_data_cookie;
-                                options.cookie.disabled_landing_page_cookie = res.data.disabled_landing_page_cookie;
-                                options.cookie.disabled_first_visit_cookie = res.data.disabled_first_visit_cookie;
-                                options.cookie.disabled_trafficsource_cookie = res.data.disabled_trafficsource_cookie;
-                                options.cookie.disabled_utmTerms_cookie = res.data.disabled_utmTerms_cookie;
-                                options.cookie.disabled_utmId_cookie = res.data.disabled_utmId_cookie;
-
-                            }
-                        }
-                    });
-                }
                 if (options.ajaxForServerEvent && !Cookies.get('pbid') && Facebook.isEnabled()) {
                      jQuery.ajax({
                         url: options.ajaxUrl,
@@ -666,7 +633,7 @@ if (!String.prototype.trim) {
              * Generate unique ID
              */
             generateUniqueId : function (event) {
-                if(event.eventID.length == 0 || (event.type == "static" && options.ajaxForServerStaticEvent) || (event.type !== "static" && options.ajaxForServerEvent)) {
+                if(event.eventID.length == 0) {
                     let idKey = event.hasOwnProperty('custom_event_post_id') ? event.custom_event_post_id : event.e_id;
                     if (!uniqueId.hasOwnProperty(idKey)) {
                         uniqueId[idKey] = pys_generate_token();
@@ -986,7 +953,7 @@ if (!String.prototype.trim) {
                 window[ this.dataLayerName ].push( arguments );
             },
 
-            loadGTMScript: function (id) {
+            loadGTMScript: function (id = '') {
                 const domain = options.gtm.gtm_container_domain ?? 'www.googletagmanager.com';
                 const loader = options.gtm.gtm_container_identifier ?? 'gtm';
                 const gtm_auth = options.gtm.gtm_auth ?? ''; // Set this if needed
@@ -1083,8 +1050,11 @@ if (!String.prototype.trim) {
                  */
                 if ( options.gdpr.consent_magic_integration_enabled && typeof CS_Data !== "undefined" ) {
 
-                    var test_prefix = CS_Data.test_prefix;
-                    if ( ( typeof CS_Data.cs_google_consent_mode_enabled !== "undefined" && CS_Data.cs_google_consent_mode_enabled == 1 ) && ( pixel == 'analytics' || pixel == 'google_ads' ) ) {
+                    let test_prefix = CS_Data.test_prefix;
+                    if (
+                        ( ( typeof CS_Data.cs_google_consent_mode_enabled !== "undefined" && CS_Data.cs_google_consent_mode_enabled == 1 ) && ( pixel == 'analytics' || pixel == 'google_ads' ) )
+                        || ( typeof CS_Data.cs_meta_ldu_mode !== "undefined" && CS_Data.cs_meta_ldu_mode && pixel == 'facebook' )
+                    ) {
                         if ( CS_Data.cs_cache_enabled == 0 || ( CS_Data.cs_cache_enabled == 1 && window.CS_Cache && window.CS_Cache.check_status ) ) {
                             return true;
                         } else {
@@ -1106,14 +1076,14 @@ if (!String.prototype.trim) {
                         return true;
                     }
 
-                    var substring = "cs_enabled_cookie_term";
-                    var theCookies = document.cookie.split( ';' );
+                    let substring = "cs_enabled_cookie_term",
+                        theCookies = document.cookie.split( ';' );
 
-                    for ( var i = 1; i <= theCookies.length; i++ ) {
+                    for ( let i = 1; i <= theCookies.length; i++ ) {
                         if ( theCookies[ i - 1 ].indexOf( substring ) !== -1 ) {
-                            var categoryCookie = theCookies[ i - 1 ].replace( 'cs_enabled_cookie_term' + test_prefix + '_', '' );
+                            let categoryCookie = theCookies[ i - 1 ].replace( 'cs_enabled_cookie_term' + test_prefix + '_', '' );
                             categoryCookie = Number( categoryCookie.replace( /\D+/g, "" ) );
-                            var cs_cookie_val = Cookies.get( 'cs_enabled_cookie_term' + test_prefix + '_' + categoryCookie );
+                            let cs_cookie_val = Cookies.get( 'cs_enabled_cookie_term' + test_prefix + '_' + categoryCookie );
 
                             if ( categoryCookie === CS_Data.cs_script_cat.facebook && pixel == 'facebook' ) {
                                 return cs_cookie_val == 'yes';
@@ -1234,7 +1204,7 @@ if (!String.prototype.trim) {
                  * ConsentMagic
                  */
                 if (options.gdpr.consent_magic_integration_enabled && typeof CS_Data !== "undefined") {
-                    var test_prefix = CS_Data.test_prefix,
+                    let test_prefix = CS_Data.test_prefix,
                         cs_refresh_after_consent = false,
                         substring = "cs_enabled_cookie_term";
 
@@ -1242,15 +1212,26 @@ if (!String.prototype.trim) {
                         cs_refresh_after_consent = CS_Data.cs_refresh_after_consent;
                     }
 
-                    if (!cs_refresh_after_consent) {
-                        var theCookies = document.cookie.split(';');
-                        for (var i = 1 ; i <= theCookies.length; i++) {
+                    let consent_actions = function () {
+                        let theCookies = document.cookie.split( ';' );
+
+                        let consent = {
+                            facebook: true,
+                            ga: true,
+                            google_ads: true,
+                            tiktok: true,
+                            bing: true,
+                            pinterest: true,
+                            gtm: true,
+                        };
+
+                        for (let i = 1 ; i <= theCookies.length; i++) {
                             if (theCookies[i-1].indexOf(substring) !== -1) {
-                                var categoryCookie = theCookies[i-1].replace('cs_enabled_cookie_term'+test_prefix+'_','');
+                                let categoryCookie = theCookies[i-1].replace('cs_enabled_cookie_term'+test_prefix+'_','');
                                 categoryCookie = Number(categoryCookie.replace(/\D+/g,""));
-                                var cs_cookie_val = Cookies.get('cs_enabled_cookie_term'+test_prefix+'_'+categoryCookie);
+                                let cs_cookie_val = Cookies.get('cs_enabled_cookie_term'+test_prefix+'_'+categoryCookie);
                                 if(cs_cookie_val == 'yes') {
-                                    if (categoryCookie === CS_Data.cs_script_cat.facebook) {
+                                    if ( ( categoryCookie === CS_Data.cs_script_cat.facebook ) || ( typeof CS_Data.cs_meta_ldu_mode !== "undefined" && CS_Data.cs_meta_ldu_mode ) ) {
                                         Facebook.loadPixel();
                                     }
 
@@ -1267,19 +1248,24 @@ if (!String.prototype.trim) {
                                         Pinterest.loadPixel();
                                     }
                                 } else {
-                                    if (categoryCookie === CS_Data.cs_script_cat.facebook) {
+                                    if ( ( categoryCookie === CS_Data.cs_script_cat.facebook ) && ( typeof CS_Data.cs_meta_ldu_mode == "undefined" || !CS_Data.cs_meta_ldu_mode ) ) {
                                         Facebook.disable();
+                                        consent.facebook = false;
                                     }
 
                                     if (categoryCookie === CS_Data.cs_script_cat.bing) {
                                         Bing.disable();
+                                        consent.bing = false;
                                     }
                                     if (categoryCookie === CS_Data.cs_script_cat.analytics && (typeof CS_Data.cs_google_analytics_consent_mode == "undefined" || CS_Data.cs_google_analytics_consent_mode == 0)) {
                                         Analytics.disable();
+                                        consent.ga = false;
+                                        consent.gtm = false;
                                     }
 
                                     if (categoryCookie === CS_Data.cs_script_cat.pinterest) {
                                         Pinterest.disable();
+                                        consent.pinterest = false;
                                     }
                                 }
                                 if (Cookies.get('cs_enabled_advanced_matching') == 'yes') {
@@ -1287,10 +1273,24 @@ if (!String.prototype.trim) {
                                 }
                             }
                         }
+                        Utils.setupGDPRData( consent );
+                    }
+
+                    if (!cs_refresh_after_consent) {
+                        consent_actions();
 
                         $(document).on('click','.cs_action_btn',function(e) {
                             e.preventDefault();
-                            var elm = $(this),
+
+                            let consent = {
+                                facebook: true,
+                                ga: true,
+                                bing: true,
+                                pinterest: true,
+                                gtm: true,
+                            };
+
+                            let elm = $(this),
                                 button_action = elm.attr('data-cs_action');
 
                             if(button_action === 'allow_all') {
@@ -1298,14 +1298,30 @@ if (!String.prototype.trim) {
                                 Bing.loadPixel();
                                 Analytics.loadPixel();
                                 Pinterest.loadPixel();
+
+                                consent.facebook = true;
+                                consent.bing = true;
+                                consent.ga = true;
+                                consent.pinterest = true;
+                                consent.gtm = true;
+
+                                Utils.setupGDPRData( consent );
                             } else if(button_action === 'disable_all') {
                                 Facebook.disable();
                                 Bing.disable();
-                                if(CS_Data.cs_google_analytics_consent_mode == 0 || typeof CS_Data.cs_google_analytics_consent_mode == "undefined")
-                                {
+                                if(CS_Data.cs_google_analytics_consent_mode == 0 || typeof CS_Data.cs_google_analytics_consent_mode == "undefined") {
                                     Analytics.disable();
+                                    consent.ga = false;
+                                    consent.gtm = false;
                                 }
                                 Pinterest.disable();
+
+                                consent.facebook = false;
+                                consent.bing = false;
+                                consent.pinterest = false;
+                                Utils.setupGDPRData( consent );
+                            } else if ( button_action === 'cs_confirm' ) {
+                                consent_actions();
                             }
                         });
                     }
@@ -1314,7 +1330,7 @@ if (!String.prototype.trim) {
                  * Real Cookie Banner
                  */
                 if(options.gdpr.real_cookie_banner_integration_enabled) {
-                    var consentApi = window.consentApi;
+                    let consentApi = window.consentApi;
                     if (consentApi) {
                         consentApi.consent("http", "_ga", "*")
                             .then(Analytics.loadPixel.bind(Analytics), Analytics.disable.bind(Analytics));
@@ -1324,6 +1340,29 @@ if (!String.prototype.trim) {
                             .then(Pinterest.loadPixel.bind(Pinterest), Pinterest.disable.bind(Pinterest));
                         consentApi.consent("http", "_uetsid", "*")
                             .then(Bing.loadPixel.bind(Bing), Bing.disable.bind(Bing));
+
+                        let consent = {
+                            facebook: true,
+                            ga: true,
+                            bing: true,
+                            pinterest: true,
+                            gtm: true,
+                        };
+
+                        if (!consentApi.consentSync("http", "_ga", "*").cookieOptIn) {
+                            consent.ga = false;
+                            consent.gtm = false;
+                        }
+                        if (!consentApi.consentSync("http", "_fbp", "*").cookieOptIn) {
+                            consent.facebook = false;
+                        }
+                        if (!consentApi.consentSync("http", "_pinterest_sess", ".pinterest.com").cookieOptIn) {
+                            consent.pinterest = false;
+                        }
+                        if (!consentApi.consentSync("http", "_uetsid", "*").cookieOptIn) {
+                            consent.bing = false;
+                        }
+                        Utils.setupGDPRData( consent );
                     }
                 }
                 /**
@@ -1332,24 +1371,48 @@ if (!String.prototype.trim) {
                 if (options.gdpr.cookiebot_integration_enabled && typeof Cookiebot !== 'undefined') {
 
                     window.addEventListener("CookiebotOnConsentReady", function() {
+
+                        let consent = {
+                            facebook: true,
+                            ga: true,
+                            bing: true,
+                            pinterest: true,
+                            gtm: true,
+                        };
+
                         Utils.manageCookies();
                         if (Cookiebot.consent.marketing) {
                             Facebook.loadPixel();
                             Bing.loadPixel();
                             Pinterest.loadPixel();
 
+                            consent.facebook = true;
+                            consent.bing = true;
+                            consent.pinterest = true;
                         }
                         if (Cookiebot.consent.statistics) {
                             Analytics.loadPixel();
+
+                            consent.ga = true;
+                            consent.gtm = true;
                         }
                         if (!Cookiebot.consent.marketing) {
                             Facebook.disable();
                             Pinterest.disable();
-                            Bing.disable()
+                            Bing.disable();
+
+                            consent.facebook = false;
+                            consent.bing = false;
+                            consent.pinterest = false;
                         }
                         if (!Cookiebot.consent.statistics) {
                             Analytics.disable();
+
+                            consent.ga = false;
+                            consent.gtm = false;
                         }
+
+                        Utils.setupGDPRData( consent );
                     });
 
                 }
@@ -1361,18 +1424,37 @@ if (!String.prototype.trim) {
 
                     $(document).onFirst('click', '.cn-set-cookie', function () {
 
+                        let consent = {};
+
                         if ($(this).data('cookie-set') === 'accept') {
                             Facebook.loadPixel();
                             Analytics.loadPixel();
                             Pinterest.loadPixel();
                             Bing.loadPixel();
+
+                            consent = {
+                                facebook: true,
+                                ga: true,
+                                bing: true,
+                                pinterest: true,
+                                gtm: true,
+                            };
                         } else {
                             Facebook.disable();
                             Analytics.disable();
                             Pinterest.disable();
                             Bing.disable();
+
+                            consent = {
+                                facebook: false,
+                                ga: false,
+                                bing: false,
+                                pinterest: false,
+                                gtm: false,
+                            };
                         }
 
+                        Utils.setupGDPRData( consent );
                     });
 
                     $(document).onFirst('click', '.cn-revoke-cookie', function () {
@@ -1380,6 +1462,16 @@ if (!String.prototype.trim) {
                         Analytics.disable();
                         Pinterest.disable();
                         Bing.disable();
+
+                        let consent = {
+                            facebook: false,
+                            ga: false,
+                            bing: false,
+                            pinterest: false,
+                            gtm: false,
+                        };
+                        Utils.setupGDPRData( consent );
+
                     });
 
                 }
@@ -1391,7 +1483,7 @@ if (!String.prototype.trim) {
 
                     $(document).onFirst('click', '#wt-cli-accept-all-btn,#cookie_action_close_header, .cky-btn-accept', function () {
                         setTimeout(function (){
-                            var cli_cookie = Cookies.get('cookieyes-consent') ?? Cookies.get('viewed_cookie_policy');
+                            let cli_cookie = Cookies.get('cookieyes-consent') ?? Cookies.get('viewed_cookie_policy');
                             if (typeof cli_cookie !== 'undefined') {
                                 if (cli_cookie === Cookies.get('cookieyes-consent') && getCookieYes('analytics') == 'yes') {
                                     Utils.manageCookies();
@@ -1404,6 +1496,15 @@ if (!String.prototype.trim) {
                         Analytics.loadPixel();
                         Pinterest.loadPixel();
                         Bing.loadPixel();
+
+                        let consent = {
+                            facebook: true,
+                            ga: true,
+                            bing: true,
+                            pinterest: true,
+                            gtm: true,
+                        };
+                        Utils.setupGDPRData( consent );
                     });
 
                     $(document).onFirst('click', '#cookie_action_close_header_reject, .cky-btn-reject', function () {
@@ -1411,10 +1512,24 @@ if (!String.prototype.trim) {
                         Analytics.disable();
                         Pinterest.disable();
                         Bing.disable();
+
+                        let consent = {
+                            facebook: false,
+                            ga: false,
+                            bing: false,
+                            pinterest: false,
+                            gtm: false,
+                        };
+                        Utils.setupGDPRData( consent );
                     });
 
                 }
 
+            },
+
+            setupGDPRData: function ( consent ) {
+                consent = window.btoa( JSON.stringify( consent ) );
+                Cookies.set( 'pys_consent', consent, { expires: 365, path: '/', domain: domain } );
             },
 
             /**
@@ -1625,8 +1740,8 @@ if (!String.prototype.trim) {
                             Utils.sendServerAjaxRequest(options.ajaxUrl, json);
                         }
 
-                        if(allData.type == 'static' && options.ajaxForServerStaticEvent) {
-                            Utils.sendServerAjaxRequest(options.ajaxUrl, json);
+                        if ( ( allData.type == 'static' && options.ajaxForServerStaticEvent ) || ( allData.hasOwnProperty( 'ajaxFire' ) && allData.ajaxFire ) ) {
+                            Utils.sendServerAjaxRequest( options.ajaxUrl, json );
                         }
                     }
                 }
@@ -1763,6 +1878,11 @@ if (!String.prototype.trim) {
                         fbq('set', 'autoConfig', false, pixelId);
                     }
                     let advancedMatching = Facebook.advancedMatching();
+
+                    if ( +options.facebook.meta_ldu === 1  ) {
+                        fbq( 'dataProcessingOptions', [ 'LDU' ], 0, 0 );
+                    }
+
                     if (options.gdpr.consent_magic_integration_enabled && typeof CS_Data !== "undefined") {
                         if(!advancedMatching) {
                             fbq('init', pixelId);
@@ -2521,6 +2641,9 @@ if (!String.prototype.trim) {
                 if(options.gtm.gtm_just_data_layer) {
                     console.warn && console.warn("[PYS] Google Tag Manager container code placement set to OFF !!!");
                     console.warn && console.warn("[PYS] Data layer codes are active but GTM container must be loaded using custom coding !!!");
+                    if(options.gtm.trackingIds.length == 0){
+                        Utils.loadGTMScript();
+                    }
                 }
 
                 if(options.hasOwnProperty("tracking_analytics") && options.tracking_analytics.hasOwnProperty("userDataEnable") && options.tracking_analytics.userDataEnable){
@@ -2732,16 +2855,26 @@ if (!String.prototype.trim) {
     $(document).ready(function () {
 
         if($("#pys_late_event").length > 0) {
-            var events =  JSON.parse($("#pys_late_event").attr("dir"));
-            for(var key in events) {
-                var event = {};
-                event[events[key].e_id] = [events[key]];
-                if(options.staticEvents.hasOwnProperty(key)) {
-                    Object.assign(options.staticEvents[key], event);
-                } else {
-                    options.staticEvents[key] = event;
+            var dirAttr = $("#pys_late_event").attr("dir");
+            if (dirAttr) {
+                try {
+                    var events = JSON.parse(dirAttr);
+                } catch (e) {
+                    console.warn("Invalid JSON in pys_late_event dir attribute:", e);
                 }
-
+            } else {
+                console.warn("pys_late_event dir attribute is undefined or empty");
+            }
+            if (events) {
+                for (var key in events) {
+                    var event = {};
+                    event[events[key].e_id] = [events[key]];
+                    if (options.staticEvents.hasOwnProperty(key)) {
+                        Object.assign(options.staticEvents[key], event);
+                    } else {
+                        options.staticEvents[key] = event;
+                    }
+                }
             }
         }
 
@@ -2957,15 +3090,21 @@ if (!String.prototype.trim) {
                 $('.add_to_cart_button:not(.product_type_variable,.product_type_bundle,.single_add_to_cart_button)').on("click",function (e) {
 
                     var product_id = $(this).data('product_id');
-
                     if (typeof product_id !== 'undefined') {
-                        Facebook.onWooAddToCartOnButtonEvent(product_id);
-                        Analytics.onWooAddToCartOnButtonEvent(product_id);
-                        GTM.onWooAddToCartOnButtonEvent(product_id);
-                        Pinterest.onWooAddToCartOnButtonEvent(product_id);
-                        Bing.onWooAddToCartOnButtonEvent(product_id);
+                        if (options.dynamicEvents.hasOwnProperty("woo_add_to_cart_on_button_click")) {
+                            var tmpEventID = pys_generate_token();
+                            $.each(options.dynamicEvents.woo_add_to_cart_on_button_click, function (i, tag) {
+                                tag.eventID = tmpEventID;
+                            });
+                        }
+                        if (typeof product_id !== 'undefined') {
+                            Facebook.onWooAddToCartOnButtonEvent(product_id);
+                            Analytics.onWooAddToCartOnButtonEvent(product_id);
+                            GTM.onWooAddToCartOnButtonEvent(product_id);
+                            Pinterest.onWooAddToCartOnButtonEvent(product_id);
+                            Bing.onWooAddToCartOnButtonEvent(product_id);
+                        }
                     }
-
                 });
 
                 // Single Product
@@ -3016,6 +3155,13 @@ if (!String.prototype.trim) {
                             qtyTag = $form.find('select[name="quantity"]');
                         }
                         qty = parseInt(qtyTag.val());
+                    }
+
+                    if(options.dynamicEvents.hasOwnProperty("woo_add_to_cart_on_button_click")){
+                        var tmpEventID = pys_generate_token();
+                        $.each(options.dynamicEvents.woo_add_to_cart_on_button_click, function (i, tag) {
+                            tag.eventID = tmpEventID;
+                        });
                     }
 
                     Facebook.onWooAddToCartOnSingleEvent(product_id, qty, product_type, $form);
@@ -3392,6 +3538,14 @@ function getCookieYes(key) {
 
 function getRootDomain(useSubdomain = false) {
     const hostname = window.location.hostname; // Get the current hostname
+    // Check if tldjs is defined before using it
+    if (typeof tldjs === "undefined") {
+        console.warn("tldjs is not defined");
+        return hostname; // Return hostname as a fallback
+    }
+
     const rootDomain = tldjs.getDomain(hostname); // Use tldjs to extract the root domain
-    return rootDomain && (useSubdomain == true) ? '.' + rootDomain : hostname; // Add leading dot for cookies
+
+    // Return the root domain with or without a leading dot based on useSubdomain
+    return rootDomain ? (useSubdomain ? '.' + rootDomain : rootDomain) : hostname;
 }

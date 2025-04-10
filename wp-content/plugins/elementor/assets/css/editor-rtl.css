@@ -1,4 +1,4 @@
-/*! elementor - v3.18.0 - 06-12-2023 */
+/*! elementor - v3.28.0 - 01-04-2025 */
 .elementor-control-unit-1 {
   width: 27px;
 }
@@ -101,10 +101,7 @@ body.elementor-navigator--dock-hint:after {
 
 #elementor-loading {
   position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  inset: 0;
   background: var(--e-a-bg-default);
   z-index: 9999;
 }
@@ -114,10 +111,7 @@ body.elementor-navigator--dock-hint:after {
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background-color: var(--e-a-bg-default);
 }
 #elementor-preview-loading i {
@@ -145,6 +139,16 @@ body.elementor-navigator--dock-hint:after {
 }
 .elementor-nerd-box .elementor-button {
   margin-block-start: 20px;
+}
+.elementor-nerd-box--upsale {
+  padding: 15px 30px 30px;
+}
+.elementor-nerd-box--upsale .elementor-nerd-box-title {
+  font-weight: 500;
+  line-height: 1.2;
+}
+.elementor-nerd-box--upsale .elementor-nerd-box-message {
+  line-height: 1.5;
 }
 
 .eicon-nerd:hover:before {
@@ -360,6 +364,268 @@ select {
   height: 27px;
 }
 
+.dialog-widget-content {
+  background-color: var(--e-a-bg-default);
+  position: absolute;
+  border-radius: 3px;
+  box-shadow: 2px 8px 23px 3px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.dialog-message {
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+.dialog-close-button {
+  cursor: pointer;
+  position: absolute;
+  margin-block-start: 15px;
+  inset-inline-end: 15px;
+  color: var(--e-a-color-txt);
+  font-size: 15px;
+  line-height: 1;
+  transition: var(--e-a-transition-hover);
+}
+.dialog-close-button:hover {
+  color: var(--e-a-color-txt-hover);
+}
+
+.dialog-prevent-scroll {
+  overflow: hidden;
+  max-height: 100vh;
+}
+
+.dialog-type-lightbox {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.elementor-editor-active .elementor-popup-modal {
+  background-color: initial;
+}
+
+.dialog-type-confirm .dialog-widget-content,
+.dialog-type-alert .dialog-widget-content {
+  margin: auto;
+  width: 400px;
+  padding: 20px;
+}
+.dialog-type-confirm .dialog-header,
+.dialog-type-alert .dialog-header {
+  font-size: 15px;
+  font-weight: 500;
+}
+.dialog-type-confirm .dialog-header:after,
+.dialog-type-alert .dialog-header:after {
+  content: "";
+  display: block;
+  border-block-end: var(--e-a-border);
+  padding-block-end: 10px;
+  margin-block-end: 10px;
+  margin-inline-start: -20px;
+  margin-inline-end: -20px;
+}
+.dialog-type-confirm .dialog-message,
+.dialog-type-alert .dialog-message {
+  min-height: 50px;
+}
+.dialog-type-confirm .dialog-buttons-wrapper,
+.dialog-type-alert .dialog-buttons-wrapper {
+  padding-block-start: 10px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+.dialog-type-confirm .dialog-buttons-wrapper .dialog-button,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.2;
+  padding: 8px 16px;
+  outline: none;
+  border: none;
+  border-radius: var(--e-a-border-radius);
+  background-color: var(--e-a-btn-bg);
+  color: var(--e-a-btn-color-invert);
+  transition: var(--e-a-transition-hover);
+}
+.dialog-type-confirm .dialog-buttons-wrapper .dialog-button:hover,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button:hover {
+  border: none;
+}
+.dialog-type-confirm .dialog-buttons-wrapper .dialog-button:hover, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button:focus,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button:hover,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button:focus {
+  background-color: var(--e-a-btn-bg-hover);
+  color: var(--e-a-btn-color-invert);
+}
+.dialog-type-confirm .dialog-buttons-wrapper .dialog-button:active,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button:active {
+  background-color: var(--e-a-btn-bg-active);
+}
+.dialog-type-confirm .dialog-buttons-wrapper .dialog-button:not([disabled]),
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button:not([disabled]) {
+  cursor: pointer;
+}
+.dialog-type-confirm .dialog-buttons-wrapper .dialog-button:disabled,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button:disabled {
+  background-color: var(--e-a-btn-bg-disabled);
+  color: var(--e-a-btn-color-disabled);
+}
+.dialog-type-confirm .dialog-buttons-wrapper .dialog-button:not(.elementor-button-state) .elementor-state-icon,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button:not(.elementor-button-state) .elementor-state-icon {
+  display: none;
+}
+.dialog-type-confirm .dialog-buttons-wrapper .dialog-button.e-btn-txt, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.dialog-cancel,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.e-btn-txt,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.dialog-cancel {
+  background: transparent;
+  color: var(--e-a-color-txt);
+}
+.dialog-type-confirm .dialog-buttons-wrapper .dialog-button.e-btn-txt:hover, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.dialog-cancel:hover, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.e-btn-txt:focus, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.dialog-cancel:focus,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.e-btn-txt:hover,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.dialog-cancel:hover,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.e-btn-txt:focus,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.dialog-cancel:focus {
+  background: var(--e-a-bg-hover);
+  color: var(--e-a-color-txt-hover);
+}
+.dialog-type-confirm .dialog-buttons-wrapper .dialog-button.e-btn-txt:disabled, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.dialog-cancel:disabled,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.e-btn-txt:disabled,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.dialog-cancel:disabled {
+  background: transparent;
+  color: var(--e-a-color-txt-disabled);
+}
+.dialog-type-confirm .dialog-buttons-wrapper .dialog-button.e-btn-txt-border,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.e-btn-txt-border {
+  border: 1px solid var(--e-a-color-txt-muted);
+}
+.dialog-type-confirm .dialog-buttons-wrapper .dialog-button.elementor-button-success, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.e-success,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.elementor-button-success,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.e-success {
+  background-color: var(--e-a-btn-bg-success);
+}
+.dialog-type-confirm .dialog-buttons-wrapper .dialog-button.elementor-button-success:hover, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.elementor-button-success:focus, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.e-success:hover, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.e-success:focus,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.elementor-button-success:hover,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.elementor-button-success:focus,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.e-success:hover,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.e-success:focus {
+  background-color: var(--e-a-btn-bg-success-hover);
+}
+.dialog-type-confirm .dialog-buttons-wrapper .dialog-button.e-primary, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.dialog-take_over, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.dialog-ok,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.e-primary,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.dialog-take_over,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.dialog-ok {
+  background-color: var(--e-a-btn-bg-primary);
+  color: var(--e-a-btn-color);
+}
+.dialog-type-confirm .dialog-buttons-wrapper .dialog-button.e-primary:hover, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.dialog-take_over:hover, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.dialog-ok:hover, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.e-primary:focus, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.dialog-take_over:focus, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.dialog-ok:focus,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.e-primary:hover,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.dialog-take_over:hover,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.dialog-ok:hover,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.e-primary:focus,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.dialog-take_over:focus,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.dialog-ok:focus {
+  background-color: var(--e-a-btn-bg-primary-hover);
+  color: var(--e-a-btn-color);
+}
+.dialog-type-confirm .dialog-buttons-wrapper .dialog-button.e-primary.e-btn-txt, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.e-btn-txt.dialog-take_over, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.e-primary.dialog-cancel, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.dialog-cancel.dialog-take_over, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.e-btn-txt.dialog-ok, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.dialog-ok.dialog-cancel,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.e-primary.e-btn-txt,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.e-btn-txt.dialog-take_over,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.e-primary.dialog-cancel,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.dialog-cancel.dialog-take_over,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.e-btn-txt.dialog-ok,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.dialog-ok.dialog-cancel {
+  background: transparent;
+  color: var(--e-a-color-primary-bold);
+}
+.dialog-type-confirm .dialog-buttons-wrapper .dialog-button.e-primary.e-btn-txt:hover, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.e-btn-txt.dialog-take_over:hover, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.e-primary.dialog-cancel:hover, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.dialog-cancel.dialog-take_over:hover, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.e-btn-txt.dialog-ok:hover, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.dialog-ok.dialog-cancel:hover, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.e-primary.e-btn-txt:focus, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.e-btn-txt.dialog-take_over:focus, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.e-primary.dialog-cancel:focus, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.dialog-cancel.dialog-take_over:focus, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.e-btn-txt.dialog-ok:focus, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.dialog-ok.dialog-cancel:focus,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.e-primary.e-btn-txt:hover,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.e-btn-txt.dialog-take_over:hover,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.e-primary.dialog-cancel:hover,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.dialog-cancel.dialog-take_over:hover,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.e-btn-txt.dialog-ok:hover,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.dialog-ok.dialog-cancel:hover,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.e-primary.e-btn-txt:focus,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.e-btn-txt.dialog-take_over:focus,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.e-primary.dialog-cancel:focus,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.dialog-cancel.dialog-take_over:focus,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.e-btn-txt.dialog-ok:focus,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.dialog-ok.dialog-cancel:focus {
+  background: var(--e-a-bg-primary);
+}
+.dialog-type-confirm .dialog-buttons-wrapper .dialog-button.go-pro, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.e-accent,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.go-pro,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.e-accent {
+  background-color: var(--e-a-btn-bg-accent);
+}
+.dialog-type-confirm .dialog-buttons-wrapper .dialog-button.go-pro:hover, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.go-pro:focus, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.e-accent:hover, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.e-accent:focus,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.go-pro:hover,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.go-pro:focus,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.e-accent:hover,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.e-accent:focus {
+  background-color: var(--e-a-btn-bg-accent-hover);
+}
+.dialog-type-confirm .dialog-buttons-wrapper .dialog-button.go-pro:active, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.e-accent:active,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.go-pro:active,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.e-accent:active {
+  background-color: var(--e-a-btn-bg-accent-active);
+}
+.dialog-type-confirm .dialog-buttons-wrapper .dialog-button.elementor-button-info, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.e-info,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.elementor-button-info,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.e-info {
+  background-color: var(--e-a-btn-bg-info);
+}
+.dialog-type-confirm .dialog-buttons-wrapper .dialog-button.elementor-button-info:hover, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.elementor-button-info:focus, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.e-info:hover, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.e-info:focus,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.elementor-button-info:hover,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.elementor-button-info:focus,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.e-info:hover,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.e-info:focus {
+  background-color: var(--e-a-btn-bg-info-hover);
+}
+.dialog-type-confirm .dialog-buttons-wrapper .dialog-button.elementor-button-warning, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.e-warning,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.elementor-button-warning,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.e-warning {
+  background-color: var(--e-a-btn-bg-warning);
+}
+.dialog-type-confirm .dialog-buttons-wrapper .dialog-button.elementor-button-warning:hover, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.elementor-button-warning:focus, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.e-warning:hover, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.e-warning:focus,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.elementor-button-warning:hover,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.elementor-button-warning:focus,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.e-warning:hover,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.e-warning:focus {
+  background-color: var(--e-a-btn-bg-warning-hover);
+}
+.dialog-type-confirm .dialog-buttons-wrapper .dialog-button.elementor-button-danger, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.e-danger,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.elementor-button-danger,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.e-danger {
+  background-color: var(--e-a-btn-bg-danger);
+}
+.dialog-type-confirm .dialog-buttons-wrapper .dialog-button.elementor-button-danger:hover, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.elementor-button-danger:focus, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.e-danger:hover, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button.e-danger:focus,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.elementor-button-danger:hover,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.elementor-button-danger:focus,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.e-danger:hover,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button.e-danger:focus {
+  background-color: var(--e-a-btn-bg-danger-hover);
+}
+.dialog-type-confirm .dialog-buttons-wrapper .dialog-button i,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button i {
+  margin-inline-end: 5px;
+}
+.dialog-type-confirm .dialog-buttons-wrapper .dialog-button:hover, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button:focus, .dialog-type-confirm .dialog-buttons-wrapper .dialog-button:visited,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button:hover,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button:focus,
+.dialog-type-alert .dialog-buttons-wrapper .dialog-button:visited {
+  color: initial;
+}
 /*
  * Container style
  */
@@ -626,6 +892,10 @@ select {
 .elementor-editor-preview .elementor-panel > .ui-resizable-w {
   display: none;
 }
+.elementor-editor-preview .elementor-panel #elementor-panel-elements-wrapper {
+  display: flex;
+  flex-direction: column;
+}
 .elementor-panel .ps__rail-y {
   z-index: 2;
 }
@@ -669,7 +939,7 @@ select {
 .elementor-panel .elementor-header-button .elementor-icon.eicon-menu-bar {
   font-size: 18px;
 }
-.elementor-panel .elementor-header-button .elementor-icon:hover, .elementor-panel .elementor-header-button .elementor-icon:focus {
+.elementor-panel .elementor-header-button:hover, .elementor-panel .elementor-header-button:focus {
   color: var(--e-a-dark-color-txt-hover);
 }
 .elementor-panel #elementor-panel-header-title {
@@ -682,6 +952,7 @@ select {
 }
 .elementor-panel #elementor-panel-elements-categories {
   padding-block-end: 10px;
+  position: relative;
 }
 .elementor-panel .elementor-panel-category {
   position: relative;
@@ -721,12 +992,14 @@ select {
   width: 100%;
   height: 40px;
   transition: var(--e-a-transition-hover);
+  border: 0;
+  background-color: transparent;
   cursor: pointer;
 }
 .elementor-panel .elementor-panel-menu-item:not(:last-child) {
   border-block-end: var(--e-a-border);
 }
-.elementor-panel .elementor-panel-menu-item:hover {
+.elementor-panel .elementor-panel-menu-item:hover, .elementor-panel .elementor-panel-menu-item:focus {
   background-color: var(--e-a-bg-hover);
 }
 .elementor-panel .elementor-panel-menu-item:active {
@@ -794,11 +1067,9 @@ select {
   border-color: var(--e-a-border-color-accent);
   color: var(--e-a-color-txt-accent);
 }
-.elementor-panel .elementor-panel-navigation .elementor-panel-navigation-tab.elementor-active a,
 .elementor-panel .elementor-panel-navigation .elementor-panel-navigation-tab.elementor-active span {
   color: var(--e-a-color-txt-accent);
 }
-.elementor-panel .elementor-panel-navigation .elementor-panel-navigation-tab a,
 .elementor-panel .elementor-panel-navigation .elementor-panel-navigation-tab span {
   color: inherit;
   display: block;
@@ -806,40 +1077,35 @@ select {
   padding: 12px 0 8px;
   font-size: 10px;
 }
-.elementor-panel .elementor-panel-navigation .elementor-panel-navigation-tab a:before,
 .elementor-panel .elementor-panel-navigation .elementor-panel-navigation-tab span:before {
   font-family: eicons;
   font-size: 16px;
   display: block;
   margin-block-end: 8px;
 }
-.elementor-panel .elementor-tab-control-content a:before,
 .elementor-panel .elementor-tab-control-content span:before {
   content: "\e92c";
 }
-.elementor-panel .elementor-tab-control-style a:before,
 .elementor-panel .elementor-tab-control-style span:before {
   content: "\e921";
 }
-.elementor-panel .elementor-tab-control-advanced a:before,
+.elementor-panel .elementor-tab-control-settings span:before {
+  content: "\e940";
+}
+.elementor-panel .elementor-tab-control-advanced-tab-floating-buttons span:before,
+.elementor-panel .elementor-tab-control-advanced-tab-links-in-bio span:before,
+.elementor-panel .elementor-tab-control-advanced-tab-floating-bars span:before,
 .elementor-panel .elementor-tab-control-advanced span:before,
-.elementor-panel .elementor-tab-control-settings a:before,
-.elementor-panel .elementor-tab-control-settings span:before,
-.elementor-panel .elementor-tab-control-general_style a:before,
 .elementor-panel .elementor-tab-control-general_style span:before {
   content: "\e916";
 }
-.elementor-panel .elementor-tab-control-responsive a:before,
 .elementor-panel .elementor-tab-control-responsive span:before {
   content: "\e885";
 }
-.elementor-panel .elementor-tab-control-lightbox a:before,
 .elementor-panel .elementor-tab-control-lightbox span:before {
   content: "\e922";
 }
-.elementor-panel .elementor-tab-control-layout a:before,
 .elementor-panel .elementor-tab-control-layout span:before,
-.elementor-panel .elementor-tab-control-column a:before,
 .elementor-panel .elementor-tab-control-column span:before {
   content: "\e899";
 }
@@ -1024,10 +1290,7 @@ select {
 }
 body.elementor-panel-loading #elementor-panel-state-loading {
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
+  inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1076,12 +1339,17 @@ body.elementor-panel-loading #elementor-panel-state-loading {
 }
 
 .elementor-panel .elementor-element {
+  font-family: var(--e-a-font-family);
+  color: var(--e-a-color-txt);
+  line-height: 1;
   text-align: center;
   border: var(--e-a-border-bold);
   border-radius: 3px;
   cursor: move;
   position: relative;
   transition: var(--e-a-transition-hover);
+  width: 100%;
+  background-color: transparent;
 }
 .elementor-panel .elementor-element--promotion .elementor-element {
   cursor: pointer;
@@ -1089,11 +1357,11 @@ body.elementor-panel-loading #elementor-panel-state-loading {
      -moz-user-select: none;
           user-select: none;
 }
-.elementor-panel .elementor-element:hover {
+.elementor-panel .elementor-element:hover, .elementor-panel .elementor-element:focus {
   background-color: var(--e-a-bg-hover);
   border-color: var(--e-a-border-color-bold);
 }
-.elementor-panel .elementor-element:hover > .eicon-lock {
+.elementor-panel .elementor-element:hover > .eicon-lock, .elementor-panel .elementor-element:focus > .eicon-lock {
   color: var(--e-a-color-accent);
 }
 .elementor-panel .elementor-element .icon {
@@ -1175,7 +1443,7 @@ body.elementor-panel-loading #elementor-panel-state-loading {
   position: absolute;
   width: 300px;
   z-index: 1;
-  background-color: #ffffff;
+  background-color: var(--e-a-bg-default);
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
   border-radius: 3px;
 }
@@ -1186,7 +1454,7 @@ body.elementor-panel-loading #elementor-panel-state-loading {
   left: 100%;
   transform: scaleY(0.7);
   border: 10px solid transparent;
-  border-inline-end-color: #ffffff;
+  border-inline-end-color: var(--e-a-bg-default);
 }
 .dialog-tooltip-widget__title {
   font-size: 14px;
@@ -1194,8 +1462,8 @@ body.elementor-panel-loading #elementor-panel-state-loading {
 .dialog-tooltip-widget .dialog-tooltip-header {
   display: flex;
   padding: 20px 20px 0;
-  color: #0C0D0E;
-  border-block-end: 1px solid #ffffff;
+  color: var(--e-a-color-txt);
+  border-block-end: 1px solid var(--e-a-bg-default);
   font-weight: 500;
 }
 .dialog-tooltip-widget .dialog-tooltip-header .eicon-pro-icon {
@@ -1207,7 +1475,7 @@ body.elementor-panel-loading #elementor-panel-state-loading {
 .dialog-tooltip-widget .dialog-tooltip-header .eicon-close {
   cursor: pointer;
   margin-inline-start: auto;
-  color: #9DA5AE;
+  color: var(--e-a-color-txt);
 }
 .dialog-tooltip-widget .dialog-tooltip-message {
   padding: 20px;
@@ -1251,17 +1519,63 @@ body.elementor-panel-loading #elementor-panel-state-loading {
   margin-block-start: 20px;
 }
 
+#elementor-panel-get-pro-elements-sticky {
+  position: sticky;
+  bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-block-end: -10px;
+}
+#elementor-panel-get-pro-elements-sticky .elementor-get-pro-sticky-message {
+  margin-top: -14px;
+  min-height: 40px;
+  display: block;
+  padding: 9px min(35px, 5%);
+  gap: 10px;
+  background-color: var(--e-a-color-white);
+  color: var(--e-a-color-black);
+  text-align: center;
+  box-shadow: 0px -10px 14px -6px rgba(0, 0, 0, 0.05);
+}
+#elementor-panel-get-pro-elements-sticky .elementor-get-pro-sticky-message a {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--e-a-btn-bg-accent);
+}
+#elementor-panel-get-pro-elements-sticky img {
+  margin-left: 17px;
+}
+
 #elementor-panel-notice-wrapper .elementor-panel-notice {
   width: 90%;
   margin: 0 auto;
   font-style: unset;
-  margin-bottom: 15px;
+  margin-block-end: 15px;
 }
 #elementor-panel-notice-wrapper .elementor-panel-notice a {
   font-weight: bold;
   font-style: italic;
-  border-bottom: 2px dotted var(--e-a-color-info);
+  border-block-end: 2px dotted var(--e-a-color-info);
   display: inline-block;
+}
+
+body.e-has-notification:not(.e-route-panel-menu) #elementor-panel-header-menu-button,
+body.e-has-notification .elementor-panel-menu-item.elementor-panel-menu-item-notification-center .elementor-panel-menu-item-icon {
+  position: relative;
+}
+body.e-has-notification:not(.e-route-panel-menu) #elementor-panel-header-menu-button:after,
+body.e-has-notification .elementor-panel-menu-item.elementor-panel-menu-item-notification-center .elementor-panel-menu-item-icon:after {
+  position: absolute;
+  content: "";
+  display: block;
+  background: var(--e-a-color-primary);
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  top: 5px;
+  right: 5px;
 }
 
 .media-modal.wp-core-ui {
@@ -1300,6 +1614,9 @@ body.elementor-panel-loading #elementor-panel-state-loading {
   line-height: 1;
   margin-inline-end: 5px;
 }
+.elementor-control .elementor-control-title:empty {
+  display: none;
+}
 .elementor-control .elementor-control-spinner {
   display: flex;
   align-items: center;
@@ -1308,6 +1625,7 @@ body.elementor-panel-loading #elementor-panel-state-loading {
   padding: 0;
 }
 .elementor-control.elementor-control-type-divider .elementor-control-content {
+  margin-inline: 20px;
   border-width: 0;
   border-block-start: var(--e-a-border);
   background-color: var(--e-a-bg-default);
@@ -1319,22 +1637,21 @@ body.elementor-panel-loading #elementor-panel-state-loading {
 .elementor-control.elementor-control-separator-before:before {
   content: "";
   position: absolute;
+  inset: 0 20px auto;
   height: 1px;
-  width: calc(100% - 40px);
-  top: 0;
-  right: 20px;
   background-color: var(--e-a-border-color);
+}
+.elementor-control.elementor-control-separator-after {
+  padding-block-end: 15px;
 }
 .elementor-control.elementor-control-separator-after:after {
   content: "";
   position: absolute;
+  inset: auto 20px 0;
   height: 1px;
-  width: calc(100% - 40px);
-  bottom: 0;
-  right: 20px;
   background-color: var(--e-a-border-color);
 }
-.elementor-control.elementor-control-separator-after + .elementor-control-type-tabs ~ .elementor-control-separator-default, .elementor-control.elementor-control-separator-after:not(.elementor-hidden-control) ~ .elementor-control-separator-default {
+.elementor-control.elementor-control-separator-after + .elementor-control-type-tabs + .elementor-control-separator-default, .elementor-control.elementor-control-separator-after:not(.elementor-hidden-control) + .elementor-control-separator-default {
   padding-block-start: 15px;
 }
 .elementor-control.elementor-control-deprecated {
@@ -1398,8 +1715,10 @@ body:not(.elementor-device-mobile) .elementor-control.elementor-control-responsi
   height: 48px;
   padding-inline: 20px;
   width: 100%;
+  border: 0;
   border-block-start: var(--e-a-border);
   border-block-start-width: 2px;
+  background-color: transparent;
   color: var(--e-a-color-txt-accent);
   cursor: pointer;
 }
@@ -1412,8 +1731,29 @@ body:not(.elementor-device-mobile) .elementor-control.elementor-control-responsi
 .elementor-panel-heading-title {
   font-weight: bold;
 }
+.elementor-panel-heading-promotion {
+  margin-inline-start: auto;
+}
+.elementor-panel-heading-promotion a {
+  color: var(--e-a-color-accent-promotion);
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+}
+.elementor-panel-heading-promotion a i {
+  margin-inline-end: 4px;
+  font-size: 14px;
+}
+.elementor-panel-heading-promotion a:hover {
+  color: var(--e-a-color-accent-promotion);
+}
+.elementor-panel-heading:focus-visible {
+  color: var(--e-a-color-txt-hover);
+}
 
-#elementor-controls .elementor-control-type-section:first-child .elementor-panel-heading {
+#elementor-controls .elementor-control-type-section:first-child .elementor-panel-heading,
+#elementor-panel-page-settings-controls .elementor-control-type-section:first-child .elementor-panel-heading,
+#elementor-panel-editorPreferences-settings-controls .elementor-control-type-section:first-child .elementor-panel-heading {
   border-block-start: none;
 }
 
@@ -1669,12 +2009,6 @@ body:not(.elementor-device-mobile) .elementor-control.elementor-control-responsi
 .e-units-choices .elementor-units-choices-label:hover {
   color: var(--e-a-color-primary-bold);
 }
-.e-units-choices .elementor-units-choices-label:not([data-choose=custom]) i {
-  display: none;
-}
-.e-units-choices .elementor-units-choices-label[data-choose=custom] span {
-  display: none;
-}
 .e-units-choices.e-units-choices-open {
   display: block;
   animation-duration: 1s;
@@ -1694,6 +2028,17 @@ body:not(.elementor-device-mobile) .elementor-control.elementor-control-responsi
     max-height: 100vh;
   }
 }
+.elementor-control-alert {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+}
+.elementor-control-alert-heading {
+  font-weight: bold;
+}
+
 .elementor-control-type-button .elementor-control-input-wrapper {
   text-align: end;
 }
@@ -1785,13 +2130,13 @@ body:not(.elementor-device-mobile) .elementor-control.elementor-control-responsi
 }
 
 .elementor-group-control-blur .elementor-slider {
-  background: url("./../images/blur.png");
+  background: url("/wp-content/plugins/elementor/assets/images/blur.png");
   background-size: cover;
   background-position: center;
 }
 
 .elementor-group-control-contrast .elementor-slider {
-  background: url("./../images/contrast.png");
+  background: url("/wp-content/plugins/elementor/assets/images/contrast.png");
   background-size: 100% 100%;
 }
 
@@ -1986,12 +2331,6 @@ body:not(.elementor-device-mobile) .elementor-control.elementor-control-responsi
 }
 .e-units-choices .elementor-units-choices-label:hover {
   color: var(--e-a-color-primary-bold);
-}
-.e-units-choices .elementor-units-choices-label:not([data-choose=custom]) i {
-  display: none;
-}
-.e-units-choices .elementor-units-choices-label[data-choose=custom] span {
-  display: none;
 }
 .e-units-choices.e-units-choices-open {
   display: block;
@@ -2271,12 +2610,6 @@ body:not(.elementor-device-mobile) .elementor-control.elementor-control-responsi
 .e-units-choices .elementor-units-choices-label:hover {
   color: var(--e-a-color-primary-bold);
 }
-.e-units-choices .elementor-units-choices-label:not([data-choose=custom]) i {
-  display: none;
-}
-.e-units-choices .elementor-units-choices-label[data-choose=custom] span {
-  display: none;
-}
 .e-units-choices.e-units-choices-open {
   display: block;
   animation-duration: 1s;
@@ -2426,16 +2759,17 @@ body:not(.elementor-device-mobile) .elementor-control.elementor-control-responsi
 .elementor-control-type-gallery .elementor-control-gallery-thumbnail {
   width: 48px;
   height: 48px;
-  background-size: cover;
-  background-position: 50% 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
   border: var(--e-a-border);
+}
+.elementor-control-type-gallery .elementor-control-gallery-thumbnail + .unoptimized__image {
+  outline: 2px solid var(--e-a-btn-bg-danger-active);
+  opacity: 0.6;
 }
 .elementor-control-type-gallery .elementor-control-gallery-edit {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  inset: 0;
   background-color: rgba(0, 0, 0, 0.2);
   padding: 10px;
   font-size: 11px;
@@ -2568,7 +2902,7 @@ body:not(.elementor-device-mobile) .elementor-control.elementor-control-responsi
   font-size: 13px;
 }
 .e-global__preview-items-container {
-  max-height: 260px;
+  max-height: 400px;
   overflow-y: auto;
   padding: 5px 0;
 }
@@ -2615,11 +2949,8 @@ body:not(.elementor-device-mobile) .elementor-control.elementor-control-responsi
 }
 .e-global__color-preview-color, .e-global__color-preview-transparent-bg {
   border-radius: 3px;
-  height: 100%;
-  width: 100%;
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
 }
 .e-global__color-preview-transparent-bg {
   background-image: linear-gradient(45deg, var(--e-a-border-color-bold) 25%, transparent 0, transparent 75%, var(--e-a-border-color-bold) 0, var(--e-a-border-color-bold)), linear-gradient(45deg, var(--e-a-border-color-bold) 25%, transparent 0, transparent 75%, var(--e-a-border-color-bold) 0, var(--e-a-border-color-bold));
@@ -2755,7 +3086,6 @@ body:not(.elementor-device-mobile) .elementor-control.elementor-control-responsi
   height: 100%;
   background-size: cover;
   background-position: center;
-  padding-block-end: 42.8571%;
 }
 .elementor-control-media-area {
   background-image: linear-gradient(45deg, var(--e-a-border-color-bold) 25%, transparent 0, transparent 75%, var(--e-a-border-color-bold) 0, var(--e-a-border-color-bold)), linear-gradient(45deg, var(--e-a-border-color-bold) 25%, transparent 0, transparent 75%, var(--e-a-border-color-bold) 0, var(--e-a-border-color-bold));
@@ -2785,10 +3115,7 @@ body:not(.elementor-device-mobile) .elementor-control.elementor-control-responsi
 .elementor-control-media .elementor-control-media__content:hover:after {
   content: "";
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  inset: 0;
   background-color: rgba(0, 0, 0, 0.2);
   pointer-events: none;
 }
@@ -2847,6 +3174,12 @@ body:not(.elementor-device-mobile) .elementor-control.elementor-control-responsi
 }
 .elementor-control-media.e-media-empty .elementor-control-file-area {
   display: none;
+}
+.elementor-control-media__warnings:empty {
+  display: none;
+}
+.elementor-control-media__warnings:not(:empty) {
+  margin-block-start: 10px;
 }
 .elementor-control-media__file {
   display: flex;
@@ -2925,6 +3258,77 @@ body:not(.elementor-device-mobile) .elementor-control.elementor-control-responsi
   background-color: var(--e-a-bg-active-bold);
 }
 
+.elementor-control-notice {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 16px;
+  border-radius: 3px;
+  border: 1px solid var(--notice-control-color, var(--e-a-color-txt));
+  color: var(--e-a-color-txt);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: start;
+  margin-block-start: 10px;
+}
+.elementor-control-notice-type-info {
+  --notice-control-color: var(--e-a-color-info);
+}
+.elementor-control-notice-type-success {
+  --notice-control-color: var(--e-a-color-success);
+}
+.elementor-control-notice-type-warning {
+  --notice-control-color: var(--e-a-color-warning);
+}
+.elementor-control-notice-type-danger {
+  --notice-control-color: var(--e-a-color-danger);
+}
+.elementor-control-notice-icon {
+  flex-basis: 18px;
+  color: var(--notice-control-color);
+}
+.elementor-control-notice-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 6px;
+  flex: 1;
+}
+.elementor-control-notice-main-heading {
+  font-weight: 700;
+  font-style: italic;
+}
+.elementor-control-notice-main-content {
+  font-style: italic;
+  line-height: 1.5;
+}
+.elementor-control-notice-main-actions {
+  display: flex;
+  gap: 10px;
+  padding-block-start: 8px;
+}
+.elementor-control-notice-main a {
+  color: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+.elementor-control-notice-main a:hover, .elementor-control-notice-main a:focus {
+  color: inherit;
+}
+.elementor-control-notice-dismiss {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
 .elementor-control-type-popover_toggle input {
   display: none;
 }
@@ -2981,6 +3385,10 @@ body:not(.elementor-device-mobile) .elementor-control.elementor-control-responsi
   padding-block-end: 10px;
 }
 .elementor-control-type-repeater.elementor-repeater-has-minimum-rows .elementor-repeater-tool-remove {
+  display: none;
+}
+.elementor-control-type-repeater.elementor-repeater-has-maximum-rows .elementor-repeater-tool-duplicate,
+.elementor-control-type-repeater.elementor-repeater-has-maximum-rows .elementor-repeater-add {
   display: none;
 }
 .elementor-control-type-repeater .elementor-repeater-fields {
@@ -3045,7 +3453,9 @@ body:not(.elementor-device-mobile) .elementor-control.elementor-control-responsi
   padding-block-start: 5px;
 }
 
-#elementor-controls {
+#elementor-controls,
+#elementor-panel-page-settings-controls,
+#elementor-panel-editorPreferences-settings-controls {
   padding-block-start: 15px;
 }
 
@@ -3059,7 +3469,7 @@ body:not(.elementor-device-mobile) .elementor-control.elementor-control-responsi
   display: none;
 }
 .elementor-control-type-section:not(:first-child):not(.elementor-control-type-section + .elementor-control-type-section) {
-  margin-top: 25px;
+  margin-block-start: 25px;
 }
 
 .elementor-control-type-select .elementor-control-input-wrapper {
@@ -3228,10 +3638,7 @@ body:not(.elementor-device-mobile) .elementor-control.elementor-control-responsi
 .elementor-slider .noUi-connect {
   position: absolute;
   z-index: 0;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
+  inset: 0;
   will-change: transform;
   transform-origin: 0 0;
   background-color: var(--e-a-border-color-focus);
@@ -3369,8 +3776,11 @@ body:not(.elementor-device-mobile) .elementor-control.elementor-control-responsi
 }
 
 .elementor-control-type-tabs {
-  display: flex;
+  display: none;
   font-size: var(--control-title-size);
+}
+.elementor-control-type-tabs:has(> :not(.elementor-control-type-tab.elementor-hidden-control)) {
+  display: flex;
 }
 
 .elementor-control-type-tab {
@@ -3378,8 +3788,8 @@ body:not(.elementor-device-mobile) .elementor-control.elementor-control-responsi
   width: 100%;
   padding: 0;
   line-height: 25px;
-  border-top: var(--e-a-border-bold);
-  border-bottom: var(--e-a-border-bold);
+  border-block-start: var(--e-a-border-bold);
+  border-block-end: var(--e-a-border-bold);
   border-inline-end: var(--e-a-border-bold);
   transition: var(--e-a-transition-hover);
   cursor: pointer;
@@ -3417,8 +3827,8 @@ body:not(.elementor-device-mobile) .elementor-control.elementor-control-responsi
 .elementor-control-type-code:not(.elementor-control-dynamic-value) .elementor-control-dynamic-switcher {
   position: absolute;
   top: 0;
-  z-index: 1;
   left: 0;
+  z-index: 1;
 }
 .elementor-control-type-textarea .elementor-control-input-wrapper,
 .elementor-control-type-code .elementor-control-input-wrapper {
@@ -3551,6 +3961,83 @@ body:not(.elementor-device-mobile) .elementor-control.elementor-control-responsi
   padding-block-start: 2px;
 }
 
+.elementor-control-type-visual_choice {
+  width: 100%;
+}
+
+.elementor-visual-choice-choices {
+  display: grid;
+  -moz-column-gap: 4px;
+       column-gap: 4px;
+  row-gap: 4px;
+  grid-template-columns: repeat(var(--elementor-visual-choice-columns), 1fr);
+  height: -moz-fit-content;
+  height: fit-content;
+  text-align: center;
+  border-spacing: 1px;
+  border-radius: var(--e-a-border-radius);
+  overflow: hidden;
+}
+
+.elementor-visual-choice-element {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: center;
+  padding: 4px;
+  width: auto;
+}
+.elementor-visual-choice-element input {
+  display: none;
+}
+.elementor-visual-choice-element input.e-visual-choice-placeholder + .elementor-visual-choice-label, .elementor-visual-choice-element input:checked + .elementor-visual-choice-label {
+  border: 2px solid var(--e-a-bg-active-bold);
+  background-color: var(--e-a-bg-active-bold);
+  border-radius: 3px;
+  opacity: 1;
+}
+.elementor-visual-choice-element input:not(:checked) + .elementor-visual-choice-label {
+  opacity: 0.7;
+}
+.elementor-visual-choice-element input:hover + .elementor-visual-choice-label {
+  opacity: 1;
+  transform: scale(1.05);
+  background-color: var(--e-a-bg-hover);
+}
+.elementor-visual-choice-label {
+  border-block-start: var(--e-a-border-bold);
+  border-block-end: var(--e-a-border-bold);
+  border-inline-start: var(--e-a-border-bold);
+  border-inline-end: none;
+  font-size: 12px;
+  transition: var(--e-a-transition-hover);
+  cursor: pointer;
+  overflow: hidden;
+  padding: 8px;
+}
+.elementor-visual-choice-label:nth-child(2) {
+  border-start-start-radius: var(--e-a-border-radius);
+  border-end-start-radius: var(--e-a-border-radius);
+}
+.elementor-visual-choice-label:last-child {
+  border-inline-end: var(--e-a-border-bold);
+  border-start-end-radius: var(--e-a-border-radius);
+  border-end-end-radius: var(--e-a-border-radius);
+}
+.elementor-visual-choice-image {
+  height: auto;
+  width: 100%;
+}
+
+.elementor-label-inline .elementor-visual-choice-choices {
+  justify-content: flex-end;
+}
+
+.tipsy-inner {
+  white-space: pre-line;
+}
+
 .elementor-control-type-wp_widget .widget-inside {
   line-height: 2;
   background-color: inherit;
@@ -3643,6 +4130,9 @@ body:not(.elementor-device-mobile) .elementor-control.elementor-control-responsi
 }
 .elementor-control-type-wysiwyg .mce-btn-group .mce-btn:hover, .elementor-control-type-wysiwyg .mce-btn-group .mce-btn:active, .elementor-control-type-wysiwyg .mce-btn-group .mce-btn.mce-active {
   color: var(--e-a-color-txt-active);
+  background: var(--e-a-bg-hover);
+  border-color: var(--e-a-border-color);
+  box-shadow: none;
 }
 .elementor-control-type-wysiwyg .mce-btn-group .mce-btn:hover i, .elementor-control-type-wysiwyg .mce-btn-group .mce-btn:active i, .elementor-control-type-wysiwyg .mce-btn-group .mce-btn.mce-active i {
   color: var(--e-a-color-txt-active);
@@ -3661,6 +4151,33 @@ body:not(.elementor-device-mobile) .elementor-control.elementor-control-responsi
   border: none;
 }
 
+@media screen and (prefers-color-scheme: dark) {
+  #wp-link-wrap {
+    color-scheme: light;
+    --e-a-color-txt: #515962;
+    --e-a-bg-default: #ffffff;
+    --e-a-border-color-bold: #D5D8DC;
+    --e-a-color-primary-bold: #D004D4;
+  }
+  #wp-link {
+    color: var(--e-a-color-txt);
+  }
+  #wp-link input {
+    background-color: var(--e-a-bg-default);
+    border-color: var(--e-a-border-color-bold);
+  }
+  #wp-link input[type=checkbox] {
+    border-color: var(--e-a-border-color-bold);
+  }
+  #wp-link input[type=checkbox]:checked {
+    background: var(--e-a-color-primary-bold);
+  }
+  #wp-link input.button-primary {
+    background: #2271b1;
+    border-color: #2271b1;
+    color: #fff;
+  }
+}
 #elementor-mode-switcher {
   --e-a-mode-switcher-width: 15px;
   --e-a-mode-switcher-height: 50px;
@@ -3699,14 +4216,17 @@ body:not(.elementor-device-mobile) .elementor-control.elementor-control-responsi
 .elementor-revision-item__wrapper {
   display: flex;
   align-items: center;
+  text-align: start;
+  width: 100%;
   border: var(--e-a-border);
   border-radius: var(--e-a-border-radius);
   padding: 10px 15px;
   margin-block-end: 10px;
   font-size: 11px;
   transition: var(--e-a-transition-hover);
+  background-color: transparent;
 }
-.elementor-revision-item__wrapper:hover {
+.elementor-revision-item__wrapper:hover, .elementor-revision-item__wrapper:focus {
   background-color: var(--e-a-bg-hover);
 }
 .elementor-revision-item-loading .elementor-revision-item__tools-current {
@@ -3757,20 +4277,23 @@ body:not(.elementor-device-mobile) .elementor-control.elementor-control-responsi
 .elementor-history-item {
   display: flex;
   align-items: center;
+  text-align: start;
   border: var(--e-a-border);
   border-radius: var(--e-a-border-radius);
   padding: 10px 15px;
   margin-block-end: 10px;
+  width: 100%;
   font-size: 11px;
   line-height: 1.4;
+  background-color: transparent;
   cursor: pointer;
   transition: var(--e-a-transition-hover);
 }
-.elementor-history-item:hover:not(.elementor-history-item-current) {
+.elementor-history-item:hover:not(.elementor-history-item-current), .elementor-history-item:focus:not(.elementor-history-item-current) {
   background-color: var(--e-a-bg-hover);
   color: var(--e-a-txt-color-hover);
 }
-.elementor-history-item:hover:not(.elementor-history-item-current) .elementor-history-item__icon .eicon:before {
+.elementor-history-item:hover:not(.elementor-history-item-current) .elementor-history-item__icon .eicon:before, .elementor-history-item:focus:not(.elementor-history-item-current) .elementor-history-item__icon .eicon:before {
   content: "\e924";
 }
 .elementor-history-item-current {
@@ -3778,7 +4301,7 @@ body:not(.elementor-device-mobile) .elementor-control.elementor-control-responsi
   background-color: var(--e-a-bg-active);
   color: var(--e-a-txt-color-active);
 }
-.elementor-history-item-current .elementor-history-item__icon .eicon:before, .elementor-history-item-current:hover .elementor-history-item__icon .eicon:before {
+.elementor-history-item-current .elementor-history-item__icon .eicon:before, .elementor-history-item-current:hover .elementor-history-item__icon .eicon:before, .elementor-history-item-current:focus .elementor-history-item__icon .eicon:before {
   content: "\e90e";
 }
 .elementor-history-item__details {
@@ -3818,6 +4341,76 @@ body:not(.elementor-device-mobile) .elementor-control.elementor-control-responsi
 #elementor-panel-history-no-items .elementor-nerd-box-icon,
 #elementor-panel-revisions-no-revisions .elementor-nerd-box-icon {
   margin-block-start: 20px;
+}
+
+.e-control-display-conditions-promotion__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.e-control-display-conditions-promotion__wrapper:hover .eicon-lock.e-control-display-conditions-promotion {
+  color: var(--e-a-color-accent);
+}
+.e-control-display-conditions-promotion__description {
+  display: flex;
+  align-self: center;
+}
+.e-control-display-conditions-promotion__text {
+  display: inline-block;
+}
+.e-control-display-conditions-promotion__lock-wrapper {
+  width: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.e-control-display-conditions-promotion.eicon-flow {
+  align-self: flex-end;
+  cursor: pointer;
+  border: var(--e-a-border-bold);
+  border-radius: var(--e-a-border-radius);
+  padding: 5px;
+}
+.e-control-display-conditions-promotion.eicon-flow.filled {
+  background-color: var(--e-a-bg-active);
+  color: #E73CF6;
+}
+
+.e-control-motion-effects-promotion__wrapper:hover .eicon-lock, .e-control-promotion__wrapper:hover .eicon-lock {
+  color: var(--e-a-color-accent);
+}
+.e-control-motion-effects-promotion__wrapper .elementor-control-title, .e-control-promotion__wrapper .elementor-control-title {
+  margin-inline-end: 0;
+}
+.e-control-motion-effects-promotion__wrapper .select-promotion, .e-control-promotion__wrapper .select-promotion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-inline-start: 5px;
+  padding-inline-end: 20px;
+  cursor: pointer;
+  height: 27px;
+  width: 100%;
+  color: var(--e-a-color-txt);
+  border-radius: var(--e-a-border-radius);
+  background-color: var(--e-a-bg-default);
+  box-shadow: none;
+  border: var(--e-a-border-bold);
+  font-size: var(--control-title-size);
+}
+.e-control-motion-effects-promotion__lock-wrapper, .e-control-promotion__lock-wrapper {
+  width: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.e-link-promotion {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: #93003f;
+}
+.e-link-promotion:hover {
+  color: #93003f;
 }
 
 .elementor-panel #elementor-panel-header #elementor-panel-header-kit-close,
@@ -4014,21 +4607,37 @@ body:not(.e-routes-has-history) #elementor-panel-header-kit-back {
 .e-btn:not(.elementor-button-state) .elementor-state-icon {
   display: none;
 }
-.elementor-button.e-btn-txt,
-.e-btn.e-btn-txt {
+.elementor-button.e-btn-txt, .dialog-type-confirm .dialog-buttons-wrapper .elementor-button.dialog-button.dialog-cancel,
+.dialog-type-alert .dialog-buttons-wrapper .elementor-button.dialog-button.dialog-cancel,
+.e-btn.e-btn-txt,
+.dialog-type-confirm .dialog-buttons-wrapper .e-btn.dialog-button.dialog-cancel,
+.dialog-type-alert .dialog-buttons-wrapper .e-btn.dialog-button.dialog-cancel {
   background: transparent;
   color: var(--e-a-color-txt);
 }
-.elementor-button.e-btn-txt:hover, .elementor-button.e-btn-txt:focus,
+.elementor-button.e-btn-txt:hover, .dialog-type-confirm .dialog-buttons-wrapper .elementor-button.dialog-button.dialog-cancel:hover,
+.dialog-type-alert .dialog-buttons-wrapper .elementor-button.dialog-button.dialog-cancel:hover, .elementor-button.e-btn-txt:focus, .dialog-type-confirm .dialog-buttons-wrapper .elementor-button.dialog-button.dialog-cancel:focus,
+.dialog-type-alert .dialog-buttons-wrapper .elementor-button.dialog-button.dialog-cancel:focus,
 .e-btn.e-btn-txt:hover,
-.e-btn.e-btn-txt:focus {
+.dialog-type-confirm .dialog-buttons-wrapper .e-btn.dialog-button.dialog-cancel:hover,
+.dialog-type-alert .dialog-buttons-wrapper .e-btn.dialog-button.dialog-cancel:hover,
+.e-btn.e-btn-txt:focus,
+.dialog-type-confirm .dialog-buttons-wrapper .e-btn.dialog-button.dialog-cancel:focus,
+.dialog-type-alert .dialog-buttons-wrapper .e-btn.dialog-button.dialog-cancel:focus {
   background: var(--e-a-bg-hover);
   color: var(--e-a-color-txt-hover);
 }
-.elementor-button.e-btn-txt:disabled,
-.e-btn.e-btn-txt:disabled {
+.elementor-button.e-btn-txt:disabled, .dialog-type-confirm .dialog-buttons-wrapper .elementor-button.dialog-button.dialog-cancel:disabled,
+.dialog-type-alert .dialog-buttons-wrapper .elementor-button.dialog-button.dialog-cancel:disabled,
+.e-btn.e-btn-txt:disabled,
+.dialog-type-confirm .dialog-buttons-wrapper .e-btn.dialog-button.dialog-cancel:disabled,
+.dialog-type-alert .dialog-buttons-wrapper .e-btn.dialog-button.dialog-cancel:disabled {
   background: transparent;
   color: var(--e-a-color-txt-disabled);
+}
+.elementor-button.e-btn-txt-border,
+.e-btn.e-btn-txt-border {
+  border: 1px solid var(--e-a-color-txt-muted);
 }
 .elementor-button.elementor-button-success, .elementor-button.e-success,
 .e-btn.elementor-button-success,
@@ -4042,25 +4651,88 @@ body:not(.e-routes-has-history) #elementor-panel-header-kit-back {
 .e-btn.e-success:focus {
   background-color: var(--e-a-btn-bg-success-hover);
 }
-.elementor-button.e-primary,
-.e-btn.e-primary {
+.elementor-button.e-primary, .dialog-type-confirm .dialog-buttons-wrapper .elementor-button.dialog-button.dialog-ok,
+.dialog-type-alert .dialog-buttons-wrapper .elementor-button.dialog-button.dialog-ok, .dialog-type-confirm .dialog-buttons-wrapper .elementor-button.dialog-button.dialog-take_over,
+.dialog-type-alert .dialog-buttons-wrapper .elementor-button.dialog-button.dialog-take_over,
+.e-btn.e-primary,
+.dialog-type-confirm .dialog-buttons-wrapper .e-btn.dialog-button.dialog-ok,
+.dialog-type-alert .dialog-buttons-wrapper .e-btn.dialog-button.dialog-ok,
+.dialog-type-confirm .dialog-buttons-wrapper .e-btn.dialog-button.dialog-take_over,
+.dialog-type-alert .dialog-buttons-wrapper .e-btn.dialog-button.dialog-take_over {
   background-color: var(--e-a-btn-bg-primary);
   color: var(--e-a-btn-color);
 }
-.elementor-button.e-primary:hover, .elementor-button.e-primary:focus,
+.elementor-button.e-primary:hover, .dialog-type-confirm .dialog-buttons-wrapper .elementor-button.dialog-button.dialog-ok:hover,
+.dialog-type-alert .dialog-buttons-wrapper .elementor-button.dialog-button.dialog-ok:hover, .dialog-type-confirm .dialog-buttons-wrapper .elementor-button.dialog-button.dialog-take_over:hover,
+.dialog-type-alert .dialog-buttons-wrapper .elementor-button.dialog-button.dialog-take_over:hover, .elementor-button.e-primary:focus, .dialog-type-confirm .dialog-buttons-wrapper .elementor-button.dialog-button.dialog-ok:focus,
+.dialog-type-alert .dialog-buttons-wrapper .elementor-button.dialog-button.dialog-ok:focus, .dialog-type-confirm .dialog-buttons-wrapper .elementor-button.dialog-button.dialog-take_over:focus,
+.dialog-type-alert .dialog-buttons-wrapper .elementor-button.dialog-button.dialog-take_over:focus,
 .e-btn.e-primary:hover,
-.e-btn.e-primary:focus {
+.dialog-type-confirm .dialog-buttons-wrapper .e-btn.dialog-button.dialog-ok:hover,
+.dialog-type-alert .dialog-buttons-wrapper .e-btn.dialog-button.dialog-ok:hover,
+.dialog-type-confirm .dialog-buttons-wrapper .e-btn.dialog-button.dialog-take_over:hover,
+.dialog-type-alert .dialog-buttons-wrapper .e-btn.dialog-button.dialog-take_over:hover,
+.e-btn.e-primary:focus,
+.dialog-type-confirm .dialog-buttons-wrapper .e-btn.dialog-button.dialog-ok:focus,
+.dialog-type-alert .dialog-buttons-wrapper .e-btn.dialog-button.dialog-ok:focus,
+.dialog-type-confirm .dialog-buttons-wrapper .e-btn.dialog-button.dialog-take_over:focus,
+.dialog-type-alert .dialog-buttons-wrapper .e-btn.dialog-button.dialog-take_over:focus {
   background-color: var(--e-a-btn-bg-primary-hover);
   color: var(--e-a-btn-color);
 }
-.elementor-button.e-primary.e-btn-txt,
-.e-btn.e-primary.e-btn-txt {
+.elementor-button.e-primary.e-btn-txt, .dialog-type-confirm .dialog-buttons-wrapper .elementor-button.e-btn-txt.dialog-button.dialog-ok,
+.dialog-type-alert .dialog-buttons-wrapper .elementor-button.e-btn-txt.dialog-button.dialog-ok, .dialog-type-confirm .dialog-buttons-wrapper .elementor-button.e-btn-txt.dialog-button.dialog-take_over,
+.dialog-type-alert .dialog-buttons-wrapper .elementor-button.e-btn-txt.dialog-button.dialog-take_over, .dialog-type-confirm .dialog-buttons-wrapper .elementor-button.e-primary.dialog-button.dialog-cancel, .dialog-type-confirm .dialog-buttons-wrapper .elementor-button.dialog-button.dialog-ok.dialog-cancel, .dialog-type-confirm .dialog-buttons-wrapper .elementor-button.dialog-button.dialog-take_over.dialog-cancel,
+.dialog-type-alert .dialog-buttons-wrapper .elementor-button.e-primary.dialog-button.dialog-cancel,
+.dialog-type-alert .dialog-buttons-wrapper .elementor-button.dialog-button.dialog-ok.dialog-cancel,
+.dialog-type-alert .dialog-buttons-wrapper .elementor-button.dialog-button.dialog-take_over.dialog-cancel,
+.e-btn.e-primary.e-btn-txt,
+.dialog-type-confirm .dialog-buttons-wrapper .e-btn.e-btn-txt.dialog-button.dialog-ok,
+.dialog-type-alert .dialog-buttons-wrapper .e-btn.e-btn-txt.dialog-button.dialog-ok,
+.dialog-type-confirm .dialog-buttons-wrapper .e-btn.e-btn-txt.dialog-button.dialog-take_over,
+.dialog-type-alert .dialog-buttons-wrapper .e-btn.e-btn-txt.dialog-button.dialog-take_over,
+.dialog-type-confirm .dialog-buttons-wrapper .e-btn.e-primary.dialog-button.dialog-cancel,
+.dialog-type-confirm .dialog-buttons-wrapper .e-btn.dialog-button.dialog-ok.dialog-cancel,
+.dialog-type-confirm .dialog-buttons-wrapper .e-btn.dialog-button.dialog-take_over.dialog-cancel,
+.dialog-type-alert .dialog-buttons-wrapper .e-btn.e-primary.dialog-button.dialog-cancel,
+.dialog-type-alert .dialog-buttons-wrapper .e-btn.dialog-button.dialog-ok.dialog-cancel,
+.dialog-type-alert .dialog-buttons-wrapper .e-btn.dialog-button.dialog-take_over.dialog-cancel {
   background: transparent;
   color: var(--e-a-color-primary-bold);
 }
-.elementor-button.e-primary.e-btn-txt:hover, .elementor-button.e-primary.e-btn-txt:focus,
+.elementor-button.e-primary.e-btn-txt:hover, .dialog-type-confirm .dialog-buttons-wrapper .elementor-button.e-btn-txt.dialog-button.dialog-ok:hover,
+.dialog-type-alert .dialog-buttons-wrapper .elementor-button.e-btn-txt.dialog-button.dialog-ok:hover, .dialog-type-confirm .dialog-buttons-wrapper .elementor-button.e-btn-txt.dialog-button.dialog-take_over:hover,
+.dialog-type-alert .dialog-buttons-wrapper .elementor-button.e-btn-txt.dialog-button.dialog-take_over:hover, .dialog-type-confirm .dialog-buttons-wrapper .elementor-button.e-primary.dialog-button.dialog-cancel:hover, .dialog-type-confirm .dialog-buttons-wrapper .elementor-button.dialog-button.dialog-ok.dialog-cancel:hover, .dialog-type-confirm .dialog-buttons-wrapper .elementor-button.dialog-button.dialog-take_over.dialog-cancel:hover,
+.dialog-type-alert .dialog-buttons-wrapper .elementor-button.e-primary.dialog-button.dialog-cancel:hover,
+.dialog-type-alert .dialog-buttons-wrapper .elementor-button.dialog-button.dialog-ok.dialog-cancel:hover,
+.dialog-type-alert .dialog-buttons-wrapper .elementor-button.dialog-button.dialog-take_over.dialog-cancel:hover, .elementor-button.e-primary.e-btn-txt:focus, .dialog-type-confirm .dialog-buttons-wrapper .elementor-button.e-btn-txt.dialog-button.dialog-ok:focus,
+.dialog-type-alert .dialog-buttons-wrapper .elementor-button.e-btn-txt.dialog-button.dialog-ok:focus, .dialog-type-confirm .dialog-buttons-wrapper .elementor-button.e-btn-txt.dialog-button.dialog-take_over:focus,
+.dialog-type-alert .dialog-buttons-wrapper .elementor-button.e-btn-txt.dialog-button.dialog-take_over:focus, .dialog-type-confirm .dialog-buttons-wrapper .elementor-button.e-primary.dialog-button.dialog-cancel:focus, .dialog-type-confirm .dialog-buttons-wrapper .elementor-button.dialog-button.dialog-ok.dialog-cancel:focus, .dialog-type-confirm .dialog-buttons-wrapper .elementor-button.dialog-button.dialog-take_over.dialog-cancel:focus,
+.dialog-type-alert .dialog-buttons-wrapper .elementor-button.e-primary.dialog-button.dialog-cancel:focus,
+.dialog-type-alert .dialog-buttons-wrapper .elementor-button.dialog-button.dialog-ok.dialog-cancel:focus,
+.dialog-type-alert .dialog-buttons-wrapper .elementor-button.dialog-button.dialog-take_over.dialog-cancel:focus,
 .e-btn.e-primary.e-btn-txt:hover,
-.e-btn.e-primary.e-btn-txt:focus {
+.dialog-type-confirm .dialog-buttons-wrapper .e-btn.e-btn-txt.dialog-button.dialog-ok:hover,
+.dialog-type-alert .dialog-buttons-wrapper .e-btn.e-btn-txt.dialog-button.dialog-ok:hover,
+.dialog-type-confirm .dialog-buttons-wrapper .e-btn.e-btn-txt.dialog-button.dialog-take_over:hover,
+.dialog-type-alert .dialog-buttons-wrapper .e-btn.e-btn-txt.dialog-button.dialog-take_over:hover,
+.dialog-type-confirm .dialog-buttons-wrapper .e-btn.e-primary.dialog-button.dialog-cancel:hover,
+.dialog-type-confirm .dialog-buttons-wrapper .e-btn.dialog-button.dialog-ok.dialog-cancel:hover,
+.dialog-type-confirm .dialog-buttons-wrapper .e-btn.dialog-button.dialog-take_over.dialog-cancel:hover,
+.dialog-type-alert .dialog-buttons-wrapper .e-btn.e-primary.dialog-button.dialog-cancel:hover,
+.dialog-type-alert .dialog-buttons-wrapper .e-btn.dialog-button.dialog-ok.dialog-cancel:hover,
+.dialog-type-alert .dialog-buttons-wrapper .e-btn.dialog-button.dialog-take_over.dialog-cancel:hover,
+.e-btn.e-primary.e-btn-txt:focus,
+.dialog-type-confirm .dialog-buttons-wrapper .e-btn.e-btn-txt.dialog-button.dialog-ok:focus,
+.dialog-type-alert .dialog-buttons-wrapper .e-btn.e-btn-txt.dialog-button.dialog-ok:focus,
+.dialog-type-confirm .dialog-buttons-wrapper .e-btn.e-btn-txt.dialog-button.dialog-take_over:focus,
+.dialog-type-alert .dialog-buttons-wrapper .e-btn.e-btn-txt.dialog-button.dialog-take_over:focus,
+.dialog-type-confirm .dialog-buttons-wrapper .e-btn.e-primary.dialog-button.dialog-cancel:focus,
+.dialog-type-confirm .dialog-buttons-wrapper .e-btn.dialog-button.dialog-ok.dialog-cancel:focus,
+.dialog-type-confirm .dialog-buttons-wrapper .e-btn.dialog-button.dialog-take_over.dialog-cancel:focus,
+.dialog-type-alert .dialog-buttons-wrapper .e-btn.e-primary.dialog-button.dialog-cancel:focus,
+.dialog-type-alert .dialog-buttons-wrapper .e-btn.dialog-button.dialog-ok.dialog-cancel:focus,
+.dialog-type-alert .dialog-buttons-wrapper .e-btn.dialog-button.dialog-take_over.dialog-cancel:focus {
   background: var(--e-a-bg-primary);
 }
 .elementor-button.go-pro, .elementor-button.e-accent,
@@ -4079,6 +4751,18 @@ body:not(.e-routes-has-history) #elementor-panel-header-kit-back {
 .e-btn.go-pro:active,
 .e-btn.e-accent:active {
   background-color: var(--e-a-btn-bg-accent-active);
+}
+.elementor-button.elementor-button-info, .elementor-button.e-info,
+.e-btn.elementor-button-info,
+.e-btn.e-info {
+  background-color: var(--e-a-btn-bg-info);
+}
+.elementor-button.elementor-button-info:hover, .elementor-button.elementor-button-info:focus, .elementor-button.e-info:hover, .elementor-button.e-info:focus,
+.e-btn.elementor-button-info:hover,
+.e-btn.elementor-button-info:focus,
+.e-btn.e-info:hover,
+.e-btn.e-info:focus {
+  background-color: var(--e-a-btn-bg-info-hover);
 }
 .elementor-button.elementor-button-warning, .elementor-button.e-warning,
 .e-btn.elementor-button-warning,
@@ -4276,6 +4960,10 @@ body.e-is-device-mode:not(.elementor-device-desktop) #elementor-preview-responsi
   padding: 0 10px;
 }
 
+.elementor-template-library-template-insert + .elementor-template-library-template-generate-variation {
+  margin-inline-start: 4px;
+}
+
 #elementor-template-library-header-preview-back {
   padding-block: 16.5px 15px;
   padding-inline: 0 16.5px;
@@ -4294,12 +4982,12 @@ body.e-is-device-mode:not(.elementor-device-desktop) #elementor-preview-responsi
   content: "\e87d";
 }
 
-#elementor-template-library-templates[data-template-source=local] #elementor-template-library-templates-container {
+#elementor-template-library-templates[data-template-source=local] #elementor-template-library-templates-container, #elementor-template-library-templates[data-template-source=cloud] #elementor-template-library-templates-container {
   margin-block-start: 10px;
   margin-block-end: 45px;
   border-block-start: var(--e-a-border);
 }
-#elementor-template-library-templates[data-template-source=local] .elementor-template-library-order-input:checked + .elementor-template-library-order-label {
+#elementor-template-library-templates[data-template-source=local] .elementor-template-library-order-input:checked + .elementor-template-library-order-label, #elementor-template-library-templates[data-template-source=cloud] .elementor-template-library-order-input:checked + .elementor-template-library-order-label {
   color: var(--e-a-color-txt-active);
 }
 #elementor-template-library-templates[data-template-source=remote] #elementor-template-library-templates-container {
@@ -4345,6 +5033,10 @@ body.e-is-device-mode:not(.elementor-device-desktop) #elementor-preview-responsi
 .elementor-template-library-filter-toolbar {
   display: flex;
   align-items: center;
+}
+
+.elementor-template-library-filter-select-source {
+  width: 200px;
 }
 
 #elementor-template-library-filter-toolbar-remote {
@@ -4419,6 +5111,27 @@ label.elementor-template-library-order-label:hover {
   content: "\e923";
 }
 
+#elementor-template-library-filter-toolbar-side-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#elementor-template-library-add-new-folder {
+  cursor: pointer;
+  font-size: 20px;
+  padding: 0 5px;
+  border-radius: 2px;
+  color: var(--e-a-color-txt);
+}
+#elementor-template-library-add-new-folder:hover {
+  background-color: var(--e-a-bg-hover);
+}
+
+#elementor-template-library-create-new-folder-dialog .elementor-create-folder-template-dialog__p {
+  margin-bottom: 10px;
+}
+
 #elementor-template-library-filter-text-wrapper {
   width: 200px;
   position: relative;
@@ -4428,6 +5141,9 @@ label.elementor-template-library-order-label:hover {
   top: 50%;
   left: 0;
   transform: translateY(-50%);
+}
+#elementor-template-library-filter-text-wrapper i.eicon-loading.eicon-animation-spin {
+  top: 25%;
 }
 
 #elementor-template-library-filter-text {
@@ -4522,10 +5238,7 @@ label.elementor-template-library-order-label:hover {
 }
 .elementor-template-library-template-remote .elementor-template-library-template-preview {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background-color: rgba(0, 0, 0, 0.5);
   transition: opacity 0.5s;
   cursor: pointer;
@@ -4552,6 +5265,9 @@ label.elementor-template-library-order-label:hover {
   text-overflow: ellipsis;
   overflow: hidden;
   padding-inline-end: 5px;
+}
+.elementor-template-library-template-remote .elementor-template-library-favorite {
+  margin-inline-start: auto;
 }
 .elementor-template-library-template-remote .elementor-template-library-template-favorite-input {
   display: none;
@@ -4592,7 +5308,8 @@ label.elementor-template-library-order-label:hover {
 }
 
 #elementor-template-library-order-toolbar-local,
-.elementor-template-library-template-local {
+.elementor-template-library-template-local,
+.elementor-template-library-template-cloud {
   display: flex;
   align-items: center;
   padding: 0 25px;
@@ -4608,61 +5325,82 @@ label.elementor-template-library-order-label:hover {
   font-weight: 500;
 }
 
-.elementor-template-library-template-local {
+.elementor-template-library-template-local,
+.elementor-template-library-template-cloud {
   height: 50px;
   width: 100%;
   margin-block-start: 1px;
   transition: background-color 0.3s linear;
 }
-.elementor-template-library-template-local:hover {
+.elementor-template-library-template-local:hover,
+.elementor-template-library-template-cloud:hover {
   background-color: var(--e-a-bg-hover);
 }
-.elementor-template-library-template-local:first-child {
+.elementor-template-library-template-local:first-child,
+.elementor-template-library-template-cloud:first-child {
   border-start-start-radius: 3px;
   border-start-end-radius: 3px;
   border-end-start-radius: 0;
   border-end-end-radius: 0;
 }
-.elementor-template-library-template-local:last-child {
+.elementor-template-library-template-local:last-child,
+.elementor-template-library-template-cloud:last-child {
   border-start-start-radius: 0;
   border-start-end-radius: 0;
   border-end-start-radius: 3px;
   border-end-end-radius: 3px;
 }
-.elementor-template-library-template-local .elementor-template-library-template-name {
+.elementor-template-library-template-local .elementor-template-library-template-name,
+.elementor-template-library-template-cloud .elementor-template-library-template-name {
   font-weight: 500;
 }
 .elementor-template-library-template-local .elementor-template-library-template-name,
-.elementor-template-library-template-local .elementor-template-library-template-meta {
+.elementor-template-library-template-local .elementor-template-library-template-meta,
+.elementor-template-library-template-cloud .elementor-template-library-template-name,
+.elementor-template-library-template-cloud .elementor-template-library-template-meta {
   padding-inline-end: 20px;
+}
+.elementor-template-library-template-local .elementor-template-library-local-column-1 i,
+.elementor-template-library-template-cloud .elementor-template-library-local-column-1 i {
+  padding-inline-end: 10px;
 }
 .elementor-template-library-template-local .elementor-template-library-template-name,
 .elementor-template-library-template-local .elementor-template-library-template-meta,
 .elementor-template-library-template-local .elementor-template-library-template-preview,
-.elementor-template-library-template-local .elementor-template-library-template-action {
+.elementor-template-library-template-local .elementor-template-library-template-action,
+.elementor-template-library-template-cloud .elementor-template-library-template-name,
+.elementor-template-library-template-cloud .elementor-template-library-template-meta,
+.elementor-template-library-template-cloud .elementor-template-library-template-preview,
+.elementor-template-library-template-cloud .elementor-template-library-template-action {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.elementor-template-library-template-local .elementor-template-library-template-controls {
+.elementor-template-library-template-local .elementor-template-library-template-controls,
+.elementor-template-library-template-cloud .elementor-template-library-template-controls {
   position: relative;
   display: flex;
   align-items: center;
 }
-.elementor-template-library-template-local .elementor-template-library-template-controls > div {
+.elementor-template-library-template-local .elementor-template-library-template-controls > div,
+.elementor-template-library-template-cloud .elementor-template-library-template-controls > div {
   cursor: pointer;
   transition: color 0.5s;
 }
-.elementor-template-library-template-local .elementor-template-library-template-insert i {
+.elementor-template-library-template-local .elementor-template-library-template-insert i,
+.elementor-template-library-template-cloud .elementor-template-library-template-insert i {
   margin-inline-end: 3px;
 }
-.elementor-template-library-template-local .elementor-template-library-template-control-title {
+.elementor-template-library-template-local .elementor-template-library-template-control-title,
+.elementor-template-library-template-cloud .elementor-template-library-template-control-title {
   margin-inline-start: 6px;
 }
-.elementor-template-library-template-local .elementor-template-library-template-more .elementor-template-library-template-delete:hover {
+.elementor-template-library-template-local .elementor-template-library-template-more .elementor-template-library-template-delete:hover,
+.elementor-template-library-template-cloud .elementor-template-library-template-more .elementor-template-library-template-delete:hover {
   color: var(--e-a-color-danger);
 }
-.elementor-template-library-template-local .elementor-template-library-template-more {
+.elementor-template-library-template-local .elementor-template-library-template-more,
+.elementor-template-library-template-cloud .elementor-template-library-template-more {
   display: none;
   position: absolute;
   background-color: var(--e-a-bg-default);
@@ -4674,7 +5412,8 @@ label.elementor-template-library-order-label:hover {
   transform: translateX(-65%) translateY(-7px);
   z-index: 1;
 }
-.elementor-template-library-template-local .elementor-template-library-template-more:before {
+.elementor-template-library-template-local .elementor-template-library-template-more:before,
+.elementor-template-library-template-cloud .elementor-template-library-template-more:before {
   content: "";
   position: absolute;
   border: solid transparent;
@@ -4682,18 +5421,22 @@ label.elementor-template-library-order-label:hover {
   border-block-end-color: var(--e-a-color-white);
   transform: translateY(-100%);
 }
-.elementor-template-library-template-local .elementor-template-library-template-more > div {
+.elementor-template-library-template-local .elementor-template-library-template-more > div,
+.elementor-template-library-template-cloud .elementor-template-library-template-more > div {
   margin: 10px 0;
   font-size: 11px;
 }
-.elementor-template-library-template-local .elementor-template-library-template-more a {
+.elementor-template-library-template-local .elementor-template-library-template-more a,
+.elementor-template-library-template-cloud .elementor-template-library-template-more a {
   color: var(--e-a-color-txt);
 }
-.elementor-template-library-template-local .elementor-template-library-template-more-toggle {
+.elementor-template-library-template-local .elementor-template-library-template-more-toggle,
+.elementor-template-library-template-cloud .elementor-template-library-template-more-toggle {
   flex-grow: 1;
   text-align: end;
 }
-.elementor-template-library-template-local .elementor-template-library-template-more-toggle i {
+.elementor-template-library-template-local .elementor-template-library-template-more-toggle i,
+.elementor-template-library-template-cloud .elementor-template-library-template-more-toggle i {
   font-size: 16px;
 }
 
@@ -4760,8 +5503,105 @@ label.elementor-template-library-order-label:hover {
   height: 55px;
   font-size: 16px;
 }
+#elementor-template-library-save-template-form .cloud-library-form-inputs {
+  display: block;
+  width: 500px;
+  margin: 0 auto;
+}
+#elementor-template-library-save-template-form .cloud-library-form-inputs > * {
+  height: 55px;
+  font-size: 16px;
+  margin-block-end: 15px;
+}
+#elementor-template-library-save-template-form .cloud-library-form-inputs #elementor-template-library-save-template-submit {
+  float: inline-end;
+}
+#elementor-template-library-save-template-form .cloud-library-form-inputs .select2-selection__e-plus-button {
+  display: none;
+}
+#elementor-template-library-save-template-form .cloud-library-form-inputs .select2-selection--multiple .select2-selection__rendered {
+  height: 55px;
+  font-size: 16px;
+  padding-inline-start: 25px;
+  line-height: 55px;
+}
+#elementor-template-library-save-template-form .cloud-library-form-inputs .select2-search__field {
+  max-width: calc(100% - 50px);
+  float: inline-start;
+  line-height: 45px;
+}
+#elementor-template-library-save-template-form .cloud-library-form-inputs .select2-container .select2-search--inline {
+  float: none;
+}
+#elementor-template-library-save-template-form .cloud-library-form-inputs .select2-container.select2-container--default .select2-selection--multiple .select2-selection__choice {
+  background-color: transparent;
+  color: var(--e-a-color-txt);
+  line-height: 36px;
+  font-size: 16px;
+  padding: 5px 5px 5px 0px;
+}
+#elementor-template-library-save-template-form .cloud-library-form-inputs .select2-container.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+  color: var(--e-a-color-txt);
+}
 
-#elementor-template-library-save-template-name {
+#elementor-template-library-save-template .select2-dropdown {
+  box-shadow: none;
+  border: 1px solid #D5D8DC;
+  border-radius: 2px;
+}
+#elementor-template-library-save-template .select2-dropdown--above {
+  margin-block-start: -10px;
+}
+#elementor-template-library-save-template .select2-dropdown--below {
+  margin-block-start: 10px;
+}
+#elementor-template-library-save-template .select2-results__options {
+  padding-block-start: 15px;
+  padding-block-end: 15px;
+}
+#elementor-template-library-save-template .select2-container.select2-container--default .select2-results__option--highlighted[aria-selected], #elementor-template-library-save-template .select2-results__option[aria-selected=true]:not(.select2-results__option--highlighted) {
+  background-color: transparent;
+}
+
+#select2-elementor-template-library-save-template-source-results .select2-results__message {
+  padding-inline-start: 25px;
+  font-size: 16px;
+}
+#select2-elementor-template-library-save-template-source-results .select2-results__option {
+  text-align: start;
+}
+#select2-elementor-template-library-save-template-source-results .select2-results__option .main-item {
+  padding-inline-start: 25px;
+  font-size: 16px;
+}
+#select2-elementor-template-library-save-template-source-results .select2-results__option .sub-item {
+  padding-inline-start: 50px;
+  font-size: 14px;
+}
+#select2-elementor-template-library-save-template-source-results .select2-results__option span:before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  height: 15px;
+  width: 15px;
+  border: 2px solid #69727D;
+  border-radius: 2px;
+  background-color: #ffffff;
+  margin-inline-end: 10px;
+  vertical-align: middle;
+}
+#select2-elementor-template-library-save-template-source-results .select2-results__option[aria-selected=true] span:before {
+  font-family: eicons;
+  content: "\e90e";
+  color: #ffffff;
+  border: none;
+  background-color: #69727D;
+  display: inline-block;
+  padding-inline-start: 2px;
+  font-size: 11px;
+}
+
+#elementor-template-library-save-template-name, #elementor-template-library-save-template-source {
   width: 500px;
   padding-inline-start: 25px;
   border-start-start-radius: 3px;
@@ -4811,6 +5651,10 @@ label.elementor-template-library-order-label:hover {
   max-height: 95vh;
   padding: 100px 0 0;
   min-height: 550px;
+}
+
+.elementor-template-library-cloud-empty__button {
+  margin-block-start: 45px;
 }
 
 #elementor-template-library-connect-logo {
@@ -5111,6 +5955,7 @@ label.elementor-template-library-order-label:hover {
 }
 .elementor-context-menu-list__item--disabled {
   cursor: default;
+  opacity: 0.5;
   color: var(--e-a-color-disabled);
 }
 .elementor-context-menu-list__item:not(.elementor-context-menu-list__item--disabled):hover, .elementor-context-menu-list__item:not(.elementor-context-menu-list__item--disabled):focus {
@@ -5130,14 +5975,24 @@ label.elementor-template-library-order-label:hover {
 .elementor-context-menu-list__item__shortcut {
   color: var(--e-a-color-txt-muted);
 }
+.elementor-context-menu-list__item__shortcut--link-fullwidth {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  cursor: pointer;
+}
 .elementor-context-menu-list__item__title, .elementor-context-menu-list__item__shortcut {
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 1;
+  position: relative;
 }
 .elementor-context-menu-list__item.elementor-context-menu-list__item-delete:not(.elementor-context-menu-list__item--disabled):hover > *, .elementor-context-menu-list__item.elementor-context-menu-list__item-delete:not(.elementor-context-menu-list__item--disabled):focus > * {
   color: var(--e-global-color-danger);
+}
+.elementor-context-menu-list__item.elementor-hidden {
+  display: none;
 }
 .elementor-context-menu .eicon-pro-icon {
   color: var(--e-global-color-accent);
@@ -5151,8 +6006,9 @@ label.elementor-template-library-order-label:hover {
 }
 #elementor-hotkeys__content {
   display: flex;
+  justify-content: space-between;
   gap: 70px;
-  padding: 10px 30px;
+  padding: 20px 30px;
   width: 100%;
   overflow: hidden;
 }
@@ -5165,34 +6021,13 @@ label.elementor-template-library-order-label:hover {
 }
 
 .elementor-hotkeys__col {
-  width: 50%;
-}
-@media (max-width: 1024px) {
-  .elementor-hotkeys__col {
-    width: 100%;
-  }
-}
-.elementor-hotkeys__header, .elementor-hotkeys__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   width: 100%;
 }
 .elementor-hotkeys__header {
-  padding: 10px 0;
   font-weight: 500;
-}
-.elementor-hotkeys__list {
-  background-color: var(--e-a-bg-default);
-  height: calc(100% - 42px);
-  padding: 10px 0;
-}
-@media (max-width: 479px) {
-  .elementor-hotkeys__list {
-    padding: 0;
-  }
-}
-@media (max-width: 1024px) {
-  .elementor-hotkeys__list {
-    height: auto;
-  }
 }
 .elementor-hotkeys__item {
   display: flex;
@@ -5210,38 +6045,42 @@ label.elementor-template-library-order-label:hover {
 .elementor-hotkeys__item--shortcut {
   flex-grow: 0;
   display: flex;
-  flex-direction: row-reverse;
+  gap: 27px;
 }
-.elementor-hotkeys__item--shortcut span {
+@media (max-width: 1024px) {
+  .elementor-hotkeys__item--shortcut {
+    gap: 23px;
+  }
+}
+.elementor-hotkeys__item--shortcut kbd {
   position: relative;
+  font-family: unset;
   background-color: var(--e-a-bg-active);
   padding: 5px 12px;
-  margin-inline-end: 27px;
-  border-radius: 3px;
+  border-radius: var(--e-a-border-radius);
 }
-@media (max-width: 479px) {
-  .elementor-hotkeys__item--shortcut span {
+@media (max-width: 1024px) {
+  .elementor-hotkeys__item--shortcut kbd {
     padding: 4px 9px;
-    margin-inline-end: 23px;
   }
 }
-.elementor-hotkeys__item--shortcut span:after {
-  content: " + ";
+.elementor-hotkeys__item--shortcut kbd:not(:last-of-type)::after {
+  content: "+";
   position: absolute;
-  right: -18px;
+  left: 0;
   width: 9px;
   text-align: center;
+  margin-inline-end: -18px;
 }
-@media (max-width: 479px) {
-  .elementor-hotkeys__item--shortcut span:after {
-    right: -16px;
+@media (max-width: 1024px) {
+  .elementor-hotkeys__item--shortcut kbd:not(:last-of-type)::after {
+    margin-inline-end: -16px;
   }
 }
-.elementor-hotkeys__item--shortcut span:last-child {
-  margin-inline-end: 0;
-}
-.elementor-hotkeys__item--shortcut span:last-child:after {
-  display: none;
+
+.elementor-template-library-template-remote:not(.elementor-template-library-template-page):not(.elementor-template-library-template-lp).elementor-template-library-template-floating_button {
+  margin-top: 0 !important;
+  width: calc(25% - 30px);
 }
 
 .ui-resizable-n {
@@ -5303,6 +6142,8 @@ label.elementor-template-library-order-label:hover {
 
 body {
   --e-editor-navigator-width: 240px;
+  --e-editor-navigator-indicator-width: 3px;
+  --e-editor-navigator-promotion-height: 30px;
 }
 
 #elementor-navigator {
@@ -5322,8 +6163,8 @@ body {
   display: none;
 }
 body.elementor-navigator-docked #elementor-navigator {
-  top: 0;
-  left: 0;
+  inset: 0;
+  inset-inline-start: auto;
   height: 100%;
 }
 body:not(.elementor-navigator-docked) #elementor-navigator {
@@ -5331,6 +6172,8 @@ body:not(.elementor-navigator-docked) #elementor-navigator {
 }
 #elementor-navigator__inner {
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 #elementor-navigator__header {
   display: flex;
@@ -5345,6 +6188,20 @@ body:not(.elementor-navigator-docked) #elementor-navigator {
   font-weight: 400;
   padding: 10px 0;
   cursor: move;
+}
+iframe + #elementor-navigator__header__title, #elementor-navigator__ai-titles + #elementor-navigator__header__title {
+  padding-inline-end: 17.5px;
+}
+#elementor-navigator__ai-titles {
+  width: 35px;
+  text-align: center;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+#elementor-navigator__ai-titles:hover {
+  color: #E73CF6;
 }
 #elementor-navigator__close, #elementor-navigator__toggle-all {
   color: var(--e-a-color-txt);
@@ -5368,7 +6225,7 @@ body:not(.elementor-navigator-docked) #elementor-navigator {
   font-size: 11px;
 }
 #elementor-navigator__elements {
-  height: calc(100% - 49px);
+  flex-grow: 1;
   overflow: auto;
   position: relative;
 }
@@ -5378,19 +6235,32 @@ body:not(.elementor-navigator-docked) #elementor-navigator {
 #elementor-navigator__elements .elementor-nerd-box {
   padding: 25px;
 }
-> #elementor-navigator__elements-section {
+#elementor-navigator__elements > .elementor-navigator__element-section {
   border-block-end: var(--e-a-border);
 }
 #elementor-navigator__footer {
-  position: absolute;
   width: 100%;
-  left: 0;
-  bottom: 0;
   text-align: center;
+}
+#elementor-navigator__footer__resize-bar {
   border-block-start: var(--e-a-border);
 }
-.elementor-navigator-docked #elementor-navigator__footer {
+.elementor-navigator-docked #elementor-navigator__footer__resize-bar {
   display: none;
+}
+#elementor-navigator__footer__promotion {
+  font-size: 12px;
+  padding: 4px 17px;
+  font-family: "Roboto", sans-serif;
+  color: var(--e-a-bg-logo);
+  min-height: var(--e-editor-navigator-promotion-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#elementor-navigator__footer__promotion a {
+  color: var(--e-a-color-accent-promotion);
+  margin-inline-start: 1px;
 }
 
 .elementor-navigator__item {
@@ -5429,7 +6299,7 @@ body:not(.elementor-navigator-docked) #elementor-navigator {
   padding: 10px;
 }
 .elementor-navigator__elements .elementor-empty-view__title {
-  margin-inline-start: 23px;
+  margin-inline-start: 34px;
   font-size: 10px;
   font-style: italic;
 }
@@ -5507,11 +6377,10 @@ body:not(.elementor-navigator-docked) #elementor-navigator {
 .elementor-navigator__element__indicators {
   position: relative;
   transition: transform 0.5s;
-  padding-inline-start: 5px;
   z-index: 91;
 }
 .elementor-navigator__element__indicators:not(:hover) {
-  transform: translateX(calc(-100% + 8px));
+  transform: translateX(calc(-100% + var(--e-editor-navigator-indicator-width)));
 }
 .elementor-navigator__element__indicator {
   height: 100%;
@@ -5519,15 +6388,12 @@ body:not(.elementor-navigator-docked) #elementor-navigator {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: var(--e-a-color-txt-invert);
-  background-color: var(--e-a-color-white);
-  border-inline-start: var(--e-a-border);
+  color: var(--e-a-color-txt);
+  background-color: var(--e-a-bg-default);
+  border-inline-end: var(--e-a-border);
 }
 .elementor-navigator__element__indicator:first-child {
-  border-inline-start: 3px solid var(--e-a-border-color-accent);
-}
-.elementor-editing .elementor-navigator__element__indicator:first-child {
-  border-color: #242729;
+  border-inline-start: var(--e-editor-navigator-indicator-width) solid var(--e-a-border-color-accent);
 }
 .elementor-navigator__element__indicator:hover {
   color: var(--e-a-color-txt-hover);
@@ -5535,6 +6401,9 @@ body:not(.elementor-navigator-docked) #elementor-navigator {
 .elementor-navigator__element--hidden .elementor-navigator__element__title,
 .elementor-navigator__element--hidden .elementor-navigator__element__toggle {
   opacity: 0.5;
+}
+.elementor-navigator__promotion-text {
+  line-height: 18px;
 }
 
 .e-notice-bar {
@@ -5566,7 +6435,7 @@ body:not(.elementor-navigator-docked) #elementor-navigator {
   font-size: 11px;
 }
 .e-notice-bar__primary_action a:hover {
-  color: #47001e;
+  color: rgb(70.5, 0, 30.2142857143);
   background: #F1F2F3;
 }
 .e-notice-bar__secondary_message, .e-notice-bar__secondary_action {
@@ -5859,6 +6728,9 @@ body:not(.elementor-device-desktop) #e-notice-bar {
 .pcr-app[data-theme=monolith] .pcr-selection .pcr-color-palette {
   height: 150px;
 }
+.pcr-app .pcr-selection .pcr-picker {
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+}
 .pcr-app .pcr-interaction {
   padding-block-end: 20px;
 }
@@ -5945,10 +6817,7 @@ body:not(.elementor-device-desktop) #e-notice-bar {
   color: var(--e-a-btn-color-invert);
   text-indent: 0;
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6006,10 +6875,10 @@ body:not(.elementor-device-desktop) #e-notice-bar {
   cursor: ew-resize;
 }
 .e-ui-state--document-scrubbing-mode__on input.e-scrubbing--active, .e-ui-state--document-scrubbing-mode__on input.e-scrubbing--active:focus {
-  box-shadow: 0 0 0 1px #0e3b9c inset;
+  box-shadow: 0 0 0 1px rgb(14.2857142857, 58.5714285714, 155.7142857143) inset;
 }
 .e-ui-state--document-scrubbing-mode__on label.e-scrubbing--active {
-  color: #0e3b9c;
+  color: rgb(14.2857142857, 58.5714285714, 155.7142857143);
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;

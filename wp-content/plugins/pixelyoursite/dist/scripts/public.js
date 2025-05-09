@@ -633,7 +633,7 @@ if (!String.prototype.trim) {
              * Generate unique ID
              */
             generateUniqueId : function (event) {
-                if(event.eventID.length == 0) {
+                if(event.eventID.length == 0 || (event.type == "static" && options.ajaxForServerStaticEvent) || (event.type !== "static" && options.ajaxForServerEvent)) {
                     let idKey = event.hasOwnProperty('custom_event_post_id') ? event.custom_event_post_id : event.e_id;
                     if (!uniqueId.hasOwnProperty(idKey)) {
                         uniqueId[idKey] = pys_generate_token();
@@ -1054,6 +1054,7 @@ if (!String.prototype.trim) {
                     if (
                         ( ( typeof CS_Data.cs_google_consent_mode_enabled !== "undefined" && CS_Data.cs_google_consent_mode_enabled == 1 ) && ( pixel == 'analytics' || pixel == 'google_ads' ) )
                         || ( typeof CS_Data.cs_meta_ldu_mode !== "undefined" && CS_Data.cs_meta_ldu_mode && pixel == 'facebook' )
+                        || ( typeof CS_Data.cs_bing_consent_mode !== "undefined" && CS_Data.cs_bing_consent_mode.ad_storage.enabled && pixel == 'bing' )
                     ) {
                         if ( CS_Data.cs_cache_enabled == 0 || ( CS_Data.cs_cache_enabled == 1 && window.CS_Cache && window.CS_Cache.check_status ) ) {
                             return true;
@@ -1235,7 +1236,7 @@ if (!String.prototype.trim) {
                                         Facebook.loadPixel();
                                     }
 
-                                    if (categoryCookie === CS_Data.cs_script_cat.bing) {
+                                    if ( categoryCookie === CS_Data.cs_script_cat.bing || ( typeof CS_Data.cs_bing_consent_mode !== "undefined" && CS_Data.cs_bing_consent_mode.ad_storage.enabled ) ) {
                                         Bing.loadPixel();
                                     }
 
@@ -1253,7 +1254,7 @@ if (!String.prototype.trim) {
                                         consent.facebook = false;
                                     }
 
-                                    if (categoryCookie === CS_Data.cs_script_cat.bing) {
+                                    if ( categoryCookie === CS_Data.cs_script_cat.bing && ( typeof CS_Data.cs_bing_consent_mode == "undefined" || !CS_Data.cs_bing_consent_mode.ad_storage.enabled ) ) {
                                         Bing.disable();
                                         consent.bing = false;
                                     }
@@ -1306,18 +1307,24 @@ if (!String.prototype.trim) {
                                 consent.gtm = true;
 
                                 Utils.setupGDPRData( consent );
-                            } else if(button_action === 'disable_all') {
-                                Facebook.disable();
-                                Bing.disable();
-                                if(CS_Data.cs_google_analytics_consent_mode == 0 || typeof CS_Data.cs_google_analytics_consent_mode == "undefined") {
+                            } else if ( button_action === 'disable_all' ) {
+                                if ( typeof CS_Data.cs_meta_ldu_mode == "undefined" || CS_Data.cs_meta_ldu_mode == 0 ) {
+                                    Facebook.disable();
+                                    consent.facebook = false;
+                                }
+
+                                if ( typeof CS_Data.cs_bing_consent_mode == "undefined" || CS_Data.cs_bing_consent_mode.ad_storage.enabled == 0 ) {
+                                    Bing.disable();
+                                    consent.bing = false;
+                                }
+
+                                if ( CS_Data.cs_google_analytics_consent_mode == 0 || typeof CS_Data.cs_google_analytics_consent_mode == "undefined" ) {
                                     Analytics.disable();
                                     consent.ga = false;
                                     consent.gtm = false;
                                 }
-                                Pinterest.disable();
 
-                                consent.facebook = false;
-                                consent.bing = false;
+                                Pinterest.disable();
                                 consent.pinterest = false;
                                 Utils.setupGDPRData( consent );
                             } else if ( button_action === 'cs_confirm' ) {

